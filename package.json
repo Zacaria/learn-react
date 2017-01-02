@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "reveal": "reveal-md Presentation.md --highlightTheme github --theme solarized"
   },
   "repository": {
     "type": "git",
