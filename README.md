@@ -29,3 +29,11 @@ TODO
 ## How to use
 
 TODO
+
+# TODOS
+
+- [x] Introduction
+- [ ] Topics
+- [ ] How to use
+- [ ] Reveal [Presentation](Presentation.md)
+- [ ] [Workshop](Workshop.md)
