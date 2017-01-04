@@ -1,5 +1,10 @@
 # Learn react
 
+## Prequisites
+
+- knowledge of JavaScript
+- es6 helps a lot
+
 ## Purpose
 
 > [React](https://facebook.github.io/react/) is javascript **library** for building User Interfaces
@@ -24,11 +29,24 @@ This repo aims to help introducing React for developers.
 
 ## Topics
 
-TODO
+* Virtual DOM
+* JSX
+* Declarative
+* Component Lifecycle
+* Immutability : why ?
+* One way data-flow
+* Performance
+* Tests : Enzyme / Jest
+* Redux ?
+* Dumb and smart components ?
+* Others : Flux, Relay ?
+* Learn once, write anywhere : React-native
 
 ## How to use
 
-TODO
+### Presentation
+
+Run `npm run reveal`, opens a tab in the browser with a reveal. sourced by Presentation.md
 
 # TODOS
 
