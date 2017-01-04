@@ -18,7 +18,7 @@ Casting
 
 ## Reducers
 
-![](./asset/imgs/reducer.png)
+![](./assets/imgs/reducer.png)
 
 ---
 
