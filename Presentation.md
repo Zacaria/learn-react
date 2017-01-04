@@ -6,9 +6,12 @@
 
 1st release : March 2013
 
-Current stable release : 15.4.0
-
 > React is a library for providing a view for data rendered as HTML.
+
+[![npm](https://img.shields.io/npm/dm/react.svg)](https://www.npmjs.org/package/react)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/facebook/react.svg)](https://github.com/facebook/react/pulls)
+[![GitHub release](https://img.shields.io/github/release/facebook/react.svg)](https://github.com/facebook/react)
+[![GitHub stars](https://img.shields.io/github/stars/facebook/react.svg?style=social&label=Star)](https://github.com/facebook/react)
 
 ---
 
@@ -67,7 +70,11 @@ State vs Props
 <img src="assets/imgs/jest-logo.png" width="123px">
 <img src="assets/imgs/npm-logo.png" width="345px">
 
+---
 
-----
+## React-native
 
-
+[![npm](https://img.shields.io/npm/dm/react-native.svg)](https://www.npmjs.org/package/react-native)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/facebook/react-native.svg)](https://github.com/facebook/react-native/pulls)
+[![GitHub release](https://img.shields.io/github/release/facebook/react-native.svg)](https://github.com/facebook/react-native)
+[![GitHub stars](https://img.shields.io/github/stars/facebook/react-native.svg?style=social&label=Star)](https://github.com/facebook/react-native)
