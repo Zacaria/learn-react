@@ -55,3 +55,38 @@ Run `npm run reveal`, opens a tab in the browser with a reveal. sourced by Prese
 - [ ] How to use
 - [ ] Reveal [Presentation](Presentation.md)
 - [ ] [Workshop](Workshop.md)
+- [x] Sources
+
+# Sources
+
+## React
+
+Official doc : https://facebook.github.io/react/
+
+Main learning ref : 4 hours : https://developmentarc.gitbooks.io/react-indepth/content/
+
+Useful articles :
+- 5 min : http://buildwithreact.com/tutorial/jsx
+- 2 min : https://medium.com/@learnreact/container-components-c0e67432e005#.m5ln3mykh
+- 5 min : https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.gv3g9xvuu
+- 7 min : https://medium.com/javascript-scene/jsx-looks-like-an-abomination-1c1ec351a918#.xtw93rso7
+- 4 min : https://medium.com/@esamatti/react-js-pure-render-performance-anti-pattern-fb88c101332f#.7ngk35ww6
+
+Videos :
+- 66 min : https://egghead.io/courses/react-fundamentals
+
+Awesome list : https://github.com/enaqx/awesome-react
+
+## Redux (harder but valuable !)
+
+Main learning ref : 10 hours : http://redux.js.org/
+
+Useful articles :
+
+- 11 min : https://code-cartoons.com/a-cartoon-intro-to-redux-3afb775501a6
+
+Videos :
+- lvl 1 : 121 min : https://egghead.io/courses/getting-started-with-redux
+- lvl 2 : 137 min : https://egghead.io/courses/building-react-applications-with-idiomatic-redux
+
+Awesome list : https://github.com/brillout/awesome-redux
