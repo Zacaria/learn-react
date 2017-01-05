@@ -30,9 +30,29 @@ Needs :
 
 ## How ?
 
-Virtual DOM
-ReactDOM
-One way data-binding
+* Virtual DOM
+* ReactDOM
+* One way data-binding
+
+----
+
+## Virtual DOM
+
+Rendering is one of the heaviest operation
+
+![](./assets/imgs/virtual_dom_diff.png)
+
+----
+
+## One way data-binding
+
+```
+// impossible
+this.state = {foo:'bar'}
+
+// Ok
+this.setState({foo:'bar'})
+```
 
 ---
 
@@ -44,11 +64,18 @@ One way data-binding
 
 ### Lifecycle
 
+<p data-height="265" data-theme-id="0" data-slug-hash="qREoaO" data-default-tab="result" data-user="Muvaiah" data-embed-version="2" data-pen-title="React-lifecycle" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/Muvaiah/pen/qREoaO/">React-lifecycle</a> by Zacaria (<a href="http://codepen.io/Muvaiah">@Muvaiah</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+----
+
 <img src="https://cdn-images-1.medium.com/max/1600/0*VoYsN6eq7I_wjVV5.png" width="650px">
 
 ---
 
 State vs Props
+
+> Props are to components what arguments are to functions.
 
 ---
 
@@ -69,6 +96,12 @@ State vs Props
 <img src="assets/imgs/redux-logo.png" width="150px">
 <img src="assets/imgs/jest-logo.png" width="123px">
 <img src="assets/imgs/npm-logo.png" width="345px">
+
+---
+
+## Hello world
+
+<a class="jsbin-embed" href="http://jsbin.com/nirozayefe/embed?js,console">JS Bin on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.40.2"></script>
 
 ---
 
