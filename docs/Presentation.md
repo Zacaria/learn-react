@@ -30,9 +30,10 @@
 
 * Components
 * Virtual DOM
-* State
-* One way data-binding
-* JSX : Babel
+* JSX
+* Props & State TBD
+* Components API & Lifecycle
+* Unidirectional data flow
 
 ---
 
@@ -70,13 +71,68 @@ Use Composition instead of inheritance !
 
 ---
 
+## JSX
+
+Language allying JS and XML !
+
+Why ?
+
+```
+// Clean
+<div className="red">
+    Hello
+</div>;
+
+//Duh
+React.createElement('div', { className: 'red' }, 'Hello');
+```
+
+----
+
+
+```
+// Clean
+<DashboardUnit data-index="2">
+  <h1>Scores</h1>
+  <Scoreboard className="results" scores={gameScores} />
+</DashboardUnit>;
+
+//Duh Duh
+React.createElement(
+  DashboardUnit,
+  { 'data-index': '2' },
+  React.createElement('h1', null, 'Scores'),
+  React.createElement(Scoreboard, {
+    className: 'results', scores: gameScores
+  })
+);
+```
+
+----
+
+## Exercise
+
+<a class="jsbin-embed" href="http://jsbin.com/qucecahako/1/embed?html,js,output">JS Bin on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.40.3"></script>
+
+---
+
 ## Container & presentational component
+
+---
+
+## Unidirectional data flow
+
+Data is passed by props children component
+
+
 
 ---
 
 ## State vs Props
 
 > Props are to components what arguments are to functions.
+
+> Like props, state alters component rendering. However it is private and fully controlled by the component.
 
 ---
 
@@ -109,31 +165,6 @@ this.state = {foo:'bar'};
 // Ok
 this.setState({foo:'bar'});
 ```
-
----
-
-## what is a component ?
-
----
-
-### JSX
-
-JS written under XML format
-
-```
-class Component extends React.Component {
-    // Mandatory function
-    render() {
-        return (
-            <div className="hi">Hello</div>
-        )
-    }
-}
-```
-
-Or write React.creatElement('div', {className: 'hi' },'Hello');
-
-[jsx](http://buildwithreact.com/tutorial/jsx)
 
 ---
 
