@@ -72,6 +72,8 @@ Useful articles :
 - 5 min : https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.gv3g9xvuu
 - 7 min : https://medium.com/javascript-scene/jsx-looks-like-an-abomination-1c1ec351a918#.xtw93rso7
 - 4 min : https://medium.com/@esamatti/react-js-pure-render-performance-anti-pattern-fb88c101332f#.7ngk35ww6
+- 9 min : https://medium.com/@tylermcginnis/react-interview-questions-c8a319ed02bd#.v8meuozg9
+- 10 min : https://medium.freecodecamp.com/the-5-things-you-need-to-know-to-understand-react-a1dbd5d114a3#.9nb1uifs5
 
 Videos :
 - 66 min : https://egghead.io/courses/react-fundamentals
