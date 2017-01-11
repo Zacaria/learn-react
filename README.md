@@ -66,8 +66,9 @@ Official doc : https://facebook.github.io/react/
 
 Main learning ref : 4 hours : https://developmentarc.gitbooks.io/react-indepth/content/
 
-Useful articles :
+Useful articles (ordered):
 - 5 min : http://buildwithreact.com/tutorial/jsx
+- 5 min : https://medium.freecodecamp.com/react-aha-moments-4b92bd36cc4e#.m4r2w6czb
 - 2 min : https://medium.com/@learnreact/container-components-c0e67432e005#.m5ln3mykh
 - 5 min : https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.gv3g9xvuu
 - 7 min : https://medium.com/javascript-scene/jsx-looks-like-an-abomination-1c1ec351a918#.xtw93rso7

@@ -31,21 +31,14 @@
 * Components
 * Virtual DOM
 * JSX
-* Props & State TBD
-* Components API & Lifecycle
 * Unidirectional data flow
+* Components API & lifecycle
+* Containers & presentational component
+
 
 ---
 
-## State
-
-```
-
-```
-
----
-
-## Component
+## Components
 
 ```
 // Stateless
@@ -68,6 +61,22 @@ class Container extends React.Component {
 ```
 
 Use Composition instead of inheritance !
+
+---
+
+## State vs Props ?
+
+> Props are to components what arguments are to functions.
+
+> Like props, state alters component rendering. However it is private and fully controlled by the component.
+
+---
+
+## Virtual DOM
+
+Rendering is one of the heaviest operation
+
+<img src="./assets/imgs/virtual_dom_diff.png" width="650px">
 
 ---
 
@@ -116,38 +125,38 @@ React.createElement(
 
 ---
 
-## Container & presentational component
-
----
-
 ## Unidirectional data flow
 
 Data is passed by props children component
 
-
-
 ---
 
-## State vs Props
+## Components API & lifecycle
 
-> Props are to components what arguments are to functions.
+* render
+* setState
+* es6 class constructor
+* componentWillMount
+* componentDidMount
+* shouldComponentUpdate...
 
-> Like props, state alters component rendering. However it is private and fully controlled by the component.
 
----
-
-## Lifecycle
+----
 
 <img src="https://cdn-images-1.medium.com/max/1600/0*VoYsN6eq7I_wjVV5.png" width="650px">
 
 ---
 
-## Virtual DOM
+## Container & presentational component
 
-Rendering is one of the heaviest operation
+Also called "smart" and "dumb" components
 
-<img src="./assets/imgs/virtual_dom_diff.png" width="650px">
-
+* Container :
+ * Renders other components
+ * Holds logic, lifecycle hooks
+* Presentational :
+ * Renders html, holds styles
+ * Stateless, knows nothing but given props
 
 ---
 
@@ -169,6 +178,8 @@ this.setState({foo:'bar'});
 ---
 
 ## what we've seen
+
+Recap
 
 ---
 
