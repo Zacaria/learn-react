@@ -193,6 +193,14 @@ jsbin with filter
 
 ---
 
+## Performance
+
+* Production build
+* Lifecycle : shouldComponentUpdate
+* Immutability
+
+---
+
 ## What ?
 
 * Express state
