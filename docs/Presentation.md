@@ -40,6 +40,62 @@
 
 ## Components
 
+Use es6 classes
+
+```
+class MyComponent extends React.Component {
+    // Minimum mandatory function
+    render() {
+        return <div>Hello World</div>
+    }
+}
+```
+
+----
+
+Set initial State
+
+```
+class MyComponent extends React.Component {
+    constructor(props) {
+        // You must call super first
+        super(props);
+        this.state = {value: 0};
+    }
+
+    render() {
+        const {value} = this.state;
+        // Template interpreted with curly braces
+        return <div>Is value zero ? {value === 0 ? 'yes' : 'no'}</div>
+    }
+}
+```
+
+----
+
+Use events
+
+```
+class MyComponent extends React.Component {
+    constructor(props) {
+        super(props);
+        // Manual binding, better perfs
+        this.clickHandler = this.clickHandler.bind(this);
+    }
+    clickHandler(e) {
+        alert('Hi ' + e.target.value);
+    }
+    render() {
+        return (<div>
+            <p onClick={clickHandler}>Manual bind</p>
+            <p onClick={(e) => clickHandler(e, 'Zac')}>Auto-bind</p>
+        </div>)
+    }
+}
+```
+
+----
+
 ```
 // Stateless
 const Presentational = (props) => {
@@ -54,13 +110,13 @@ class Container extends React.Component {
         this.state = {value: 0};
     }
     render() {
+        // Container's state is passed to Presentationnal via props
         return <Presentational value={this.state.value}/>
     }
 }
-
 ```
 
-Use Composition instead of inheritance !
+Use Composition instead of inheritance
 
 ---
 
@@ -68,7 +124,7 @@ Use Composition instead of inheritance !
 
 > Props are to components what arguments are to functions.
 
-> Like props, state alters component rendering. However it is private and fully controlled by the component.
+> Like props, state alters component rendering. However it is private and fully controlled by the component. (To be avoided)
 
 ---
 
@@ -82,7 +138,7 @@ Rendering is one of the heaviest operation
 
 ## JSX
 
-Language allying JS and XML !
+Language featuring JS and XML !
 
 Why ?
 
@@ -95,6 +151,8 @@ Why ?
 //Duh
 React.createElement('div', { className: 'red' }, 'Hello');
 ```
+
+NB : You must always have a root element
 
 ----
 
@@ -135,7 +193,7 @@ Data is passed by props children component
 
 * render
 * setState
-* es6 class constructor
+* constructor
 * componentWillMount
 * componentDidMount
 * shouldComponentUpdate...
