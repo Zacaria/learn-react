@@ -18,7 +18,7 @@
     "postversion": "git push",
     "deploy-silent": "npm run preversion && npm run postversion",
     "test": "NODE_ENV=test node_modules/.bin/mocha server/test -R spec --recursive --compilers js:babel-core/register",
-    "reveal": "node_modules/.bin/reveal-md docs/Presentation.md --highlightTheme github --theme custom"
+    "reveal": "(cd docs && ../node_modules/.bin/reveal-md Presentation.md --highlightTheme github --theme custom)"
   },
   "repository": {
     "type": "git",
