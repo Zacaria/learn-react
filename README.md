@@ -54,7 +54,7 @@ Run `npm run reveal`, opens a tab in the browser with a reveal. sourced by Prese
 - [ ] Topics
 - [ ] How to use
 - [ ] Reveal [Presentation](Presentation.md)
-- [ ] [Workshop](Workshop.md)
+- [ ] [Workshop](docs/Workshop.md)
 - [x] Sources
 
 # Sources

@@ -40,7 +40,7 @@ Needs :
 
 Rendering is one of the heaviest operation
 
-![](./assets/imgs/virtual_dom_diff.png)
+![](docs/assets/imgs/virtual_dom_diff.png)
 
 ----
 
