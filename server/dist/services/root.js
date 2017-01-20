@@ -20,10 +20,9 @@ var websiteRoot = exports.websiteRoot = function websiteRoot(_ref) {
         message: _infos.WELCOME,
         version: _package2.default.version,
         doc: protocol + '://' + host + '/doc',
-        db: protocol + '://' + host + '/rockmongo',
-        signup: protocol + '://' + host + '/api/signup',
-        signin: protocol + '://' + host + '/api/signin',
-        users: protocol + '://' + host + '/api/users',
-        messages: protocol + '://' + host + '/api/messages'
+        signup: protocol + '://' + host + '/signup',
+        signin: protocol + '://' + host + '/signin',
+        users: protocol + '://' + host + '/users',
+        posts: protocol + '://' + host + '/posts'
     };
 };

@@ -9,6 +9,8 @@ var _app = require('../app');
 
 var _app2 = _interopRequireDefault(_app);
 
+var _rethinkDb = require('./rethinkDb');
+
 var _http = require('http');
 
 var _http2 = _interopRequireDefault(_http);
@@ -19,22 +21,27 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.OPENSHIFT_NODEJS_PORT || '8080');
-_app2.default.set('port', port);
+var port = normalizePort(process.env.port || '8081');
 
-/**
- * Create HTTP server.
- */
+(0, _rethinkDb.dbInit)().then(runServer).catch(onError);
 
-var server = _http2.default.createServer(_app2.default);
+function runServer() {
+    _app2.default.set('port', port);
 
-/**
- * Listen on provided port, on all network interfaces.
- */
+    /**
+     * Create HTTP server.
+     */
 
-server.listen(port, process.env.OPENSHIFT_NODEJS_IP);
-server.on('error', onError);
-server.on('listening', onListening);
+    var server = _http2.default.createServer(_app2.default);
+
+    /**
+     * Listen on provided port, on all network interfaces.
+     */
+
+    server.listen(port, 'localhost');
+    server.on('error', onError);
+    server.on('listening', onListening);
+}
 
 /**
  * Normalize a port into a number, string, or false.
@@ -87,7 +94,5 @@ function onError(error) {
  */
 
 function onListening() {
-    var addr = server.address();
-    var bind = typeof addr === 'string' ? 'pipe ' + addr : 'port ' + addr.port;
-    console.log('Listening on ' + bind, 'ip', process.env.OPENSHIFT_NODEJS_IP);
+    console.log('Listening on ' + port);
 }

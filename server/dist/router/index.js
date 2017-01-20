@@ -8,6 +8,10 @@ var _express = require('express');
 
 var _express2 = _interopRequireDefault(_express);
 
+var _posts = require('./routes/posts');
+
+var _posts2 = _interopRequireDefault(_posts);
+
 var _root = require('../services/root');
 
 var rootService = _interopRequireWildcard(_root);
@@ -38,6 +42,8 @@ app.get('/', function (req, res) {
         infos: rootService.websiteRoot({ protocol: protocol, host: host })
     });
 });
+
+app.use('/posts', _posts2.default);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

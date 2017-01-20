@@ -114,7 +114,7 @@ th {
 
 td {
   vertical-align: top;
-  padding: 10px 8px 0 8px;
+  padding: 2px 8px;
   border: #e0e0e0 1px solid;
 }
 
@@ -126,8 +126,6 @@ td {
 
 .label-optional {
   float: right;
-  background-color: grey;
-  margin-top: 4px;
 }
 
 .open-left {
@@ -174,10 +172,6 @@ pre {
   margin: 10px 0 20px 0;
 }
 
-pre.prettyprint {
-  width: 100%;
-}
-
 code.language-text {
   word-wrap: break-word;
 }
@@ -187,35 +181,38 @@ pre.language-json {
 }
 
 pre.language-html {
-  margin: 0 0 20px 0;
+  margin: 40px 0 20px 0;
 }
 
-.type {
+pre.language-html:before {
+  content: attr(data-type);
+  position: absolute;
+  top: -30px;
+  left: 0;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
   font-size: 15px;
   display: inline-block;
-  margin: 0 0 5px 0;
-  padding: 4px 5px;
+  padding: 2px 5px;
   border-radius: 6px;
   text-transform: uppercase;
   background-color: #3387CC;
   color: #ffffff;
 }
 
-.type__get {
+pre.language-html[data-type="get"]:before {
   background-color: green;
 }
 
-.type__put {
+pre.language-html[data-type="put"]:before {
   background-color: #e5c500;
 }
 
-.type__post {
+pre.language-html[data-type="post"]:before {
   background-color: #4070ec;
 }
 
-.type__delete {
+pre.language-html[data-type="delete"]:before {
   background-color: #ed0039;
 }
 
