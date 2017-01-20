@@ -1,7 +1,7 @@
 import chai from'chai';
 import chaiHttp from 'chai-http';
 import server from '../../../src/app';
-import dbInit from '../../../src/bin/rethinkDb';
+import {dbInit, dbDestroy} from '../../../src/bin/rethinkDb';
 const should = chai.should();
 
 chai.use(chaiHttp);
@@ -9,6 +9,10 @@ chai.use(chaiHttp);
 describe('Posts', () => {
     before(done => {
         dbInit().then(() => done());
+    });
+
+    after(done => {
+        dbDestroy().then(() => done());
     });
 
     describe('/GET posts', () => {

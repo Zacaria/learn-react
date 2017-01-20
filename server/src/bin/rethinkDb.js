@@ -32,11 +32,22 @@ const createTables = (tables) =>
         )
     );
 
+/**
+ * Drop db for testing purpose
+ * @param dbName
+ */
+const dropDb = (dbName) =>
+    new Promise((resolve, reject) =>
+        r.dbDrop(dbName)
+            .then(resolve)
+            .catch(reject)
+    );
+
 
 /**
  * Init rethinkDb database
  */
-const init = () =>
+export const dbInit = () =>
     new Promise((resolve, reject) => {
         createDbIfMissing(config.rethinkdb.db)
             .then(() => createTables(config.rethinkdb.tables))
@@ -44,4 +55,9 @@ const init = () =>
             .catch(reject);
     });
 
-export default init;
+export const dbDestroy = () =>
+    new Promise((resolve, reject) => {
+        dropDb(config.rethinkdb.db)
+            .then(resolve)
+            .catch(reject);
+    });

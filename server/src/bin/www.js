@@ -5,7 +5,7 @@
  */
 
 import app from '../app';
-import dbInit from './rethinkDb';
+import {dbInit} from './rethinkDb';
 import http from 'http';
 
 
