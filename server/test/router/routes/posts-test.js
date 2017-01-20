@@ -2,6 +2,7 @@ import chai from'chai';
 import chaiHttp from 'chai-http';
 import server from '../../../src/app';
 import {dbInit, dbDestroy} from '../../../src/bin/rethinkDb';
+import {insertPost} from '../../../src/services/posts';
 const should = chai.should();
 
 chai.use(chaiHttp);
@@ -16,6 +17,30 @@ describe('Posts', () => {
     });
 
     describe('/GET posts', () => {
+
+        const post1 = {
+            text: "hehejkzhkfhejkhjkrhezjdbn,bf,nbdsy",
+            author: "dude",
+            createdAt: Date.now()
+        };
+
+        const post2 = {
+            text: "post 2",
+            author: "norris",
+            createdAt: Date.now()
+        };
+
+        const posts = [post1, post2];
+
+        before(done => {
+            Promise.all(posts.map(insertPost))
+                .then(() => done())
+                .catch((err) => {
+                    console.log('Error before hook', err);
+                    done(err);
+                });
+        });
+
         it('should display root posts message', (done) => {
             chai.request(server)
                 .get('/posts')
@@ -23,7 +48,8 @@ describe('Posts', () => {
                     res.should.have.status(200);
                     res.body.should.be.a('object');
                     res.body.should.have.property('success').eql(true);
-                    res.body.should.have.property('info').eql('posts root');
+                    res.body.should.have.property('posts');
+                    res.body.posts.should.be.a('array');
                     done();
                 });
         });

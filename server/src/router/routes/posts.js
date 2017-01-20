@@ -2,11 +2,24 @@ import express from 'express';
 const router = express.Router();
 import * as postsService from '../../services/posts';
 
+
+/**
+ * Without pagination it's easier to practice
+ * So I let this as is
+ */
 router.get('/', (req, res) => {
-    res.json({
-        success: true,
-        info: 'posts root'
-    })
+    postsService.getPosts()
+        .then((posts) =>
+            res.json({
+                success: true,
+                posts
+            }))
+        .catch((err) =>
+            res.json({
+                success: false,
+                err
+            }));
+
 });
 
 /**

@@ -3,6 +3,13 @@ const r = require('rethinkdbdash')(config.rethinkdb);
 
 const postsTable = 'posts';
 
+export const getPosts = () =>
+    new Promise((resolve, reject) =>
+        r.table(postsTable)
+            .then(resolve)
+            .catch(reject)
+    );
+
 /**
  * Inserts a new post
  * @param author id of the author
