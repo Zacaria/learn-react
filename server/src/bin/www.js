@@ -5,6 +5,7 @@
  */
 
 import app from '../app';
+import dbInit from './dbInit';
 import http from 'http';
 
 
@@ -13,22 +14,31 @@ import http from 'http';
  */
 
 
-const port = normalizePort(process.env.OPENSHIFT_NODEJS_PORT || '8080');
-app.set('port', port);
+const port = normalizePort(process.env.port || '8081');
 
-/**
- * Create HTTP server.
- */
+dbInit()
+    .then(runServer)
+    .catch(onError);
 
-const server = http.createServer(app);
+function runServer(infos) => {
+    console.log('dbs_created', infos.dbs_created);
+    app.set('port', port);
 
-/**
- * Listen on provided port, on all network interfaces.
- */
+    /**
+     * Create HTTP server.
+     */
 
-server.listen(port, process.env.OPENSHIFT_NODEJS_IP);
-server.on('error', onError);
-server.on('listening', onListening);
+    const server = http.createServer(app);
+
+    /**
+     * Listen on provided port, on all network interfaces.
+     */
+
+    server.listen(port, 'localhost');
+    server.on('error', onError);
+    server.on('listening', onListening);
+}
+
 
 /**
  * Normalize a port into a number, string, or false.
@@ -83,9 +93,5 @@ function onError(error) {
  */
 
 function onListening() {
-    const addr = server.address();
-    const bind = typeof addr === 'string'
-        ? 'pipe ' + addr
-        : 'port ' + addr.port;
-    console.log('Listening on ' + bind, 'ip',  process.env.OPENSHIFT_NODEJS_IP);
+    console.log('Listening on ' + port);
 }
