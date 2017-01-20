@@ -1,5 +1,8 @@
 # Learn react
 
+Workshop server : [![Build Status](https://travis-ci.org/Zacaria/learn-react.svg?branch=master)](https://travis-ci.org/Zacaria/learn-react)
+Workshop client : TBD
+
 ## Prequisites
 
 - knowledge of JavaScript
