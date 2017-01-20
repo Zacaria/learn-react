@@ -1,3 +1,7 @@
 language: node_js
 node_js:
   - "6"
+  - "7"
+
+addons:
+  rethinkdb: '2.3.5'
