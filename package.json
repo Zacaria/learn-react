@@ -31,13 +31,15 @@
   },
   "homepage": "https://github.com/Zacaria/learn-react#readme",
   "dependencies": {
-    "reveal-md": "0.0.32",
     "body-parser": "^1.15.2",
+    "config": "^1.24.0",
     "cookie-parser": "^1.4.3",
     "express": "^4.14.0",
     "helmet": "^3.2.0",
     "morgan": "^1.7.0",
-    "pm2": "^2.2.3"
+    "pm2": "^2.2.3",
+    "rethinkdbdash": "^2.3.27",
+    "reveal-md": "0.0.32"
   },
   "devDependencies": {
     "apidoc": "^0.17.3",

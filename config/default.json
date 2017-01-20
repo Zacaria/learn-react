@@ -1,0 +1,6 @@
+{
+    "rethinkdb": {
+        "db": "default",
+        "authKey": ""
+    }
+}
