@@ -1,7 +1,7 @@
 import chai from'chai';
 import chaiHttp from 'chai-http';
 import server from '../../../src/app';
-import dbInit from '../../../src/bin/dbInit';
+import dbInit from '../../../src/bin/rethinkDb';
 const should = chai.should();
 
 chai.use(chaiHttp);

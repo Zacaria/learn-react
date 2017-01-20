@@ -5,7 +5,7 @@
  */
 
 import app from '../app';
-import dbInit from './dbInit';
+import dbInit from './rethinkDb';
 import http from 'http';
 
 
@@ -20,8 +20,7 @@ dbInit()
     .then(runServer)
     .catch(onError);
 
-function runServer(infos) => {
-    console.log('dbs_created', infos.dbs_created);
+function runServer() {
     app.set('port', port);
 
     /**
