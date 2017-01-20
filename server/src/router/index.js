@@ -1,5 +1,6 @@
 import express from 'express';
 const app = express.Router();
+import postsRoutes from './routes/posts';
 import * as rootService from '../services/root';
 import * as exceptions from '../constants/exceptions';
 
@@ -17,6 +18,8 @@ app.get('/', (req, res) => {
         infos: rootService.websiteRoot({protocol, host})
     });
 });
+
+app.use('/posts', postsRoutes);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
