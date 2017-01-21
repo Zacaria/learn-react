@@ -18,19 +18,16 @@ describe('Posts', () => {
 
     describe('/GET posts', () => {
 
-        const post1 = {
-            text: "hehejkzhkfhejkhjkrhezjdbn,bf,nbdsy",
-            author: "dude",
-            createdAt: Date.now()
-        };
+        const postsCount = 30;
 
-        const post2 = {
-            text: "post 2",
-            author: "norris",
-            createdAt: Date.now()
-        };
+        const genPosts = (count) =>
+            new Array(count).fill({}).map((e, i) => ({
+                text: 'toto' + i,
+                author:'chuck',
+                createdAt: Date.now()
+            }));
 
-        const posts = [post1, post2];
+        const posts = genPosts(postsCount);
 
         before(done => {
             Promise.all(posts.map(insertPost))
@@ -41,7 +38,7 @@ describe('Posts', () => {
                 });
         });
 
-        it('should display root posts message', (done) => {
+        it('should display root posts message with no parameter', (done) => {
             chai.request(server)
                 .get('/posts')
                 .end((err, res) => {
@@ -50,6 +47,7 @@ describe('Posts', () => {
                     res.body.should.have.property('success').eql(true);
                     res.body.should.have.property('posts');
                     res.body.posts.should.be.a('array');
+                    res.body.posts.length.should.eql(postsCount);
                     done();
                 });
         });
