@@ -10,6 +10,15 @@ export const getPosts = () =>
             .catch(reject)
     );
 
+export const getPaginatedPosts = ({skip=0, limit=10}) =>
+    new Promise((resolve, reject) =>
+        r.table(postsTable)
+            .orderBy('createdAt')
+            .slice(Number(skip), Number(skip)+Number(limit))
+            .then(resolve)
+            .catch(reject)
+    );
+
 /**
  * Inserts a new post
  * @param author id of the author

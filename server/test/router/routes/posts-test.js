@@ -22,7 +22,7 @@ describe('Posts', () => {
 
         const genPosts = (count) =>
             new Array(count).fill({}).map((e, i) => ({
-                text: 'toto' + i,
+                text: i,
                 author:'chuck',
                 createdAt: Date.now()
             }));
@@ -50,6 +50,27 @@ describe('Posts', () => {
                     res.body.posts.length.should.eql(postsCount);
                     done();
                 });
+        });
+
+        describe('/GET /posts/?skip=:skip&limit=:limit', () => {
+            const url = (skip, limit) => `/posts/${skip}&${limit}`;
+            const skip = 10;
+            const limit = 5;
+            it('should paginate posts', done => {
+                console.log('url', url(10,10));
+                chai.request(server)
+                    .get(url(skip, limit))
+                    .end((err, res) => {
+                    console.log(res.body);
+                        res.should.have.status(200);
+                        res.body.should.be.a('object');
+                        res.body.should.have.property('success').eql(true);
+                        res.body.should.have.property('posts');
+                        res.body.posts.should.be.a('array');
+                        res.body.posts.length.should.eql(limit);
+                        done();
+                    });
+            });
         });
     });
 

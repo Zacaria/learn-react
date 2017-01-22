@@ -3,11 +3,33 @@ const router = express.Router();
 import * as postsService from '../../services/posts';
 
 
+router.get('/:skip&:limit', (req, res) => {
+    const {skip, limit} = req.params;
+    console.log('hey', skip, limit);
+
+    postsService.getPaginatedPosts({skip, limit})
+        .then((posts) =>
+            res.json({
+                success: true,
+                posts
+            }))
+        .catch((err) =>
+            res.json({
+                success: false,
+                err
+            }));
+});
+
 /**
  * Without pagination it's easier to practice
  * So I let this as is
+ * @api {get} /posts Show all
+ * @apiDescription Shows all messages
+ * @apiName Post
+ * @apiGroup Post
  */
 router.get('/', (req, res) => {
+    console.log('coucou');
     postsService.getPosts()
         .then((posts) =>
             res.json({
@@ -27,7 +49,6 @@ router.get('/', (req, res) => {
  * @apiDescription create a message
  * @apiName Post creation
  * @apiGroup Post
- * @apiPermission Authentified
  *
  * @apiParam {String} text message
  */
