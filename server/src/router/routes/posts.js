@@ -5,8 +5,6 @@ import * as postsService from '../../services/posts';
 
 router.get('/:skip&:limit', (req, res) => {
     const {skip, limit} = req.params;
-    console.log('hey', skip, limit);
-
     postsService.getPaginatedPosts({skip, limit})
         .then((posts) =>
             res.json({
@@ -29,7 +27,6 @@ router.get('/:skip&:limit', (req, res) => {
  * @apiGroup Post
  */
 router.get('/', (req, res) => {
-    console.log('coucou');
     postsService.getPosts()
         .then((posts) =>
             res.json({

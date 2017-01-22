@@ -57,11 +57,9 @@ describe('Posts', () => {
             const skip = 10;
             const limit = 5;
             it('should paginate posts', done => {
-                console.log('url', url(10,10));
                 chai.request(server)
                     .get(url(skip, limit))
                     .end((err, res) => {
-                    console.log(res.body);
                         res.should.have.status(200);
                         res.body.should.be.a('object');
                         res.body.should.have.property('success').eql(true);
