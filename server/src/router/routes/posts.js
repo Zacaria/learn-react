@@ -2,43 +2,33 @@ import express from 'express';
 const router = express.Router();
 import * as postsService from '../../services/posts';
 
-
-router.get('/:skip&:limit', (req, res) => {
-    const {skip, limit} = req.params;
+/**
+ * @api {get} /posts pagination
+ * @apiDescription Shows paginated messages
+ * @apiName Post
+ * @apiGroup Post
+ *
+ * @apiParam {String} skip posts
+ * @apiParam {String} limit number of posts
+ */
+router.get('/posts', (req, res) => {
+    const {protocol} = req;
+    const host = req.get('host');
+    const skip = Number(req.query.skip) >= 0 && Number(req.query.skip) || 0;
+    const limit = Number(req.query.limit) >= 0 && Number(req.query.limit) || 10;
     postsService.getPaginatedPosts({skip, limit})
         .then((posts) =>
             res.json({
                 success: true,
-                posts
+                posts,
+                next: `${protocol}://${host}/posts?skip=${skip + limit}&limit=${limit}`,
+                previous: `${protocol}://${host}/posts?skip=${skip - limit >= 0 ? skip - limit : 0}&limit=${limit}`
             }))
         .catch((err) =>
             res.json({
                 success: false,
                 err
             }));
-});
-
-/**
- * Without pagination it's easier to practice
- * So I let this as is
- * @api {get} /posts Show all
- * @apiDescription Shows all messages
- * @apiName Post
- * @apiGroup Post
- */
-router.get('/', (req, res) => {
-    postsService.getPosts()
-        .then((posts) =>
-            res.json({
-                success: true,
-                posts
-            }))
-        .catch((err) =>
-            res.json({
-                success: false,
-                err
-            }));
-
 });
 
 /**
@@ -49,7 +39,7 @@ router.get('/', (req, res) => {
  *
  * @apiParam {String} text message
  */
-router.post('/', (req, res) => {
+router.post('/posts', (req, res) => {
     const {text} = req.body;
 
     if(!text || !text.trim()) {

@@ -47,18 +47,46 @@ describe('Posts', () => {
                     res.body.should.have.property('success').eql(true);
                     res.body.should.have.property('posts');
                     res.body.posts.should.be.a('array');
-                    res.body.posts.length.should.eql(postsCount);
+                    res.body.posts.length.should.eql(10);
                     done();
                 });
         });
 
-        describe('/GET /posts/?skip=:skip&limit=:limit', () => {
-            const url = (skip, limit) => `/posts/${skip}&${limit}`;
+        describe('?skip=:skip&limit=:limit', () => {
+            const url = (skip, limit) => `/posts?skip=${skip}&limit=${limit}`;
             const skip = 10;
-            const limit = 5;
+            const limit = 10;
             it('should paginate posts', done => {
                 chai.request(server)
                     .get(url(skip, limit))
+                    .end((err, res) => {
+                        res.should.have.status(200);
+                        res.body.should.be.a('object');
+                        res.body.should.have.property('success').eql(true);
+                        res.body.should.have.property('posts');
+                        res.body.posts.should.be.a('array');
+                        res.body.posts.length.should.eql(limit);
+                        done();
+                    });
+            });
+
+            it('should default skip to 0', done => {
+                chai.request(server)
+                    .get(url(-12, limit))
+                    .end((err, res) => {
+                        res.should.have.status(200);
+                        res.body.should.be.a('object');
+                        res.body.should.have.property('success').eql(true);
+                        res.body.should.have.property('posts');
+                        res.body.posts.should.be.a('array');
+                        res.body.posts.length.should.eql(limit);
+                        done();
+                    });
+            });
+
+            it('should default limit to 10', done => {
+                chai.request(server)
+                    .get(url(skip, -15))
                     .end((err, res) => {
                         res.should.have.status(200);
                         res.body.should.be.a('object');

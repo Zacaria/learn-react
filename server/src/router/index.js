@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
     });
 });
 
-app.use('/posts', postsRoutes);
+app.use('/', postsRoutes);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

@@ -3,18 +3,11 @@ const r = require('rethinkdbdash')(config.rethinkdb);
 
 const postsTable = 'posts';
 
-export const getPosts = () =>
-    new Promise((resolve, reject) =>
-        r.table(postsTable)
-            .then(resolve)
-            .catch(reject)
-    );
-
-export const getPaginatedPosts = ({skip=0, limit=10}) =>
+export const getPaginatedPosts = ({skip, limit}) =>
     new Promise((resolve, reject) =>
         r.table(postsTable)
             .orderBy('createdAt')
-            .slice(Number(skip), Number(skip)+Number(limit))
+            .slice(skip, skip + limit)
             .then(resolve)
             .catch(reject)
     );
