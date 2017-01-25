@@ -43,7 +43,7 @@ app.get('/', function (req, res) {
     });
 });
 
-app.use('/posts', _posts2.default);
+app.use('/', _posts2.default);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

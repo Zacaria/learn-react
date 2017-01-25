@@ -20,14 +20,26 @@ var router = _express2.default.Router();
 
 
 /**
- * Without pagination it's easier to practice
- * So I let this as is
+ * @api {get} /posts pagination
+ * @apiDescription Shows paginated messages
+ * @apiName Post
+ * @apiGroup Post
+ *
+ * @apiParam {String} skip posts
+ * @apiParam {String} limit number of posts
  */
-router.get('/', function (req, res) {
-    postsService.getPosts().then(function (posts) {
+router.get('/posts', function (req, res) {
+    var protocol = req.protocol;
+
+    var host = req.get('host');
+    var skip = Number(req.query.skip) >= 0 && Number(req.query.skip) || 0;
+    var limit = Number(req.query.limit) >= 0 && Number(req.query.limit) || 10;
+    postsService.getPaginatedPosts({ skip: skip, limit: limit }).then(function (posts) {
         return res.json({
             success: true,
-            posts: posts
+            posts: posts,
+            next: protocol + '://' + host + '/posts?skip=' + (skip + limit) + '&limit=' + limit,
+            previous: protocol + '://' + host + '/posts?skip=' + (skip - limit >= 0 ? skip - limit : 0) + '&limit=' + limit
         });
     }).catch(function (err) {
         return res.json({
@@ -42,11 +54,10 @@ router.get('/', function (req, res) {
  * @apiDescription create a message
  * @apiName Post creation
  * @apiGroup Post
- * @apiPermission Authentified
  *
  * @apiParam {String} text message
  */
-router.post('/', function (req, res) {
+router.post('/posts', function (req, res) {
     var text = req.body.text;
 
 
