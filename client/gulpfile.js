@@ -5,6 +5,15 @@ const Server = require('karma').Server;
 const browserSync = require("browser-sync").create();
 const config = require('./webpack.config.js');
 
+const filesToWatch = [
+    'index.html',
+    'src/**/*',
+    'gulpfile.js',
+    'package.json',
+    'webpack.config.js',
+    'karma.conf.js'
+];
+
 gulp.task('dist', () =>
     gulp
         .src('src/index.js')
@@ -35,7 +44,5 @@ gulp.task('default', ['dist', 'test'], () => {
         }
     });
 
-    gulp.watch([
-        'index.html', 'src/**/*', 'gulpfile.js', 'package.json'
-    ], ['js-watch']);
+    gulp.watch(filesToWatch, ['js-watch']);
 });
