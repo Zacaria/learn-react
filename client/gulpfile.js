@@ -1,6 +1,7 @@
 const gulp = require('gulp');
 const plumber = require('gulp-plumber');
 const webpack = require('webpack-stream');
+const Server = require('karma').Server;
 const browserSync = require("browser-sync").create();
 const config = require('./webpack.config.js');
 
@@ -12,9 +13,21 @@ gulp.task('dist', () =>
         .pipe(gulp.dest('dist/'))
 );
 
-gulp.task('js-watch', ['dist'], () => browserSync.reload());
+/**
+ * Run test once and exit
+ */
+gulp.task('test',(done) => {
+    new Server({
+        configFile: __dirname + '/karma.conf.js',
+        singleRun: true
+    }, function() {
+        done();
+    }).start();
+});
 
-gulp.task('default', ['dist'], () => {
+gulp.task('js-watch', ['dist', 'test'], () => browserSync.reload());
+
+gulp.task('default', ['dist', 'test'], () => {
 
     browserSync.init({
         server: {

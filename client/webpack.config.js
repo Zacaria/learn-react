@@ -10,6 +10,7 @@ const config = {
         filename: 'bundle.js'
     },
     cache: false,
+    devtool: 'inline-source-map',
     module: {
         loaders: [
             {
@@ -26,6 +27,12 @@ const config = {
     resolve: {
         // you can now require('file') instead of require('file.coffee')
         extensions: ['', '.js', '.json', '.jsx']
+    },
+    externals: {
+        'cheerio': 'window',
+        'react/addons': true,
+        'react/lib/ExecutionEnvironment': true,
+        'react/lib/ReactContext': true
     }
 };
 
