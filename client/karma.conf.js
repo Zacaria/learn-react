@@ -22,14 +22,15 @@ module.exports = function(config) {
             'karma-mocha',
             'karma-sourcemap-loader',
             'karma-chrome-launcher',
-            'karma-phantomjs-launcher'
+            'karma-phantomjs-launcher',
+            'karma-spec-reporter'
         ],
         babelPreprocessor: {
             options: {
                 presets: ['es2015', 'react']
             }
         },
-        reporters: ['progress'],
+        reporters: ['spec'],
         port: 9876,
         colors: true,
         logLevel: config.LOG_INFO,
