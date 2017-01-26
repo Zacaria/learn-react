@@ -7,6 +7,7 @@ Workshop client : TBD
 
 - knowledge of JavaScript
 - es6 helps a lot
+- node version 6.9
 
 ## Purpose
 
