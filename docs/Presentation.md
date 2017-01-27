@@ -28,13 +28,59 @@
 
 ## How ?
 
+* JSX
 * Components
 * Virtual DOM
-* JSX
 * Unidirectional data flow
 * Components API & lifecycle
 * Containers & presentational component
 
+---
+
+## JSX
+
+Language featuring JS and XML !
+
+Why ?
+
+```
+// Clean
+<div className="red">
+    Hello
+</div>;
+
+//Duh
+React.createElement('div', { className: 'red' }, 'Hello');
+```
+
+NB : You must always have a root element
+
+----
+
+
+```
+// Clean
+<DashboardUnit data-index="2">
+  <h1>Scores</h1>
+  <Scoreboard className="results" scores={gameScores} />
+</DashboardUnit>;
+
+//Duh Duh
+React.createElement(
+  DashboardUnit,
+  { 'data-index': '2' },
+  React.createElement('h1', null, 'Scores'),
+  React.createElement(Scoreboard, {
+    className: 'results', scores: gameScores
+  })
+);
+```
+
+----
+
+## Exercise
+
+<a class="jsbin-embed" href="http://jsbin.com/qucecahako/1/embed?html,js,output">JS Bin on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.40.3"></script>
 
 ---
 
@@ -156,53 +202,6 @@ const componentFactory = (component) => {
 Rendering is one of the heaviest operation
 
 <img src="./assets/imgs/virtual_dom_diff.png" width="650px">
-
----
-
-## JSX
-
-Language featuring JS and XML !
-
-Why ?
-
-```
-// Clean
-<div className="red">
-    Hello
-</div>;
-
-//Duh
-React.createElement('div', { className: 'red' }, 'Hello');
-```
-
-NB : You must always have a root element
-
-----
-
-
-```
-// Clean
-<DashboardUnit data-index="2">
-  <h1>Scores</h1>
-  <Scoreboard className="results" scores={gameScores} />
-</DashboardUnit>;
-
-//Duh Duh
-React.createElement(
-  DashboardUnit,
-  { 'data-index': '2' },
-  React.createElement('h1', null, 'Scores'),
-  React.createElement(Scoreboard, {
-    className: 'results', scores: gameScores
-  })
-);
-```
-
-----
-
-## Exercise
-
-<a class="jsbin-embed" href="http://jsbin.com/qucecahako/1/embed?html,js,output">JS Bin on jsbin.com</a><script src="http://static.jsbin.com/js/embed.min.js?3.40.3"></script>
 
 ---
 
