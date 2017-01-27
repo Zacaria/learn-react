@@ -118,6 +118,29 @@ class Container extends React.Component {
 
 Use Composition instead of inheritance
 
+----
+
+More abstraction ? Go for a factory !
+
+```
+// Configurable UI
+const componentFactory = (component) => {
+  return class Counter extends React.Component{
+    constructor(props) {
+      super(props);
+      this.state = {value: 0};
+    }
+    render() {
+      return React.createElement(
+        component, {
+          value: this.state.value
+        });
+    }
+  }
+}
+
+```
+
 ---
 
 ## State vs Props ?
