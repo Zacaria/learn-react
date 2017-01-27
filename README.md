@@ -9,6 +9,8 @@ Workshop client : TBD
 - es6 helps a lot
 - node version 6.9
 
+- Rethinkdb for server
+
 ## Purpose
 
 > [React](https://facebook.github.io/react/) is javascript **library** for building User Interfaces
@@ -48,18 +50,30 @@ This repo aims to help introducing React for developers.
 
 ## How to use
 
+First run `npm install` to get all dependencies
+
 ### Presentation
 
-Run `npm run reveal`, opens a tab in the browser with a reveal. sourced by Presentation.md
+`npm run reveal` : opens a tab in the browser with a reveal. sourced by Presentation.md
+
+### Server
+
+Start rethinkdb
+
+`npm run watch-server`: starts the REST api for the client
+
+### Client
+
+`npm run watch-client`: starts react client
 
 # TODOS
 
 - [x] Introduction
-- [ ] Topics
+- [x] Topics
 - [ ] How to use
-- [ ] Reveal [Presentation](Presentation.md)
+- [x] Reveal [Presentation](Presentation.md)
 - [ ] Examples
-- [ ] [Workshop](docs/Workshop.md)
+- [ ] [Workshop](docs/Workshop.md) (doing)
 - [x] Sources
 
 # Sources
