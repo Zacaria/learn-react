@@ -209,6 +209,23 @@ Rendering is one of the heaviest operation
 
 Data is passed by props children component
 
+----
+
+## One way data-binding
+
+```
+// GET STATE
+const foo = this.state.foo;
+
+// SET STATE
+
+// impossible
+this.state = {foo:'bar'};
+
+// Ok
+this.setState({foo:'bar'});
+```
+
 ---
 
 ## Components API & lifecycle
@@ -237,23 +254,6 @@ Also called "smart" and "dumb" components
 * Presentational :
  * Renders html, holds styles
  * Stateless, knows nothing but given props
-
----
-
-## One way data-binding
-
-```
-// GET STATE
-const foo = this.state.foo;
-
-// SET STATE
-
-// impossible
-this.state = {foo:'bar'};
-
-// Ok
-this.setState({foo:'bar'});
-```
 
 ---
 
