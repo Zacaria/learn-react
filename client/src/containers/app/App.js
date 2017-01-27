@@ -1,23 +1,41 @@
 import React from 'react';
-import Button from '../../components/button/Button';
+import MessageForm from '../../components/messageForm/MessageForm';
 
 class App extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            text: 'Submit'
+            inputValue: ''
         };
+        this.onInputChange = this.onInputChange.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
+        this.isValidInput = this.isValidInput.bind(this);
+        this.submit = this.submit.bind(this);
     }
 
-    handleClick() {
-        console.log('clicked');
+    onSubmit(value) {
+        this.isValidInput(value) && this.submit(value);
+    }
+
+    isValidInput(value) {
+        return value && value.trim();
+    }
+
+    submit(value) {
+        console.log('go for', value)
+    }
+
+    onInputChange(e) {
+        this.setState({
+            inputValue: e.target.value
+        })
     }
 
     render() {
         return (
             <div>
-                <span>Coucou</span>
-                <Button text={this.state.text} onClick={() => this.handleClick()}/>
+                <h1>Welcome</h1>
+                <MessageForm onSubmit={() => this.onSubmit(this.state.inputValue)} onInputChange={this.onInputChange}/>
             </div>
         );
     }
