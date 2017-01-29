@@ -72,6 +72,7 @@ Start rethinkdb
 - [x] Topics
 - [ ] How to use
 - [x] Reveal [Presentation](Presentation.md)
+- [ ] Code gifs
 - [ ] Examples
 - [ ] [Workshop](docs/Workshop.md) (doing)
 - [x] Sources
