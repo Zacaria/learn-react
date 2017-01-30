@@ -1,12 +1,12 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 
-import App from '../../containers/app/App';
+import AddMessage from '../../containers/addMessage/AddMessage';
 
 const Root = ({ store }) => {
   return (
     <Provider store={store}>
-      <App/>
+      <AddMessage/>
     </Provider>
   );
 };

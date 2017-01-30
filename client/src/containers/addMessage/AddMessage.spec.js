@@ -2,13 +2,13 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import chai from 'chai';
 import spies from 'chai-spies';
-import { App } from './App';
+import { AddMessage } from './AddMessage';
 import MessageForm from '../../components/messageForm/MessageForm';
 
 const expect = chai.expect;
 chai.use(spies);
 
-describe('<App />', () => {
+describe('<AddMessage />', () => {
   const changeEvent = {
     target: {
       value: 'random',
@@ -32,7 +32,7 @@ describe('<App />', () => {
   let form;
 
   beforeEach(() => {
-    wrapper = shallow(<App dispatch={dispatch}/>);
+    wrapper = shallow(<AddMessage dispatch={dispatch}/>);
     wrapper.setProps({
       newMessage: changeEvent.target.value,
       sendMessage,
@@ -51,12 +51,12 @@ describe('<App />', () => {
     let invalid2;
 
     it('should return true with not empty value', () => {
-      expect(App.isValidMessage(valid)).to.be.true;
+      expect(AddMessage.isValidMessage(valid)).to.be.true;
     });
 
     it('should return false with empty or undefined value', () => {
-      expect(App.isValidMessage(invalid1)).to.be.false;
-      expect(App.isValidMessage(invalid2)).to.be.false;
+      expect(AddMessage.isValidMessage(invalid1)).to.be.false;
+      expect(AddMessage.isValidMessage(invalid2)).to.be.false;
     });
   });
 

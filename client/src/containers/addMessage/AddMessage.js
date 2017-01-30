@@ -1,12 +1,12 @@
 import React from 'react';
-import {bindActionCreators} from 'redux'
-import {connect} from 'react-redux';
-import {getNewMessage} from '../../reducers';
-import {sendMessage, changeNewMessage} from '../../actions';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { getNewMessage } from '../../reducers';
+import { sendMessage, changeNewMessage } from '../../actions';
 
 import MessageForm from '../../components/messageForm/MessageForm';
 
-export class App extends React.Component {
+export class AddMessage extends React.Component {
   static isValidMessage(value) {
     return !!(value && value.trim());
   }
@@ -14,14 +14,14 @@ export class App extends React.Component {
   constructor(props) {
     super(props);
     this.onInputChange = this.onInputChange.bind(this);
-    App.isValidMessage = App.isValidMessage.bind(this);
+    AddMessage.isValidMessage = AddMessage.isValidMessage.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
     this.submit = this.submit.bind(this);
   }
 
   onSubmit(e, value) {
     e.preventDefault();
-    App.isValidMessage(value) && this.submit(value);
+    AddMessage.isValidMessage(value) && this.submit(value);
   }
 
   submit(value) {
@@ -54,8 +54,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = dispatch => {
   return bindActionCreators({
     sendMessage,
-    changeNewMessage
+    changeNewMessage,
   }, dispatch);
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(AddMessage);
