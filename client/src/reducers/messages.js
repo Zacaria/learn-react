@@ -2,8 +2,11 @@ import {combineReducers} from 'redux';
 import * as actionTypes from '../actionTypes';
 
 const byId = (state = {}, action = {}) => {
-    if (action.response) {
-        return Object.assign(state, action.response.entities.messages);
+    switch(action.type) {
+        case actionTypes.SEND_MESSAGE_SUCCESS:
+            return Object.assign(state, action.response.entities.messages);
+        default:
+            return state;
     }
     return state;
 };
