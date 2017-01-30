@@ -20,6 +20,9 @@ describe('<App />', () => {
         preventDefault: chai.spy()
     };
 
+    const changeNewMessage = chai.spy();
+    const sendMessage = chai.spy();
+
     const dispatch = chai.spy();
 
     let onSubmit;
@@ -32,7 +35,9 @@ describe('<App />', () => {
     beforeEach(() => {
         wrapper = shallow(<App dispatch={dispatch}/>);
         wrapper.setProps({
-            sendMessage: chai.spy()
+            newMessage: changeEvent.target.value,
+            sendMessage,
+            changeNewMessage
         });
         onSubmit = chai.spy.on(wrapper.instance(), 'onSubmit');
         submit = chai.spy.on(wrapper.instance(), 'submit');
@@ -41,19 +46,35 @@ describe('<App />', () => {
         input = formComponent.dive().find('input');
     });
 
+    describe('message validation', () => {
+        const valid = 'toto';
+        const invalid1 = '  ';
+        let invalid2;
+
+        it('should return true with not empty value', () => {
+            expect(wrapper.instance().isValidMessage(valid)).to.be.true;
+        });
+
+        it('should return false with empty or undefined value', () => {
+            expect(wrapper.instance().isValidMessage(invalid1)).to.be.false;
+            expect(wrapper.instance().isValidMessage(invalid2)).to.be.false;
+        });
+    });
+
     it('should render correctly', () => {
         expect(wrapper.find('h1').text()).to.eql('Welcome');
         expect(formComponent.length).to.eql(1);
     });
 
-    it('when typing on input should update state', () => {
+    it('when typing on input should dispatch newMessage action', () => {
         wrapper.instance().onInputChange(changeEvent);
-        expect(wrapper.state().inputValue).to.be.eql(changeEvent.target.value);
+        expect(changeNewMessage).to.have.been.called.once.with(changeEvent.target.value);
     });
 
     it('when press enter should onSubmit form', () => {
         input.simulate('change', changeEvent);
         form.simulate('submit', submitEvent);
+        expect(submitEvent.preventDefault).to.have.been.called.once;
         expect(onSubmit).to.have.been.called.once.with(submitEvent, changeEvent.target.value);
     });
 
@@ -65,13 +86,14 @@ describe('<App />', () => {
         };
 
         input.simulate('change', emptyEvent);
-        form.simulate('submit');
+        form.simulate('submit', submitEvent);
         expect(submit).to.not.have.been.called;
     });
 
-    it('when the input is valid should not submit form', () => {
+    it('when the input is valid should dispatch sendMessage', () => {
+        sendMessage.reset();
         input.simulate('change', changeEvent);
         form.simulate('submit', submitEvent);
-        expect(submit).to.have.been.called.once.with(submitEvent, changeEvent.target.value);
+        expect(sendMessage).to.have.been.called.once.with(changeEvent.target.value);
     });
 });

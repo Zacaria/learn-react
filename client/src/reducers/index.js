@@ -1,8 +1,10 @@
 import {combineReducers} from 'redux';
 import messages, * as fromMessages from './messages';
+import messageApp, * as fromMessageApp from './messageApp';
 
 const reducers = combineReducers({
-    messages
+    messages,
+    messageApp
 });
 
 export default reducers;
@@ -16,3 +18,5 @@ export const getIds = (state) => fromMessages.getIds(state.ids);
 export const getIsSending = (state) => fromMessages.getIsSending(state.isSending);
 export const getIsFetching = (state) => fromMessages.getIsFetching(state.isFetching);
 export const getErrorMessage = (state) => fromMessages.getErrorMessage(state.errorMessage);
+
+export const getNewMessage = (state) => fromMessageApp.getNewMessage(state.messageApp);
