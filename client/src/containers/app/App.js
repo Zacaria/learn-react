@@ -1,7 +1,11 @@
 import React from 'react';
+import {bindActionCreators} from 'redux'
+import {connect} from 'react-redux';
+import {sendMessage} from '../../actions';
+
 import MessageForm from '../../components/messageForm/MessageForm';
 
-class App extends React.Component {
+export class App extends React.Component {
     constructor(props){
         super(props);
         this.state = {
@@ -13,32 +17,40 @@ class App extends React.Component {
         this.submit = this.submit.bind(this);
     }
 
-    onSubmit(value) {
-        this.isValidInput(value) && this.submit(value);
+    onSubmit(e, value) {
+        this.isValidInput(value) && this.submit(e, value);
     }
 
     isValidInput(value) {
         return value && value.trim();
     }
 
-    submit(value) {
-        console.log('go for', value)
+    submit(e, value) {
+        e.preventDefault();
+        console.log('go for', value);
+        console.log(this.props);
+        this.props.sendMessage(value);
     }
 
     onInputChange(e) {
         this.setState({
             inputValue: e.target.value
-        })
+        });
     }
 
     render() {
         return (
             <div>
                 <h1>Welcome</h1>
-                <MessageForm onSubmit={() => this.onSubmit(this.state.inputValue)} onInputChange={this.onInputChange}/>
+                <MessageForm onSubmit={(e) => this.onSubmit(e, this.state.inputValue)}
+                             onInputChange={this.onInputChange}/>
             </div>
         );
     }
 }
 
-export default App;
+const mapDispatchToProps = dispatch => {
+    return bindActionCreators({sendMessage}, dispatch);
+};
+
+export default connect(null, mapDispatchToProps)(App);

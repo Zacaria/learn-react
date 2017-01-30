@@ -18,7 +18,7 @@ describe('<MessageForm />', () => {
     };
 
     let wrapper;
-    let button;
+    let form;
     let input;
 
     beforeEach(() => {
@@ -27,22 +27,17 @@ describe('<MessageForm />', () => {
             onSubmit: () => onSubmit(changeEvent.target.value),
             onInputChange
         });
-        button = wrapper.find('button');
+        form = wrapper.find('form');
         input = wrapper.find('input');
         input.simulate('change', changeEvent);
     });
 
     it('should render correctly', () => {
-        expect(button.length).to.be.eql(1);
+        expect(form.length).to.be.eql(1);
         expect(input.length).to.be.eql(1);
     });
 
     it('when typing in input should fire onChange event', () => {
         expect(onInputChange).to.have.been.called.with(changeEvent);
-    });
-
-    it('when clicking on submit button should submit form', () => {
-        button.simulate('click');
-        expect(onSubmit).to.have.been.called.once.with(changeEvent.target.value);
     });
 });

@@ -6,7 +6,7 @@ const expect = chai.expect;
 
 chai.use(spies);
 
-import App from './App';
+import {App} from './App';
 import MessageForm from '../../components/messageForm/MessageForm';
 
 describe('<App />', () => {
@@ -16,23 +16,34 @@ describe('<App />', () => {
         }
     };
 
+    const submitEvent = {
+        preventDefault: chai.spy()
+    };
+
+    const dispatch = chai.spy();
+
     let onSubmit;
     let submit;
     let wrapper;
+    let formComponent;
     let input;
     let form;
 
     beforeEach(() => {
-        wrapper = shallow(<App/>);
+        wrapper = shallow(<App dispatch={dispatch}/>);
+        wrapper.setProps({
+            sendMessage: chai.spy()
+        });
         onSubmit = chai.spy.on(wrapper.instance(), 'onSubmit');
         submit = chai.spy.on(wrapper.instance(), 'submit');
-        form = wrapper.find(MessageForm);
-        input = form.dive().find('input');
+        formComponent = wrapper.find(MessageForm);
+        form = formComponent.dive().find('form');
+        input = formComponent.dive().find('input');
     });
 
     it('should render correctly', () => {
         expect(wrapper.find('h1').text()).to.eql('Welcome');
-        expect(wrapper.find(MessageForm).length).to.eql(1);
+        expect(formComponent.length).to.eql(1);
     });
 
     it('when typing on input should update state', () => {
@@ -42,8 +53,8 @@ describe('<App />', () => {
 
     it('when press enter should onSubmit form', () => {
         input.simulate('change', changeEvent);
-        input.simulate('submit');
-        expect(onSubmit).to.have.been.called.once.with(changeEvent.target.value);
+        form.simulate('submit', submitEvent);
+        expect(onSubmit).to.have.been.called.once.with(submitEvent, changeEvent.target.value);
     });
 
     it('when the input is empty should not submit form', () => {
@@ -54,13 +65,13 @@ describe('<App />', () => {
         };
 
         input.simulate('change', emptyEvent);
-        input.simulate('submit');
+        form.simulate('submit');
         expect(submit).to.not.have.been.called;
     });
 
     it('when the input is valid should not submit form', () => {
         input.simulate('change', changeEvent);
-        input.simulate('submit');
-        expect(submit).to.have.been.called.once.with(changeEvent.target.value);
+        form.simulate('submit', submitEvent);
+        expect(submit).to.have.been.called.once.with(submitEvent, changeEvent.target.value);
     });
 });

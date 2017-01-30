@@ -1,10 +1,9 @@
 import React, {PropTypes} from 'react';
 
 const MessageForm = ({onSubmit, onInputChange}) => (
-    <div>
-        <input type="submit" onChange={onInputChange} onSubmit={onSubmit}/>
-        <button onClick={onSubmit}>Submit</button>
-    </div>
+    <form onSubmit={onSubmit}>
+        <input type="text" onChange={onInputChange}/>
+    </form>
 );
 
 MessageForm.propTypes = {

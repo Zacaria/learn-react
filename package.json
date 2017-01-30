@@ -40,9 +40,14 @@
     "express": "^4.14.0",
     "helmet": "^3.2.0",
     "morgan": "^1.7.0",
+    "normalizr": "^3.1.0",
     "pm2": "^2.2.3",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-redux": "^5.0.2",
+    "redux": "^3.6.0",
+    "redux-logger": "^2.7.4",
+    "redux-thunk": "^2.2.0",
     "rethinkdbdash": "^2.3.27",
     "reveal-md": "0.0.32"
   },
@@ -69,6 +74,7 @@
     "karma-spec-reporter": "0.0.26",
     "karma-webpack": "^2.0.2",
     "mocha": "^3.2.0",
+    "node-uuid": "^1.4.7",
     "nodemon": "^1.11.0",
     "react-addons-test-utils": "^15.4.2",
     "webpack-stream": "^3.2.0"
