@@ -41,3 +41,7 @@ jspm_packages
 
 # Rethinkdb
 rethinkdb_data
+
+#dist folders
+/client/dist/
+/server/dist/
