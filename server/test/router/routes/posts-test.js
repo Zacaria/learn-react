@@ -8,128 +8,128 @@ const should = chai.should();
 chai.use(chaiHttp);
 
 describe('Posts', () => {
+  before(done => {
+    dbInit().then(() => done());
+  });
+
+  after(done => {
+    dbDestroy().then(() => done());
+  });
+
+  describe('/GET posts', () => {
+
+    const postsCount = 30;
+
+    const genPosts = (count) =>
+      new Array(count).fill({}).map((e, i) => ({
+        text: i,
+        author: 'chuck',
+        createdAt: Date.now()
+      }));
+
+    const posts = genPosts(postsCount);
+
     before(done => {
-        dbInit().then(() => done());
-    });
-
-    after(done => {
-        dbDestroy().then(() => done());
-    });
-
-    describe('/GET posts', () => {
-
-        const postsCount = 30;
-
-        const genPosts = (count) =>
-            new Array(count).fill({}).map((e, i) => ({
-                text: i,
-                author:'chuck',
-                createdAt: Date.now()
-            }));
-
-        const posts = genPosts(postsCount);
-
-        before(done => {
-            Promise.all(posts.map(insertPost))
-                .then(() => done())
-                .catch((err) => {
-                    console.log('Error before hook', err);
-                    done(err);
-                });
-        });
-
-        it('should display root posts message with no parameter', (done) => {
-            chai.request(server)
-                .get('/posts')
-                .end((err, res) => {
-                    res.should.have.status(200);
-                    res.body.should.be.a('object');
-                    res.body.should.have.property('success').eql(true);
-                    res.body.should.have.property('posts');
-                    res.body.posts.should.be.a('array');
-                    res.body.posts.length.should.eql(10);
-                    done();
-                });
-        });
-
-        describe('?skip=:skip&limit=:limit', () => {
-            const url = (skip, limit) => `/posts?skip=${skip}&limit=${limit}`;
-            const skip = 10;
-            const limit = 10;
-            it('should paginate posts', done => {
-                chai.request(server)
-                    .get(url(skip, limit))
-                    .end((err, res) => {
-                        res.should.have.status(200);
-                        res.body.should.be.a('object');
-                        res.body.should.have.property('success').eql(true);
-                        res.body.should.have.property('posts');
-                        res.body.posts.should.be.a('array');
-                        res.body.posts.length.should.eql(limit);
-                        done();
-                    });
-            });
-
-            it('should default skip to 0', done => {
-                chai.request(server)
-                    .get(url(-12, limit))
-                    .end((err, res) => {
-                        res.should.have.status(200);
-                        res.body.should.be.a('object');
-                        res.body.should.have.property('success').eql(true);
-                        res.body.should.have.property('posts');
-                        res.body.posts.should.be.a('array');
-                        res.body.posts.length.should.eql(limit);
-                        done();
-                    });
-            });
-
-            it('should default limit to 10', done => {
-                chai.request(server)
-                    .get(url(skip, -15))
-                    .end((err, res) => {
-                        res.should.have.status(200);
-                        res.body.should.be.a('object');
-                        res.body.should.have.property('success').eql(true);
-                        res.body.should.have.property('posts');
-                        res.body.posts.should.be.a('array');
-                        res.body.posts.length.should.eql(limit);
-                        done();
-                    });
-            });
+      Promise.all(posts.map(insertPost))
+        .then(() => done())
+        .catch((err) => {
+          console.log('Error before hook', err);
+          done(err);
         });
     });
 
-    describe('/POST posts', () => {
-        const post = {
-            text: 'my text'
-        };
-
-        it('should fail when text is empty', (done) => {
-            chai.request(server)
-                .post('/posts')
-                .send({text: '  '})
-                .end((err, res) => {
-                    res.should.have.status(200);
-                    res.body.should.be.a('object');
-                    res.body.should.have.property('success').eql(false);
-                    res.body.should.have.property('exception').eql('no text provided');
-                    done();
-                });
+    it('should display root posts message with no parameter', (done) => {
+      chai.request(server)
+        .get('/posts')
+        .end((err, res) => {
+          res.should.have.status(200);
+          res.body.should.be.a('object');
+          res.body.should.have.property('success').eql(true);
+          res.body.should.have.property('posts');
+          res.body.posts.should.be.a('array');
+          res.body.posts.length.should.eql(10);
+          done();
         });
+    });
 
-        it('should create a new post', (done) => {
-            chai.request(server)
-                .post('/posts')
-                .send(post)
-                .end((err, res) => {
-                    res.should.have.status(200);
-                    res.body.should.be.a('object');
-                    res.body.should.have.property('success').eql(true);
-                    res.body.should.have.property('created');
-                    res.body.created.should.be.a('array');
-                    done();
-                });
+    describe('?skip=:skip&limit=:limit', () => {
+      const url = (skip, limit) => `/posts?skip=${skip}&limit=${limit}`;
+      const skip = 10;
+      const limit = 10;
+      it('should paginate posts', done => {
+        chai.request(server)
+          .get(url(skip, limit))
+          .end((err, res) => {
+            res.should.have.status(200);
+            res.body.should.be.a('object');
+            res.body.should.have.property('success').eql(true);
+            res.body.should.have.property('posts');
+            res.body.posts.should.be.a('array');
+            res.body.posts.length.should.eql(limit);
+            done();
+          });
+      });
+
+      it('should default skip to 0', done => {
+        chai.request(server)
+          .get(url(-12, limit))
+          .end((err, res) => {
+            res.should.have.status(200);
+            res.body.should.be.a('object');
+            res.body.should.have.property('success').eql(true);
+            res.body.should.have.property('posts');
+            res.body.posts.should.be.a('array');
+            res.body.posts.length.should.eql(limit);
+            done();
+          });
+      });
+
+      it('should default limit to 10', done => {
+        chai.request(server)
+          .get(url(skip, -15))
+          .end((err, res) => {
+            res.should.have.status(200);
+            res.body.should.be.a('object');
+            res.body.should.have.property('success').eql(true);
+            res.body.should.have.property('posts');
+            res.body.posts.should.be.a('array');
+            res.body.posts.length.should.eql(limit);
+            done();
+          });
+      });
+    });
+  });
+
+  describe('/POST posts', () => {
+    const post = {
+      text: 'my text'
+    };
+
+    it('should fail when text is empty', (done) => {
+      chai.request(server)
+        .post('/posts')
+        .send({text: '  '})
+        .end((err, res) => {
+          res.should.have.status(200);
+          res.body.should.be.a('object');
+          res.body.should.have.property('success').eql(false);
+          res.body.should.have.property('exception').eql('no text provided');
+          done();
         });
-    })
+    });
+
+    it('should create a new post', (done) => {
+      chai.request(server)
+        .post('/posts')
+        .send(post)
+        .end((err, res) => {
+          res.should.have.status(200);
+          res.body.should.be.a('object');
+          res.body.should.have.property('success').eql(true);
+          res.body.should.have.property('created');
+          res.body.created.should.be.a('array');
+          done();
+        });
+    });
+  })
 });

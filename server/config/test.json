@@ -1,6 +1,6 @@
 {
-    "rethinkdb": {
-        "db": "testDb",
-        "authKey": ""
-    }
+  "rethinkdb": {
+    "db": "testDb",
+    "authKey": ""
+  }
 }

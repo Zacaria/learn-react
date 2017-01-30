@@ -1,7 +1,10 @@
 {
-    "rethinkdb": {
-        "db": "default",
-        "authKey": "",
-        "tables": ["users", "posts"]
-    }
+  "rethinkdb": {
+    "db": "default",
+    "authKey": "",
+    "tables": [
+      "users",
+      "posts"
+    ]
+  }
 }

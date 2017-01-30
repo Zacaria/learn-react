@@ -1,9 +1,16 @@
 {
-  "apps" : [{
-    "name": "server",
-    "script"    : "dist/bin/www.js",
-    "instances" : "max",
-    "exec_mode" : "cluster",
-    "watch": ["dist", "package.json", "config", "doc"]
-  }]
+  "apps": [
+    {
+      "name": "server",
+      "script": "dist/bin/www.js",
+      "instances": "max",
+      "exec_mode": "cluster",
+      "watch": [
+        "dist",
+        "package.json",
+        "config",
+        "doc"
+      ]
+    }
+  ]
 }

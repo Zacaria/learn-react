@@ -12,23 +12,24 @@ import * as postsService from '../../services/posts';
  * @apiParam {String} limit number of posts
  */
 router.get('/posts', (req, res) => {
-    const {protocol} = req;
-    const host = req.get('host');
-    const skip = Number(req.query.skip) >= 0 && Number(req.query.skip) || 0;
-    const limit = Number(req.query.limit) >= 0 && Number(req.query.limit) || 10;
-    postsService.getPaginatedPosts({skip, limit})
-        .then((posts) =>
-            res.json({
-                success: true,
-                posts,
-                next: `${protocol}://${host}/posts?skip=${skip + limit}&limit=${limit}`,
-                previous: `${protocol}://${host}/posts?skip=${skip - limit >= 0 ? skip - limit : 0}&limit=${limit}`
-            }))
-        .catch((err) =>
-            res.json({
-                success: false,
-                err
-            }));
+  const { protocol } = req;
+  const host = req.get('host');
+  const skip = Number(req.query.skip) >= 0 && Number(req.query.skip) || 0;
+  const limit = Number(req.query.limit) >= 0 && Number(req.query.limit) || 10;
+  postsService.getPaginatedPosts({ skip, limit })
+    .then((posts) =>
+      res.json({
+        success: true,
+        posts,
+        next: `${protocol}://${host}/posts?skip=${skip + limit}&limit=${limit}`,
+        previous: `${protocol}://${host}/posts?` +
+                  `skip=${skip - limit >= 0 ? skip - limit : 0}&limit=${limit}`,
+      }))
+    .catch((err) =>
+      res.json({
+        success: false,
+        err,
+      }));
 });
 
 /**
@@ -40,32 +41,30 @@ router.get('/posts', (req, res) => {
  * @apiParam {String} text message
  */
 router.post('/posts', (req, res) => {
-    const {text} = req.body;
+  const { text } = req.body;
 
-    if(!text || !text.trim()) {
-        return res.json({
-            success: false,
-            exception: 'no text provided'
-        })
-    }
+  if (!text || !text.trim()) {
+    return res.json({
+      success: false,
+      exception: 'no text provided',
+    });
+  }
 
-    postsService.insertPost({
-        author: 'zac',
-        text,
-        createdAt: Date.now()
-    })
-        .then((data) =>
-            res.json({
-                success: true,
-                created: data
-            }))
-        .catch((err) =>
-            res.json({
-                success: false,
-                err
-            }));
-
-
+  postsService.insertPost({
+    author: 'zac',
+    text,
+    createdAt: Date.now(),
+  })
+    .then((data) =>
+      res.json({
+        success: true,
+        created: data,
+      }))
+    .catch((err) =>
+      res.json({
+        success: false,
+        err,
+      }));
 });
 
 export default router;
