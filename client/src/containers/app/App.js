@@ -7,25 +7,26 @@ import {sendMessage, changeNewMessage} from '../../actions';
 import MessageForm from '../../components/messageForm/MessageForm';
 
 export class App extends React.Component {
+    static isValidMessage(value) {
+        return !!(value && value.trim());
+    }
+
     constructor(props){
         super(props);
         this.onInputChange = this.onInputChange.bind(this);
-        this.isValidMessage = this.isValidMessage.bind(this);
+        App.isValidMessage = App.isValidMessage.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
         this.submit = this.submit.bind(this);
     }
 
     onSubmit(e, value) {
         e.preventDefault();
-        this.isValidMessage(value) && this.submit(value);
-    }
-
-    isValidMessage(value) {
-        return !!(value && value.trim());
+        App.isValidMessage(value) && this.submit(value);
     }
 
     submit(value) {
         this.props.sendMessage(value);
+        this.props.changeNewMessage('');
     }
 
     onInputChange(e) {
@@ -37,6 +38,7 @@ export class App extends React.Component {
             <div>
                 <h1>Welcome</h1>
                 <MessageForm onSubmit={(e) => this.onSubmit(e, this.props.newMessage)}
+                             messageValue={this.props.newMessage}
                              onInputChange={this.onInputChange}/>
             </div>
         );

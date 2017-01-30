@@ -52,12 +52,12 @@ describe('<App />', () => {
         let invalid2;
 
         it('should return true with not empty value', () => {
-            expect(wrapper.instance().isValidMessage(valid)).to.be.true;
+            expect(App.isValidMessage(valid)).to.be.true;
         });
 
         it('should return false with empty or undefined value', () => {
-            expect(wrapper.instance().isValidMessage(invalid1)).to.be.false;
-            expect(wrapper.instance().isValidMessage(invalid2)).to.be.false;
+            expect(App.isValidMessage(invalid1)).to.be.false;
+            expect(App.isValidMessage(invalid2)).to.be.false;
         });
     });
 
