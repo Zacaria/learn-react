@@ -11,10 +11,10 @@ export default reducers;
 
 export const getMessage = (state, id) => fromMessages.getMessage(state, id);
 export const getMessages = (state) => {
-  const ids = fromMessages.getIds(state);
-  return ids.map(id => fromMessages.getMessage(state.byId, id));
+  const ids = fromMessages.getIds(state.messages);
+  return ids.map(id => fromMessages.getMessage(state.messages.byId, id));
 };
-export const getIds = (state) => fromMessages.getIds(state.ids);
+export const getIds = (state) => fromMessages.getIds(state.messages);
 export const getIsSending = (state) => fromMessages.getIsSending(state.isSending);
 export const getIsFetching = (state) => fromMessages.getIsFetching(state.isFetching);
 export const getErrorMessage = (state) => fromMessages.getErrorMessage(state.errorMessage);

@@ -4,7 +4,7 @@ import * as actionTypes from '../actionTypes';
 const byId = (state = {}, action = {}) => {
   switch (action.type) {
     case actionTypes.SEND_MESSAGE_SUCCESS:
-      return Object.assign(state, action.response.entities.messages);
+      return Object.assign(state, action.response.entities.message);
     default:
       return state;
   }
@@ -12,11 +12,8 @@ const byId = (state = {}, action = {}) => {
 
 const ids = (state = [], action = {}) => {
   switch (action.type) {
-    case actionTypes.SEND_MESSAGE_REQUEST:
-      return [
-        ...state,
-        action.response.result,
-      ];
+    case actionTypes.SEND_MESSAGE_SUCCESS:
+      return state.concat(action.response.result);
     default:
       return state;
   }
