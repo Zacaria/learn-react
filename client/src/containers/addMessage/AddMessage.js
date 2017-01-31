@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { getNewMessage } from '../../reducers';
@@ -44,6 +44,16 @@ export class AddMessage extends React.Component {
     );
   }
 }
+
+AddMessage.propTypes = {
+  newMessage: PropTypes.string,
+  sendMessage: PropTypes.func.isRequired,
+  changeNewMessage: PropTypes.func.isRequired,
+};
+
+AddMessage.defaultProps = {
+  newMessage: '',
+};
 
 const mapStateToProps = (state) => {
   return {

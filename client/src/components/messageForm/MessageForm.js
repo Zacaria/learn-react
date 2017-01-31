@@ -7,8 +7,13 @@ const MessageForm = ({ onSubmit, onInputChange, messageValue }) => (
 );
 
 MessageForm.propTypes = {
-  onSubmit: PropTypes.func,
-  onInputChange: PropTypes.func,
+  onSubmit: PropTypes.func.isRequired,
+  onInputChange: PropTypes.func.isRequired,
+  messageValue: PropTypes.string.isRequired,
+};
+
+MessageForm.defaultProps = {
+  messageValue: '',
 };
 
 export default MessageForm;

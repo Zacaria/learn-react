@@ -22,11 +22,10 @@ describe('<MessageForm />', () => {
   let input;
 
   beforeEach(() => {
-    wrapper = shallow(<MessageForm/>);
-    wrapper.setProps({
-      onSubmit: () => onSubmit(changeEvent.target.value),
-      onInputChange,
-    });
+    wrapper = shallow(<MessageForm
+      onSubmit={(e) => onSubmit(e, changeEvent.target.value)}
+      onInputChange={onInputChange}
+    />);
     form = wrapper.find('form');
     input = wrapper.find('input');
     input.simulate('change', changeEvent);

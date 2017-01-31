@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { getMessages } from '../../reducers';
 
-class ListMessage extends React.Component {
+export class ListMessage extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -18,11 +18,19 @@ class ListMessage extends React.Component {
   }
 }
 
+ListMessage.propTypes = {
+  messages: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
+  })),
+};
+
+ListMessage.defaultProps = {
+  messages: [],
+};
+
 const mapStateToProps = (state) => ({
   messages: getMessages(state),
 });
 
-ListMessage = connect(mapStateToProps)(ListMessage);
-
-export default ListMessage;
-
+export default connect(mapStateToProps)(ListMessage);

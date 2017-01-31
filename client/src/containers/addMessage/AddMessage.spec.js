@@ -32,12 +32,12 @@ describe('<AddMessage />', () => {
   let form;
 
   beforeEach(() => {
-    wrapper = shallow(<AddMessage dispatch={dispatch}/>);
-    wrapper.setProps({
-      newMessage: changeEvent.target.value,
-      sendMessage,
-      changeNewMessage,
-    });
+    wrapper = shallow(<AddMessage
+      newMessage={changeEvent.target.value}
+      sendMessage={sendMessage}
+      changeNewMessage={changeNewMessage}
+    />);
+
     onSubmit = chai.spy.on(wrapper.instance(), 'onSubmit');
     submit = chai.spy.on(wrapper.instance(), 'submit');
     formComponent = wrapper.find(MessageForm);
