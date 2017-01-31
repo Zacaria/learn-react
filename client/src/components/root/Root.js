@@ -4,13 +4,13 @@ import { Provider } from 'react-redux';
 import ListMessage from '../../containers/listMessage/ListMessage';
 import AddMessage from '../../containers/addMessage/AddMessage';
 
-const Root = ({ store }) => (
-    <Provider store={store}>
-      <div>
-        <ListMessage/>
-        <AddMessage/>
-      </div>
-    </Provider>
-  );
+export const Root = ({ store }) => (
+  <Provider store={store}>
+    <div>
+      <ListMessage/>
+      <AddMessage/>
+    </div>
+  </Provider>
+);
 
 export default Root;
