@@ -4,6 +4,7 @@ import chai from 'chai';
 import spies from 'chai-spies';
 
 import { ListMessage } from './ListMessage';
+import Message from '../../components/message/Message';
 
 const expect = chai.expect;
 chai.use(spies);
@@ -11,16 +12,17 @@ chai.use(spies);
 describe('<ListMessage />', () => {
   it('should render zero messages', () => {
     const wrapper = shallow(<ListMessage messages={[]}/>);
-    expect(wrapper.find('Message')).to.have.length(0);
+    expect(wrapper.find(Message)).to.have.length(0);
   });
 
   it('should render undefined messages', () => {
     const wrapper = shallow(<ListMessage messages={undefined}/>);
-    expect(wrapper.find('Message')).to.have.length(0);
+    expect(wrapper.find(Message)).to.have.length(0);
   });
 
   it('should render some messages', () => {
-    const messages = [{
+    const messages = [
+      {
         id: '1',
         text: 'toto',
       }, {
@@ -35,6 +37,6 @@ describe('<ListMessage />', () => {
       },
     ];
     const wrapper = shallow(<ListMessage messages={messages}/>);
-    expect(wrapper.find('Message')).to.have.length(messages.length);
+    expect(wrapper.find(Message)).to.have.length(messages.length);
   });
 });
