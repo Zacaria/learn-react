@@ -2,6 +2,8 @@ import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { getMessages } from '../../reducers';
 
+import Message from '../../components/message/Message';
+
 export class ListMessage extends React.Component {
   constructor(props) {
     super(props);
@@ -11,7 +13,7 @@ export class ListMessage extends React.Component {
     return (<div>
       {
         this.props.messages.map(message =>
-          (<div key={message.id}>{message.text}</div>)
+          (<Message key={message.id} text={message.text}/>)
         )
       }
     </div>);
