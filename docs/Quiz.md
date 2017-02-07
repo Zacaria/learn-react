@@ -9,17 +9,17 @@ Les questions sont centrées sur les pratiques communément utilisée dans un en
 
 1. Sélectionnez les affirmations correctes :
 
-  ```
-      test = 'false';
-      if(test) {
-          const one = 1;
-          let two = 1;
-          var three = 2;
-      }
-      console.log(test);
-      console.log(one);
-      console.log(two);
-      console.log(three);
+  ```
+  test = 'false';
+  if(test) {
+      const one = 1;
+      let two = 1;
+      var three = 2;
+  }
+  console.log(test);
+  console.log(one);
+  console.log(two);
+  console.log(three);
   ```
 
   * Le premier console.log écris `undefined` dans la console.
@@ -65,10 +65,10 @@ Les questions sont centrées sur les pratiques communément utilisée dans un en
 6. A partir du code suivant, comment faire pour importer les variables de earth.js ?
 
   ```   
-      // earth.js
-      export const EARTH_RADIUS = 6371;
-      export const EARTH_VOLUME = (4/3) * Math.PI * Math.pow(EARTH_RADIUS, 3);
-      export default {EARTH_RADIUS, EARTH_VOLUME};
+  // earth.js
+  export const EARTH_RADIUS = 6371;
+  export const EARTH_VOLUME = (4/3) * Math.PI * Math.pow(EARTH_RADIUS, 3);
+  export default {EARTH_RADIUS, EARTH_VOLUME};
   ```
 
   * `const earth = require('./earth');`.
@@ -109,11 +109,11 @@ Les questions sont centrées sur les pratiques communément utilisée dans un en
 10. Quelles propositions sont correctes pour remplacer le commentaire dans le code suivant
 
   ```    
-      const latitude = 45;
-      const longitude = 45;
-      const position = {
-          // INSERT HERE
-      }
+  const latitude = 45;
+  const longitude = 45;
+  const position = {
+      // INSERT HERE
+  }
   ```
 
   * `latitude = latitude; longitude = longitude`.
@@ -141,11 +141,11 @@ Les questions sont centrées sur les pratiques communément utilisée dans un en
 13. Que se passe-t-il lorsque ce code est exécuté ?
 
   ``` 
-      const user = {name: 'chuck'};
+  const user = {name: 'chuck'};
 
-      user.name = 'bob';
+  user.name = 'bob';
 
-      console.log(user.name);
+  console.log(user.name);
   ```
 
   * Le programme affiche "chuck".
@@ -157,11 +157,11 @@ Les questions sont centrées sur les pratiques communément utilisée dans un en
 14. Que se passe-t-il lorsque ce code est exécuté ?
 
   ```
-      const user = {name: 'chuck'};
+  const user = {name: 'chuck'};
 
-      user = {name: 'bob'};
+  user = {name: 'bob'};
 
-      console.log(user.name);
+  console.log(user.name);
   ```
 
   * Le programme affiche "chuck".
@@ -173,8 +173,8 @@ Les questions sont centrées sur les pratiques communément utilisée dans un en
 15. Sachant que toutes les variables sont définies. Quelle est la ligne la plus performante ?
 
   ``` 
-      isEmpty ? [] : () => displayName();
-      isEmpty ? emptyArray : displayName;
+  isEmpty ? [] : () => displayName();
+  isEmpty ? emptyArray : displayName;
   ```
 
   * La première.
