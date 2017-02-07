@@ -1,7 +1,3 @@
-<style type="text/css">
-    ul { list-style-type: upper-alpha; }
-</style>
-
 # ES6 Quiz
 
 Je vous propose de vous évaluer en EcmaScript 6 avec ce questionnaire.
@@ -185,4 +181,4 @@ Les questions sont centrées sur les pratiques communément utilisée dans un en
 ---
 
 Bravo vous êtes arrivés au bout ! J'espère que ça vous a plu :)
-Maintenant voici les [réponses](./Quiz.md)
+Maintenant voici les [réponses](./Quiz-answers.md)
