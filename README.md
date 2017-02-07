@@ -1,15 +1,8 @@
 # Learn react
 
-Workshop server : [![Build Status](https://travis-ci.org/Zacaria/learn-react.svg?branch=master)](https://travis-ci.org/Zacaria/learn-react)
-Workshop client : TBD
-
 ## Prequisites
 
-- knowledge of JavaScript
-- es6 helps a lot
-- node version 6.9
-
-- Rethinkdb for server
+- knowledge of JavaScript & es6 : take the [Quiz](docs/Quiz.md)
 
 ## Purpose
 
@@ -48,68 +41,52 @@ This repo aims to help introducing React for developers.
 * Others : Flux, Relay ?
 * Learn once, write anywhere : React-native
 
-## How to use
-
-First run `npm install` to get all dependencies
-
 ### Presentation
 
 `npm run reveal` : opens a tab in the browser with a reveal. sourced by Presentation.md
-
-### Server
-
-Start rethinkdb
-
-`npm run watch-server`: starts the REST api for the client
-
-### Client
-
-`npm run watch-client`: starts react client
 
 # TODOS
 
 - [x] Introduction
 - [x] Topics
-- [ ] How to use
 - [x] Reveal [Presentation](Presentation.md)
 - [ ] Code gifs
 - [ ] Examples
-- [ ] [Workshop](docs/Workshop.md) (doing)
 - [x] Sources
 
 # Sources
 
 ## React
 
-Official doc : https://facebook.github.io/react/
+Official doc : [](https://facebook.github.io/react/)
 
-Main learning ref : 4 hours : https://developmentarc.gitbooks.io/react-indepth/content/
+Main learning ref : 4 hours : [](https://developmentarc.gitbooks.io/react-indepth/content/)
 
 Useful articles (ordered):
-- 5 min : http://buildwithreact.com/tutorial/jsx
-- 5 min : https://medium.freecodecamp.com/react-aha-moments-4b92bd36cc4e#.m4r2w6czb
-- 2 min : https://medium.com/@learnreact/container-components-c0e67432e005#.m5ln3mykh
-- 5 min : https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.gv3g9xvuu
-- 7 min : https://medium.com/javascript-scene/jsx-looks-like-an-abomination-1c1ec351a918#.xtw93rso7
-- 4 min : https://medium.com/@esamatti/react-js-pure-render-performance-anti-pattern-fb88c101332f#.7ngk35ww6
-- 9 min : https://medium.com/@tylermcginnis/react-interview-questions-c8a319ed02bd#.v8meuozg9
-- 10 min : https://medium.freecodecamp.com/the-5-things-you-need-to-know-to-understand-react-a1dbd5d114a3#.9nb1uifs5
+- 5 min : [](http://buildwithreact.com/tutorial/jsx)
+- 5 min : [](https://medium.freecodecamp.com/react-aha-moments-4b92bd36cc4e#.m4r2w6czb)
+- 2 min : [](https://medium.com/@learnreact/container-components-c0e67432e005#.m5ln3mykh)
+- 5 min : [](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.gv3g9xvuu)
+- 7 min : [](https://medium.com/javascript-scene/jsx-looks-like-an-abomination-1c1ec351a918#.xtw93rso7)
+- 4 min : [](https://medium.com/@esamatti/react-js-pure-render-performance-anti-pattern-fb88c101332f#.7ngk35ww6)
+- 9 min : [](https://medium.com/@tylermcginnis/react-interview-questions-c8a319ed02bd#.v8meuozg9)
+- 10 min : [](https://medium.freecodecamp.com/the-5-things-you-need-to-know-to-understand-react-a1dbd5d114a3#.9nb1uifs5)
 
 Videos :
-- 66 min : https://egghead.io/courses/react-fundamentals
+- 66 min : [](https://egghead.io/courses/react-fundamentals)
 
-Awesome list : https://github.com/enaqx/awesome-react
+Awesome list : [](https://github.com/enaqx/awesome-react)
 
 ## Redux (harder but valuable !)
 
-Main learning ref : 10 hours : http://redux.js.org/
+Main learning ref : 10 hours : [](http://redux.js.org/)
 
 Useful articles :
 
-- 11 min : https://code-cartoons.com/a-cartoon-intro-to-redux-3afb775501a6
+- 11 min : [](https://code-cartoons.com/a-cartoon-intro-to-redux-3afb775501a6)
 
 Videos :
-- lvl 1 : 121 min : https://egghead.io/courses/getting-started-with-redux
-- lvl 2 : 137 min : https://egghead.io/courses/building-react-applications-with-idiomatic-redux
+- lvl 1 : 121 min : [](https://egghead.io/courses/getting-started-with-redux)
+- lvl 2 : 137 min : [](https://egghead.io/courses/building-react-applications-with-idiomatic-redux)
 
-Awesome list : https://github.com/brillout/awesome-redux
+Awesome list : [](https://github.com/brillout/awesome-redux)
