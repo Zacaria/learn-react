@@ -8,7 +8,7 @@ Les questions sont centrées sur les pratiques communément utilisée dans un en
 
 1. Sélectionnez les affirmations correctes :
 
-        ```js
+        ```javascript
         test = 'false';
         if(test) {
           const one = 1;
