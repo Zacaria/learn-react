@@ -8,7 +8,7 @@ Les questions sont centrées sur les pratiques communément utilisée dans un en
 
 1. Sélectionnez les affirmations correctes :
 
-  ```javascript
+  ```js
   test = 'false';
   if(test) {
       const one = 1;
@@ -63,7 +63,7 @@ Les questions sont centrées sur les pratiques communément utilisée dans un en
 
 6. A partir du code suivant, comment faire pour importer les variables de earth.js ?
 
-  ```javascript   
+  ```js   
   // earth.js
   export const EARTH_RADIUS = 6371;
   export const EARTH_VOLUME = (4/3) * Math.PI * Math.pow(EARTH_RADIUS, 3);
@@ -107,7 +107,7 @@ Les questions sont centrées sur les pratiques communément utilisée dans un en
 
 10. Quelles propositions sont correctes pour remplacer le commentaire dans le code suivant
 
-  ```javascript    
+  ```js    
   const latitude = 45;
   const longitude = 45;
   const position = {
@@ -139,7 +139,7 @@ Les questions sont centrées sur les pratiques communément utilisée dans un en
 
 13. Que se passe-t-il lorsque ce code est exécuté ?
 
-  ```javascript 
+  ```js 
   const user = {name: 'chuck'};
 
   user.name = 'bob';
@@ -155,7 +155,7 @@ Les questions sont centrées sur les pratiques communément utilisée dans un en
 
 14. Que se passe-t-il lorsque ce code est exécuté ?
 
-  ```javascript
+  ```js
   const user = {name: 'chuck'};
 
   user = {name: 'bob'};
@@ -171,7 +171,7 @@ Les questions sont centrées sur les pratiques communément utilisée dans un en
 
 15. Sachant que toutes les variables sont définies. Quelle est la ligne la plus performante ?
 
-  ```javascript 
+  ```js 
   isEmpty ? [] : () => displayName();
   isEmpty ? emptyArray : displayName;
   ```
