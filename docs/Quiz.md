@@ -8,18 +8,18 @@ Les questions sont centrées sur les pratiques communément utilisée dans un en
 
 1. Sélectionnez les affirmations correctes :
 
-  ```js
-  test = 'false';
-  if(test) {
-      const one = 1;
-      let two = 1;
-      var three = 2;
-  }
-  console.log(test);
-  console.log(one);
-  console.log(two);
-  console.log(three);
-  ```
+        ```js
+        test = 'false';
+        if(test) {
+          const one = 1;
+          let two = 1;
+          var three = 2;
+        }
+        console.log(test);
+        console.log(one);
+        console.log(two);
+        console.log(three);
+        ```
 
   * Le premier console.log écris `undefined` dans la console.
   * Le second console.log écris `undefined` dans la console.
