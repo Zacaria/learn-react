@@ -21,10 +21,10 @@ Les questions sont centrées sur les pratiques communément utilisée dans un en
   console.log(three);
   ```
 
-  * Le premier console.log écris `undefined` dans la console.
-  * Le second console.log écris `undefined` dans la console.
-  * Le troisième console.log écris `undefined` dans la console.
-  * Le quatrième console.log écris `undefined` dans la console.
+  * Le premier console.log écrit `undefined` dans la console.
+  * Le second console.log écrit `undefined` dans la console.
+  * Le troisième console.log écrit `undefined` dans la console.
+  * Le quatrième console.log écrit `undefined` dans la console.
 
 
 2. Concernant les déclarations de variables. Sélectionnez les affirmations correctes :
@@ -39,7 +39,7 @@ Les questions sont centrées sur les pratiques communément utilisée dans un en
 
   * Une erreur surviens à la compilation.
   * Une erreur surviens à l'execution.
-  * Une nouvelle variable est créé.
+  * Une nouvelle variable est créée.
   * Deux nouvelles variables sont créées.
 
 

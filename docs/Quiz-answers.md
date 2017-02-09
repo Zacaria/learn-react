@@ -2,11 +2,11 @@
 
 Sans mot clé la variable est globale. 
 Le mot clé `var` est function-scoped donc test et three ne sont pas undefined.
-`let` et `const` sont block-scoped. Par conséquent ils ne sont pas définis à l'extérieur du `if`.
+`let` et `const` sont block-scoped. Par conséquent ils ne sont pas définisà l'extérieur du `if`.
 
 2. C, D
 
-`const` ne définis pas une variable immutable. 
+`const` ne définit pas une variable immutable. 
 `const` permet seulement de controler le fait qu'on ne réassigne pas une variable.
 
 3. D
@@ -28,7 +28,7 @@ Pour cela il faut utiliser `bind(this)`.
 
 6. A, B, C, D, E
 
-La première réponse est celle qui était utilsée en es5 avec `module.exports`.
+La première réponse est celle qui était utilisée en es5 avec `module.exports`.
 La deuxième réponse est une fonction de compatibilité. Les `exports default` sont retrouvables dans `.default` du require.
 La troisième réponse importe l'export par défaut en lui donnant un nom arbitraire.
 La quatrième réponse import tous les exports uniques et les rassemble dans un objet nommé arbitrairement.
@@ -37,7 +37,7 @@ La cinquième réponse récupère un par un les exports uniques.
 7. C, D, E
 
 La fonction `race` permet de terminer un ensemble de promise lorsque l'une d'elles aboutit.
-La fonction `all` n'est pas ordonnée, elle prends en paramètre un tableau de promesses.
+La fonction `all` n'est pas ordonnée, elle prend en paramètre un tableau de promesses.
 
 8. A, D, E
 
@@ -57,13 +57,13 @@ La réponse D présente l'utilisation du "shorthand property definition". Lorsqu
 
 11. C, D
 
-La réponse A créé un objet litéral qui n'est pas instantiable.
+La réponse A crée un objet littéral qui n'est pas instantiable.
 La réponse B est une erreur de syntaxe.
 
 12. B, C
 
 La fonction permet de copier les propriétés d'un objet dans un autre. 
-En copiant dans objet vide `Object.assign` résouds le problème de la copie d'un objet, et non pas de sa référence.
+En copiant dans objet vide `Object.assign` résout le problème de la copie d'un objet, et non pas de sa référence.
 
 13. B
 
@@ -81,4 +81,4 @@ Le programme va produire une erreur et s'arrêter.
 C'est pourquoi la deuxième ligne est plus performante.
 Avec des problématiques de performances, il vaut mieux éviter les raccourcis instanciant de nouveux objets
 Dans la ligne 2 `emptyArray` contiendrait `new Array()`.
-Et displayName serait bindé en dehors de la fonction aux besoins de perfs. De cette manière : `displayName.bind(this)
+Et displayName serait bindé en dehors de la fonction aux besoins de perfs. De cette manière : `displayName.bind(this)`
