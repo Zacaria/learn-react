@@ -7,3 +7,8 @@ a {
 .reveal section img {
     border: none;
 }
+
+.space-around {
+    display: flex;
+    justify-content: space-between;
+}

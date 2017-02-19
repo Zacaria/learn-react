@@ -4,6 +4,13 @@
 
 ---
 
+## Avant propos
+
+* J'ai 4 mois de React
+* Intervenez !
+
+---
+
 ## Sommaire
 
 * Introduction
@@ -17,7 +24,7 @@
 
 ## Introduction
 
-1st release : March 2013
+1ère release : March 2013
 
 > React is a library for providing a view for data rendered as HTML.
 
@@ -25,6 +32,31 @@
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/facebook/react.svg)](https://github.com/facebook/react/pulls)
 [![GitHub release](https://img.shields.io/github/release/facebook/react.svg)](https://github.com/facebook/react)
 [![GitHub stars](https://img.shields.io/github/stars/facebook/react.svg?style=social&label=Star)](https://github.com/facebook/react)
+
+---
+
+## Comparaison
+
+ | jQuery | AngularJs | Angular2 | React |
+ ---|:---:|:---:|:---:|:---:|
+Release Date | 2006 | 2009 | 2016 | 2013 |
+Github stars | ![](https://img.shields.io/github/stars/jquery/jquery.svg?style=social&label=Star) | ![](https://img.shields.io/github/stars/angular/angular.js.svg?style=social&label=Star) | ![](https://img.shields.io/github/stars/angular/angular.svg?style=social&label=Star) | ![](https://img.shields.io/github/stars/facebook/react.svg?style=social&label=Star) |
+Architecture | YOLO | MV* | Any | Redux |
+Get started | Rapide | Rapide | Rapide | Lent |
+Courbe d'apprentissage | Faible | Important | ? | Faible |
+Language | JS | JS | TypeScript | JSX |
+Debug | + | - | ? | ++ |
+
+---
+
+## Qui a choisi React ?
+
+<div class="space-around">
+  <img src="assets/imgs/imgur.png" height="100px">
+  <img src="assets/imgs/paypal.png" height="100px">
+  <img src="assets/imgs/netflix-logo.png" height="100px">
+  <img src="assets/imgs/airbnb.svg" height="100px">
+</div>
 
 ---
 
@@ -39,13 +71,42 @@
 
 ## Nouveautés
 
-* React-native
-* Time travel debugging
-* Server Rendering
+React a amené de grandes innovations
+
+----
+
+## Time travel debugging
+
+<img src="assets/imgs/back-to-the-futur.gif">
+
+----
+
+## React-native
+
+Du vrai natif multi-platforme
+
+[![npm](https://img.shields.io/npm/dm/react-native.svg)](https://www.npmjs.org/package/react-native)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/facebook/react-native.svg)](https://github.com/facebook/react-native/pulls)
+[![GitHub release](https://img.shields.io/github/release/facebook/react-native.svg)](https://github.com/facebook/react-native)
+[![GitHub stars](https://img.shields.io/github/stars/facebook/react-native.svg?style=social&label=Star)](https://github.com/facebook/react-native)
+
+----
+
+## DOM virtuel
+
+Le rendu est pour le navigateur l'opération la plus couteuse
+
+<img src="assets/imgs/virtual_dom_diff.png" width="650px">
 
 ---
 
-## Test es6
+## Pause 
+
+<img src="assets/imgs/coffee.jpg" height="350px">
+
+----
+
+## Quiz es6
 
 Comment ça s'est passé ?
 
@@ -80,7 +141,7 @@ a === undefined;
 // Fail-soft destructuring with defaults
 var [a = 1] = [];
 a === 1;
-``` 
+```
 
 ----
 
@@ -88,7 +149,7 @@ a === 1;
 
 Support des modules au niveau du langage.
 
-⚠ Non supporté par Node 7
+⚠️️ Non supporté par Node 7
 
 ```JavaScript
 // lib/math.js
@@ -136,32 +197,255 @@ f(...[1,2,3]) == 6
 
 ---
 
-Outils
+## JavaScript
 
-<img src="assets/imgs/joshua-earle-117661.jpg">
+<img src="assets/imgs/entropy.png" height="">
 
-----
-
-[<img src="assets/imgs/npm-logo.png" height="100px">](https://www.npmjs.com)
-[<img src="assets/imgs/babel-logo.png" height="100px">](https://babeljs.io)
-[<img src="assets/imgs/webpack-logo.png" height="100px">](https://webpack.js.org)
-[<img src="assets/imgs/eslint.png" height="100px">](http://eslint.org)
-[<img src="assets/imgs/mocha.svg" height="100px">](https://mochajs.org)
-[<img src="assets/imgs/karma.png" height="100px">](https://karma-runner.github.io/1.0/index.html)
-
-JS fatigue is for the better 👌
+Plus pour longtemps... <!-- .element: class="fragment" data-fragment-index="1" -->
 
 ----
 
-How to 
+## Outils
+
+<div class="space-around">
+  [<img src="assets/imgs/npm-logo.png" height="100px">](https://www.npmjs.com) <!-- .element: class="fragment" data-fragment-index="1" -->
+  [<img src="assets/imgs/babel-logo.png" height="100px">](https://babeljs.io) <!-- .element: class="fragment" data-fragment-index="2" -->
+  [<img src="assets/imgs/webpack-logo.png" height="100px">](https://webpack.js.org) <!-- .element: class="fragment" data-fragment-index="3" -->
+  [<img src="assets/imgs/eslint.png" height="100px">](http://eslint.org) <!-- .element: class="fragment" data-fragment-index="4" -->
+  [<img src="assets/imgs/mocha.svg" height="100px">](https://mochajs.org) <!-- .element: class="fragment" data-fragment-index="5" -->
+  [<img src="assets/imgs/karma.png" height="100px">](https://karma-runner.github.io/1.0/index.html) <!-- .element: class="fragment" data-fragment-index="6" -->
+</div>
+
+La JS fatigue, c'est bon pour toi 👌 <!-- .element: class="fragment" data-fragment-index="7" -->
+
+----
+
+## Bonnes pratiques
+
+* Automatisation
+* Linters
+* Tests
+* Conventions
+
+----
+
+## Conventions
+
+<img src="assets/imgs/standards.png">
+
+[airbnb](https://github.com/airbnb/javascript) / [standardjs](https://github.com/feross/standard)
 
 ---
 
-## Outils React
+## Voyons la bête
 
-Enzyme
+<img src="assets/imgs/finally.jpg">
+
+* JSX <!-- .element: class="fragment" data-fragment-index="1" -->
+* Composants <!-- .element: class="fragment" data-fragment-index="2" -->
+* Cycle de vie <!-- .element: class="fragment" data-fragment-index="3" -->
 
 ---
+
+## JSX
+
+Language alliant JS et XML !
+
+Pourquoi ?
+
+```
+// Duh 😕
+React.createElement('div', { className: 'red' }, 'Hello');
+
+// Clean 😊
+<div className="red">
+    Hello
+</div>;
+```
+
+NB : Le JSX doit toujours avoir un noeud racine.
+
+----
+
+
+```
+// Duh Duh 🤢
+React.createElement(
+  DashboardUnit,
+  { 'data-index': '2' },
+  React.createElement('h1', null, 'Scores'),
+  React.createElement(Scoreboard, {
+    className: 'results', scores: gameScores
+  })
+);
+
+// Clean 😁
+<DashboardUnit data-index="2">
+  <h1>Scores</h1>
+  <Scoreboard className="results" scores={gameScores} />
+</DashboardUnit>;
+```
+
+---
+
+## Composants
+
+Brique UI dont la structure est définie par le JSX : déclaratif.
+
+Les données du composant sont paramétrées par son **état** et ses **propriétés**. 
+
+----
+
+Avec des classes es6
+
+```
+class MyComponent extends React.Component {
+    // Minimum mandatory function
+    render() {
+        return <div>Hello World</div>
+    }
+}
+```
+
+----
+
+Avec un état initial
+
+```
+class MyComponent extends React.Component {
+    constructor(props) {
+        // You must call super first
+        super(props);
+        this.state = {value: 0};
+    }
+
+    render() {
+        const {value} = this.state;
+        // Template interpreted with curly braces
+        return <div>Is value zero ? {value === 0 ? 'yes' : 'no'}</div>
+    }
+}
+```
+
+----
+
+Utilisation d'événements
+
+```
+class MyComponent extends React.Component {
+    constructor(props) {
+        super(props);
+        // Manual binding, better perfs
+        this.clickHandler = this.clickHandler.bind(this);
+    }
+    clickHandler(e) {
+        alert('Hi ' + e.target.value);
+    }
+    render() {
+        return (<div>
+            <p onClick={this.clickHandler}>Manual bind</p>
+            <p onClick={(e) => this.clickHandler(e, 'Zac')}>Auto-bind</p>
+        </div>)
+    }
+}
+```
+
+----
+
+Composition et non héritage
+
+```
+// Stateless
+const Presentational = (props) => {
+    const {value} = props;
+    return <div className="title">My value is {value}</div>
+}
+
+// Statefull
+class Container extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {value: 0};
+    }
+    render() {
+        // Container's state is passed to Presentationnal via props
+        return <Presentational value={this.state.value}/>
+    }
+}
+```
+
+----
+
+State vs Props ?
+
+> Les propriétés sont aux composants ce que les arguments sont aux fonctions.
+
+> Tout comme les propriétés, l'état altère le rendu du composant. 
+Mais l'état est privé et immutable, entièrement controlé par le composant 🤢.
+
+
+----
+
+State immutable
+
+```
+// GET STATE
+const foo = this.state.foo;
+
+// SET STATE
+
+// Impossibru !
+this.state = {foo:'bar'};
+
+// Ok
+this.setState({foo:'bar'});
+```
+
+----
+
+Plus d'abstraction ? Voilà la factory !
+
+```
+// Configurable UI
+const componentFactory = (component) => {
+  return class Counter extends React.Component{
+    constructor(props) {
+      super(props);
+      this.state = {value: 0};
+    }
+    render() {
+      return React.createElement(
+        component, {
+          value: this.state.value
+        });
+    }
+  }
+}
+
+```
+
+---
+
+## Cycle de vie
+
+Les composants utilisent les hooks de l'API :
+
+* render : obligatoire <!-- .element: class="fragment" data-fragment-index="1" -->
+* setState : déclenche le cycle de rendering <!-- .element: class="fragment" data-fragment-index="2" -->
+* componentDidMount : idéal pour les appels async <!-- .element: class="fragment" data-fragment-index="3" -->
+* shouldComponentUpdate : performance <!-- .element: class="fragment" data-fragment-index="4" -->
+* ... <!-- .element: class="fragment" data-fragment-index="5" -->
+
+
+----
+
+Au cas où
+
+<img src="https://cdn-images-1.medium.com/max/1600/0*VoYsN6eq7I_wjVV5.png" width="650px">
+
+
+---
+
 
 
 Live code : Bootstrap
@@ -173,7 +457,7 @@ Je présente mon expérience en React
 Introduction à React
 Avec angular 2, les gens se posent des questions
 comparaisons
-Qui a choisi React
+Qui a choisi React : airbnb, netflix, paypal, imgur
 Pourquoi ? (slide pourquoi et nouveautés)
 Déjà on a parlé de React, mais pas du JS
 Retour sur le test
@@ -198,7 +482,7 @@ Pour les exercices, faire intervenir tout le monde
   ex : chacun à la suite d'un coin à l'autre de la salle
   
   
-redux fatigue : https://twitter.com/dan_abramov/status/704652537635409921
+redux fatigue : <img src="assets/imgs/fatigue.png">
 
 
 [ ] Comparatif React vs Angular vs JSP/Jquery Tableau comparatif
@@ -217,3 +501,6 @@ redux fatigue : https://twitter.com/dan_abramov/status/704652537635409921
 [ ]     Concepts clés : Redux & immutable
 [ ]     Je donne des ressources
 [ ]     Et un exercice : Que je n'ai pas encore !
+
+
+<img src="assets/imgs/joshua-earle-117661.jpg" height="450px">

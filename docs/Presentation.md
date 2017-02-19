@@ -219,7 +219,7 @@ const foo = this.state.foo;
 
 // SET STATE
 
-// impossible
+// impossibru
 this.state = {foo:'bar'};
 
 // Ok
