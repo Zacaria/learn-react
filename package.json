@@ -16,6 +16,6 @@
   },
   "homepage": "https://github.com/Zacaria/learn-react#readme",
   "dependencies": {
-    "reveal-md": "0.0.32"
+    "reveal-md": "0.0.34"
   }
 }
