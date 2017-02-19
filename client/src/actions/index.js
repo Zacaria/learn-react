@@ -14,14 +14,6 @@ export const sendMessage = (message) => dispatch => {
     });
 };
 
-// export const sendMessage = message => dispatch => {
-//   dispatch({
-//     type: 'post/newMessage',
-//     // type: actionTypes.SEND_MESSAGE_SUCCESS,
-//     data: message,
-//   });
-// };
-
 export const changeNewMessage = (message) => dispatch => dispatch({
   type: actionTypes.CHANGE_NEW_MESSAGE,
   message: message,

@@ -16,7 +16,7 @@
     "test-client": "(cd client && ../node_modules/.bin/karma start karma.conf.js --single-run )",
     "start-server": "node_modules/.bin/pm2 start server/pm2.json",
     "stop-server": "node_modules/.bin/pm2 stops all --watch",
-    "watch-server": "(cd server && ../node_modules/.bin/nodemon src/bin/www.js --exec babel-node)",
+    "watch-server": "(cd server && ../node_modules/.bin/nodemon src/app.js --exec babel-node)",
     "clean-server": "(cd server && rm -rf dist/ && mkdir dist)",
     "test-server": "(NODE_ENV=test cd server && ../node_modules/.bin/mocha test -R spec --recursive --compilers js:babel-core/register)",
     "doc-server": "node_modules/.bin/apidoc -i server/src/ -o server/doc/",
@@ -47,9 +47,12 @@
     "react-redux": "^5.0.2",
     "redux": "^3.6.0",
     "redux-logger": "^2.7.4",
+    "redux-socket.io": "^1.3.1",
     "redux-thunk": "^2.2.0",
     "rethinkdbdash": "^2.3.27",
     "reveal-md": "0.0.32"
+    "socket.io": "^1.7.2",
+    "socket.io-client": "^1.7.2"
   },
   "devDependencies": {
     "apidoc": "^0.17.3",
