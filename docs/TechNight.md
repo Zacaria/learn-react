@@ -102,7 +102,7 @@ Le rendu est pour le navigateur l'opération la plus couteuse
 
 ## Pause 
 
-<img src="assets/imgs/coffee.jpg" height="350px">
+<img src="assets/imgs/pause.png" height="150px">
 
 ----
 
@@ -290,9 +290,11 @@ React.createElement(
 
 ## Composants
 
-Brique UI dont la structure est définie par le JSX : déclaratif.
+Brique UI dont la structure est définie par le JSX : déclaratif. <!-- .element: class="fragment" data-fragment-index="1" -->
 
-Les données du composant sont paramétrées par son **état** et ses **propriétés**. 
+<span class="fragment" data-fragment-index="2">
+    Les données du composant sont paramétrées par son **état** et ses **propriétés**.
+</span>
 
 ----
 
@@ -466,7 +468,7 @@ es6 pas homogène sur les plateformes
 Le JS dispose d'outils pour structurer
 Le JS dispose de bonnes pratiques et de nombreux standards
   <img src="assets/imgs/standards.png">
-
+!!!Montrer la mise en place d'un environnement
 Maintenant je vais vous montrer la bête
 Lib d'interface utilisateur
 VirtualDOM
@@ -474,6 +476,7 @@ JSX
 Composants
 Cycle de vie
 Exercice du Compteur avec tests
+
 Comment est-ce qu'on fait quelque chose de React ?
 On utilise un state manager
 
