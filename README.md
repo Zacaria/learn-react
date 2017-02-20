@@ -43,7 +43,7 @@ This repo aims to help introducing React for developers.
 
 ### Presentation
 
-`npm run reveal` : opens a tab in the browser with a reveal. sourced by Presentation.md
+`npm start` : opens a tab in the browser with a reveal. sourced by Presentation.md
 
 # TODOS
 

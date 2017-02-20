@@ -3,7 +3,7 @@
   "version": "0.3.0",
   "description": "",
   "scripts": {
-    "reveal": "(cd docs && ../node_modules/.bin/reveal-md TechNight.md -w --theme custom)"
+    "start": "(cd docs && reveal-md TechNight.md -w --theme custom)"
   },
   "repository": {
     "type": "git",
