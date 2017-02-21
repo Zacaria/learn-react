@@ -39,10 +39,10 @@
 
  | jQuery | AngularJs | Angular2 | React |
  ---|:---:|:---:|:---:|:---:|
-Release Date | 2006 | 2009 | 2016 | 2013 |
+1ère version | 2006 | 2009 | 2016 | 2013 |
 Github stars | ![](https://img.shields.io/github/stars/jquery/jquery.svg?style=social&label=Star) | ![](https://img.shields.io/github/stars/angular/angular.js.svg?style=social&label=Star) | ![](https://img.shields.io/github/stars/angular/angular.svg?style=social&label=Star) | ![](https://img.shields.io/github/stars/facebook/react.svg?style=social&label=Star) |
 Architecture | YOLO | MV* | Any | Redux |
-Get started | Rapide | Rapide | Rapide | Lent |
+Get started | Rapide | Rapide | Rapide | Lent | 
 Courbe d'apprentissage | Faible | Important | ? | Faible |
 Language | JS | JS | TypeScript | JSX |
 Debug | + | - | ? | ++ |
@@ -66,12 +66,20 @@ Debug | + | - | ? | ++ |
 * Predictabilité
 * Composants
 * Testabilité
+* Experience développeur
 
 ---
 
 ## Nouveautés
 
 React a amené de grandes innovations
+
+----
+
+## Hot Module Reload
+
+<img src="assets/imgs/hmr.gif" height="400px">
+
 
 ----
 
