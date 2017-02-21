@@ -1,24 +1,24 @@
 # TechNight
 
-<img src="assets/imgs/react-logo.png" height="100px">
+<img src="assets/imgs/react-logo.png" height="300px">
 
 ---
 
 ## Avant propos
 
 * J'ai 4 mois de React
+* Et j'en suis convaincu
 * Intervenez !
 
 ---
 
 ## Sommaire
 
-* Introduction
-* Test es6 JS
-* jQuery / Angular / React
-* A quoi ça sert ?
-* Outils pour devenir pro-actif
-* Comment apprendre
+* Contexte
+* JavaScript
+* React pains
+* Du code
+* Dans la vraie vie
 
 ---
 
@@ -33,7 +33,33 @@
 [![GitHub release](https://img.shields.io/github/release/facebook/react.svg)](https://github.com/facebook/react)
 [![GitHub stars](https://img.shields.io/github/stars/facebook/react.svg?style=social&label=Star)](https://github.com/facebook/react)
 
+Poussé par Facebook et l'annonce d'Angular2 <!-- .element: class="fragment" data-fragment-index="1" -->
+
 ---
+
+## Comparaison
+
+ | jQuery | AngularJs | Angular2 | React |
+ ---|---|---|---|---|
+
+----
+
+## Comparaison
+
+ | jQuery | AngularJs | Angular2 | React |
+ ---|---|---|---|---|
+1ère version | 2006 | 2009 | 2016 | 2013 |
+
+----
+
+## Comparaison
+
+ | jQuery | AngularJs | Angular2 | React |
+ ---|---|---|---|---|
+1ère version | 2006 | 2009 | 2016 | 2013 |
+Github stars | ![](https://img.shields.io/github/stars/jquery/jquery.svg?style=social&label=Star) | ![](https://img.shields.io/github/stars/angular/angular.js.svg?style=social&label=Star) | ![](https://img.shields.io/github/stars/angular/angular.svg?style=social&label=Star) | ![](https://img.shields.io/github/stars/facebook/react.svg?style=social&label=Star) |
+
+----
 
 ## Comparaison
 
@@ -42,7 +68,54 @@
 1ère version | 2006 | 2009 | 2016 | 2013 |
 Github stars | ![](https://img.shields.io/github/stars/jquery/jquery.svg?style=social&label=Star) | ![](https://img.shields.io/github/stars/angular/angular.js.svg?style=social&label=Star) | ![](https://img.shields.io/github/stars/angular/angular.svg?style=social&label=Star) | ![](https://img.shields.io/github/stars/facebook/react.svg?style=social&label=Star) |
 Architecture | YOLO | MV* | Any | Redux |
-Get started | Rapide | Rapide | Rapide | Lent | 
+
+----
+
+## Comparaison
+
+ | jQuery | AngularJs | Angular2 | React |
+ ---|---|---|---|---|
+1ère version | 2006 | 2009 | 2016 | 2013 |
+Github stars | ![](https://img.shields.io/github/stars/jquery/jquery.svg?style=social&label=Star) | ![](https://img.shields.io/github/stars/angular/angular.js.svg?style=social&label=Star) | ![](https://img.shields.io/github/stars/angular/angular.svg?style=social&label=Star) | ![](https://img.shields.io/github/stars/facebook/react.svg?style=social&label=Star) |
+Architecture | YOLO | MV* | Any | Redux |
+Démarrage | Rapide | Rapide | Rapide | Lent |
+
+
+----
+
+## Comparaison
+
+ | jQuery | AngularJs | Angular2 | React |
+ ---|---|---|---|---|
+1ère version | 2006 | 2009 | 2016 | 2013 |
+Github stars | ![](https://img.shields.io/github/stars/jquery/jquery.svg?style=social&label=Star) | ![](https://img.shields.io/github/stars/angular/angular.js.svg?style=social&label=Star) | ![](https://img.shields.io/github/stars/angular/angular.svg?style=social&label=Star) | ![](https://img.shields.io/github/stars/facebook/react.svg?style=social&label=Star) |
+Architecture | YOLO | MV* | Any | Redux |
+Démarrage | Rapide | Rapide | Rapide | Lent | 
+Courbe d'apprentissage | Faible | Important | ? | Faible |
+
+----
+
+## Comparaison
+
+ | jQuery | AngularJs | Angular2 | React |
+ ---|---|---|---|---|
+1ère version | 2006 | 2009 | 2016 | 2013 |
+Github stars | ![](https://img.shields.io/github/stars/jquery/jquery.svg?style=social&label=Star) | ![](https://img.shields.io/github/stars/angular/angular.js.svg?style=social&label=Star) | ![](https://img.shields.io/github/stars/angular/angular.svg?style=social&label=Star) | ![](https://img.shields.io/github/stars/facebook/react.svg?style=social&label=Star) |
+Architecture | YOLO | MV* | Any | Redux |
+Démarrage | Rapide | Rapide | Rapide | Lent | 
+Courbe d'apprentissage | Faible | Important | ? | Faible |
+Language | JS | JS | TypeScript | JSX |
+
+----
+
+## Comparaison
+
+ | jQuery | AngularJs | Angular2 | React |
+ ---|---|---|---|---|
+1ère version | 2006 | 2009 | 2016 | 2013 |
+Github stars | ![](https://img.shields.io/github/stars/jquery/jquery.svg?style=social&label=Star) | ![](https://img.shields.io/github/stars/angular/angular.js.svg?style=social&label=Star) | ![](https://img.shields.io/github/stars/angular/angular.svg?style=social&label=Star) | ![](https://img.shields.io/github/stars/facebook/react.svg?style=social&label=Star) |
+Architecture | YOLO | MV* | Any | Redux |
+Démarrage | Rapide | Rapide | Rapide | Lent | 
 Courbe d'apprentissage | Faible | Important | ? | Faible |
 Language | JS | JS | TypeScript | JSX |
 Debug | + | - | ? | ++ |
@@ -53,9 +126,12 @@ Debug | + | - | ? | ++ |
 
 <div class="space-around">
   <img src="assets/imgs/imgur.png" height="100px">
+  <img src="assets/imgs/airbnb.png" height="100px">
   <img src="assets/imgs/paypal.png" height="100px">
+</div>
+<div class="space-around">
+  <img src="assets/imgs/mirakl.png" height="100px">
   <img src="assets/imgs/netflix-logo.png" height="100px">
-  <img src="assets/imgs/airbnb.svg" height="100px">
 </div>
 
 ---
@@ -66,7 +142,6 @@ Debug | + | - | ? | ++ |
 * Predictabilité
 * Composants
 * Testabilité
-* Experience développeur
 
 ---
 
@@ -80,12 +155,13 @@ React a amené de grandes innovations
 
 <img src="assets/imgs/hmr.gif" height="400px">
 
-
 ----
 
-## Time travel debugging
+## DOM virtuel
 
-<img src="assets/imgs/back-to-the-futur.gif">
+Le rendu est pour le navigateur l'opération la plus couteuse
+
+<img src="assets/imgs/virtual_dom_diff.png" width="650px">
 
 ----
 
@@ -100,11 +176,9 @@ Du vrai natif multi-platforme
 
 ----
 
-## DOM virtuel
+## Time travel debugging
 
-Le rendu est pour le navigateur l'opération la plus couteuse
-
-<img src="assets/imgs/virtual_dom_diff.png" width="650px">
+<img src="assets/imgs/reduxflow.gif" height="400px">
 
 ---
 
@@ -213,25 +287,6 @@ Plus pour longtemps... <!-- .element: class="fragment" data-fragment-index="1" -
 
 ----
 
-## Outils
-
-<div class="space-around">
-  [<img src="assets/imgs/npm-logo.png" height="100px">](https://www.npmjs.com) <!-- .element: class="fragment" data-fragment-index="1" -->
-  [<img src="assets/imgs/babel-logo.png" height="100px">](https://babeljs.io) <!-- .element: class="fragment" data-fragment-index="2" -->
-  [<img src="assets/imgs/webpack-logo.png" height="100px">](https://webpack.js.org) <!-- .element: class="fragment" data-fragment-index="3" -->
-  [<img src="assets/imgs/eslint.png" height="100px">](http://eslint.org) <!-- .element: class="fragment" data-fragment-index="4" -->
-  [<img src="assets/imgs/mocha.svg" height="100px">](https://mochajs.org) <!-- .element: class="fragment" data-fragment-index="5" -->
-  [<img src="assets/imgs/karma.png" height="100px">](https://karma-runner.github.io/1.0/index.html) <!-- .element: class="fragment" data-fragment-index="6" -->
-</div>
-
-<span class="fragment" data-fragment-index="7">
-[create-react-app](https://github.com/facebookincubator/create-react-app)
-</span>
-
-La JS fatigue, c'est bon pour toi 👌 <!-- .element: class="fragment" data-fragment-index="8" -->
-
-----
-
 ## Bonnes pratiques
 
 * Automatisation
@@ -248,6 +303,58 @@ La JS fatigue, c'est bon pour toi 👌 <!-- .element: class="fragment" data-frag
 <span class="fragment" data-fragment-index="1">
 [airbnb](https://github.com/airbnb/javascript) / [standardjs](https://github.com/feross/standard)
 </span>
+
+----
+
+## Outils
+
+<div class="space-around">
+  [<img src="assets/imgs/npm-logo.png" height="100px">](https://www.npmjs.com) <!-- .element: class="fragment" data-fragment-index="1" -->
+  [<img src="assets/imgs/babel-logo.png" height="100px">](https://babeljs.io) <!-- .element: class="fragment" data-fragment-index="2" -->
+  [<img src="assets/imgs/webpack-logo.png" height="100px">](https://webpack.js.org) <!-- .element: class="fragment" data-fragment-index="3" -->
+  [<img src="assets/imgs/eslint.png" height="100px">](http://eslint.org) <!-- .element: class="fragment" data-fragment-index="4" -->
+  [<img src="assets/imgs/mocha.svg" height="100px">](https://mochajs.org) <!-- .element: class="fragment" data-fragment-index="5" -->
+  [<img src="assets/imgs/karma.png" height="100px">](https://karma-runner.github.io/1.0/index.html) <!-- .element: class="fragment" data-fragment-index="6" -->
+  [<img src="assets/imgs/enzyme.png" height="100px">](http://airbnb.io/enzyme) <!-- .element: class="fragment" data-fragment-index="7" -->
+</div>
+
+<span class="fragment" data-fragment-index="7">
+[create-react-app](https://github.com/facebookincubator/create-react-app)
+</span>
+
+Désolé, mais le temps nous est compté 😅 <!-- .element: class="fragment" data-fragment-index="8" -->
+
+---
+
+## Pain points
+
+<img src="assets/imgs/struggle.gif">
+
+----
+
+## Pain points #1
+
+Le système de build
+
+<img src="assets/imgs/pain.jpg">
+
+
+----
+
+## Pain points #2
+
+La JS fatigue
+
+<img src="assets/imgs/fatigue.png" height="450px">
+
+
+----
+
+## Pain points #3
+
+Penser en composants
+
+<img src="assets/imgs/react-think.png" width="650px">
 
 ---
 
@@ -417,29 +524,6 @@ this.state = {foo:'bar'};
 this.setState({foo:'bar'});
 ```
 
-----
-
-Plus d'abstraction ? Voilà la factory !
-
-```
-// Configurable UI
-const componentFactory = (component) => {
-  return class Counter extends React.Component{
-    constructor(props) {
-      super(props);
-      this.state = {value: 0};
-    }
-    render() {
-      return React.createElement(
-        component, {
-          value: this.state.value
-        });
-    }
-  }
-}
-
-```
-
 ---
 
 ## Cycle de vie
@@ -452,72 +536,44 @@ Les composants utilisent les hooks de l'API :
 * shouldComponentUpdate : performance <!-- .element: class="fragment" data-fragment-index="4" -->
 * ... <!-- .element: class="fragment" data-fragment-index="5" -->
 
-
 ----
 
 Au cas où
 
 <img src="https://cdn-images-1.medium.com/max/1600/0*VoYsN6eq7I_wjVV5.png" width="650px">
 
+---
+
+## Les mains dans le cambouis
+
+<img src="assets/imgs/cambouis.jpg" width="250px">
+
+
+[codepen](http://codepen.io/Muvaiah/pen/ZLgNEb)
+
+* Créer le premier composant <!-- .element: class="fragment" data-fragment-index="1" -->
+* Définir l'état <!-- .element: class="fragment" data-fragment-index="2" -->
+* Ajouter les contrôles <!-- .element: class="fragment" data-fragment-index="3" -->
+* Découpler <!-- .element: class="fragment" data-fragment-index="4" -->
 
 ---
 
+## Dans la vraie vie
 
+React n'est pas viable tout seul. 😅 <!-- .element: class="fragment" data-fragment-index="1" -->
 
-Live code : Bootstrap
-Réutiliser de composants
+Il faut un gestionnaire d'état. <!-- .element: class="fragment" data-fragment-index="2" -->
 
-[ ] Fil conducteur 
+Redux est le consensus en place. <!-- .element: class="fragment" data-fragment-index="3" -->
 
-Je présente mon expérience en React
-Introduction à React
-Avec angular 2, les gens se posent des questions
-comparaisons
-Qui a choisi React : airbnb, netflix, paypal, imgur
-Pourquoi ? (slide pourquoi et nouveautés)
-Déjà on a parlé de React, mais pas du JS
-Retour sur le test
-es6 pas homogène sur les plateformes
-=> babel et autres outils
-Le JS dispose d'outils pour structurer
-Le JS dispose de bonnes pratiques et de nombreux standards
-  <img src="assets/imgs/standards.png">
-!!!Montrer la mise en place d'un environnement
-Maintenant je vais vous montrer la bête
-Lib d'interface utilisateur
-VirtualDOM
-JSX
-Composants
-Cycle de vie
-Exercice du Compteur avec tests
+<img src="assets/imgs/redux-logo.png" height="200px"> <!-- .element: class="fragment" data-fragment-index="3" -->
 
-Comment est-ce qu'on fait quelque chose de React ?
-On utilise un state manager
+----
 
+## Redux
 
-Pour les exercices, faire intervenir tout le monde
-  ex : chacun à la suite d'un coin à l'autre de la salle
-  
-  
-redux fatigue : <img src="assets/imgs/fatigue.png">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QEjf1W-rRIo" frameborder="0" allowfullscreen></iframe>
 
+---
 
-[ ] Comparatif React vs Angular vs JSP/Jquery Tableau comparatif
-[ ]     exemple : mirakl migre thymeleaf
-[ ] Que puis-je faire avec React ?
-[ ]     D'abord, je donne les réalisations populaires
-[ ]     Ensuite, les nouvelles possiblités technique
-[ ] Comment faire du JS propre et structuré ? Donner les outils et bonnes pratiques
-[ ]     Airbnb
-[ ]     Github
-[ ] Quels sont les outils pour être pro-actif ?
-[ ]     Les outils JS classiques : babel, webpack
-[ ]     Les outils particuliers : Enzyme, Jest
-[ ]     Les concepts/architectures : Redux, Immutable
-[ ] Comment apprendre React
-[ ]     Concepts clés : Redux & immutable
-[ ]     Je donne des ressources
-[ ]     Et un exercice : Que je n'ai pas encore !
-
-
-<img src="assets/imgs/joshua-earle-117661.jpg" height="450px">
+## Merci
