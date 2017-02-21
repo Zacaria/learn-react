@@ -38,7 +38,7 @@
 ## Comparaison
 
  | jQuery | AngularJs | Angular2 | React |
- ---|:---:|:---:|:---:|:---:|
+ ---|---|---|---|---|
 1ère version | 2006 | 2009 | 2016 | 2013 |
 Github stars | ![](https://img.shields.io/github/stars/jquery/jquery.svg?style=social&label=Star) | ![](https://img.shields.io/github/stars/angular/angular.js.svg?style=social&label=Star) | ![](https://img.shields.io/github/stars/angular/angular.svg?style=social&label=Star) | ![](https://img.shields.io/github/stars/facebook/react.svg?style=social&label=Star) |
 Architecture | YOLO | MV* | Any | Redux |
@@ -224,7 +224,11 @@ Plus pour longtemps... <!-- .element: class="fragment" data-fragment-index="1" -
   [<img src="assets/imgs/karma.png" height="100px">](https://karma-runner.github.io/1.0/index.html) <!-- .element: class="fragment" data-fragment-index="6" -->
 </div>
 
-La JS fatigue, c'est bon pour toi 👌 <!-- .element: class="fragment" data-fragment-index="7" -->
+<span class="fragment" data-fragment-index="7">
+[create-react-app](https://github.com/facebookincubator/create-react-app)
+</span>
+
+La JS fatigue, c'est bon pour toi 👌 <!-- .element: class="fragment" data-fragment-index="8" -->
 
 ----
 
@@ -241,7 +245,9 @@ La JS fatigue, c'est bon pour toi 👌 <!-- .element: class="fragment" data-frag
 
 <img src="assets/imgs/standards.png">
 
+<span class="fragment" data-fragment-index="1">
 [airbnb](https://github.com/airbnb/javascript) / [standardjs](https://github.com/feross/standard)
+</span>
 
 ---
 
