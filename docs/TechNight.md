@@ -335,9 +335,7 @@ Désolé, mais le temps nous est compté 😅 <!-- .element: class="fragment" da
 
 ----
 
-## Pain points #1
-
-Le système de build
+## Pain points #1 : Le système de build
 
 
 <span class="fragment" data-fragment-index="1">
@@ -361,20 +359,17 @@ Le système de build
 
 <img src="assets/imgs/pain.jpg"> <!-- .element: class="fragment" data-fragment-index="7" -->
 
+Une fois en place c'est 😍 <!-- .element: class="fragment" data-fragment-index="8" -->
 
 ----
 
-## Pain points #2
-
-La JS fatigue
+## Pain points #2 : La JS fatigue
 
 <img src="assets/imgs/fatigue.png" height="450px">
 
 ----
 
-## Pain points #3
-
-Penser en composants
+## Pain points #3 : Penser en composants
 
 <img src="assets/imgs/react-think.png" width="650px">
 
