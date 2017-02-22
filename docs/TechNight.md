@@ -9,7 +9,7 @@ Excilys - Zacaria Chtatar - Février 2017
 ## Avant propos
 
 * J'ai 4 mois de React
-* Plusieurs années de JS
+* Et 3 ans de JS
 * Et j'en suis convaincu
 * Intervenez !
 
@@ -360,7 +360,7 @@ Désolé, mais le temps nous est compté 😅 <!-- .element: class="fragment" da
 
 <img src="assets/imgs/pain.jpg"> <!-- .element: class="fragment" data-fragment-index="7" -->
 
-Une fois en place c'est 😍 <!-- .element: class="fragment" data-fragment-index="8" -->
+Mais une fois en place c'est 😍 <!-- .element: class="fragment" data-fragment-index="8" -->
 
 ----
 
@@ -424,10 +424,13 @@ React.createElement(
 </DashboardUnit>;
 ```
 
+<span class="fragment" data-fragment-index="1">
+NB : Le JSX doit toujours avoir un noeud racine.
+</span>
 
-NB : Le JSX doit toujours avoir un noeud racine. <!-- .element: class="fragment" data-fragment-index="1" -->
-
-NB2 : certains attributs comme class sont changés en className <!-- .element: class="fragment" data-fragment-index="2" -->
+<span class="fragment" data-fragment-index="2">
+NB2 : certains attributs tels que `class` sont changés en `className`
+</span>
 
 ---
 
