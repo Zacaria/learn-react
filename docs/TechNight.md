@@ -145,6 +145,7 @@ Debug | + | - | ? | ++ |
 * Predictabilité
 * Composants
 * Testabilité
+* Nouveautés
 
 ---
 
@@ -598,6 +599,8 @@ Redux est le consensus en place. <!-- .element: class="fragment" data-fragment-i
 ## Redux
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/QEjf1W-rRIo" frameborder="0" allowfullscreen></iframe>
+
+[cartoon](redux.md)
 
 ---
 
