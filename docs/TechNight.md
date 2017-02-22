@@ -2,11 +2,14 @@
 
 <img src="assets/imgs/react-logo.png" height="300px">
 
+Excilys - Zacaria Chtatar - Février 2017
+
 ---
 
 ## Avant propos
 
 * J'ai 4 mois de React
+* Plusieurs années de JS
 * Et j'en suis convaincu
 * Intervenez !
 
@@ -336,7 +339,27 @@ Désolé, mais le temps nous est compté 😅 <!-- .element: class="fragment" da
 
 Le système de build
 
-<img src="assets/imgs/pain.jpg">
+
+<span class="fragment" data-fragment-index="1">
+    Babel
+</span>
+<span class="fragment" data-fragment-index="2">
+    \+ Webpack
+</span>
+<span class="fragment" data-fragment-index="3">
+    \+ Eslint
+</span>
+<span class="fragment" data-fragment-index="4">
+    \+ Mocha
+</span>
+<span class="fragment" data-fragment-index="5">
+    \+ Karma
+</span>
+<span class="fragment" data-fragment-index="6">
+    \+ Enzyme
+</span>
+
+<img src="assets/imgs/pain.jpg"> <!-- .element: class="fragment" data-fragment-index="7" -->
 
 
 ----
@@ -346,7 +369,6 @@ Le système de build
 La JS fatigue
 
 <img src="assets/imgs/fatigue.png" height="450px">
-
 
 ----
 
@@ -372,8 +394,6 @@ Penser en composants
 
 Language alliant JS et XML !
 
-Pourquoi ?
-
 ```
 // Duh 😕
 React.createElement('div', { className: 'red' }, 'Hello');
@@ -384,10 +404,9 @@ React.createElement('div', { className: 'red' }, 'Hello');
 </div>;
 ```
 
-NB : Le JSX doit toujours avoir un noeud racine.
+Pourquoi ? <!-- .element: class="fragment" data-fragment-index="1" -->
 
 ----
-
 
 ```
 // Duh Duh 🤢
@@ -399,13 +418,20 @@ React.createElement(
     className: 'results', scores: gameScores
   })
 );
+```
 
+```
 // Clean 😁
 <DashboardUnit data-index="2">
   <h1>Scores</h1>
   <Scoreboard className="results" scores={gameScores} />
 </DashboardUnit>;
 ```
+
+
+NB : Le JSX doit toujours avoir un noeud racine. <!-- .element: class="fragment" data-fragment-index="1" -->
+
+NB2 : certains attributs comme class sont changés en className <!-- .element: class="fragment" data-fragment-index="2" -->
 
 ---
 
@@ -429,6 +455,8 @@ class MyComponent extends React.Component {
     }
 }
 ```
+
+⚠️️  Les noms de composants doivent commencer par une majuscule !
 
 ----
 
@@ -546,15 +574,17 @@ Au cas où
 
 ## Les mains dans le cambouis
 
-<img src="assets/imgs/cambouis.jpg" width="250px">
+<a href="http://codepen.io/Muvaiah/pens/public/?grid_type=list#">
+    <img src="assets/imgs/cambouis.jpg" width="250px">
+</a>
 
+<span class="fragment" data-fragment-index="1">[Créer le premier composant](http://codepen.io/Muvaiah/pen/GWKrPZ?editors=0010#0)</span>
 
-[codepen](http://codepen.io/Muvaiah/pen/ZLgNEb)
+<span class="fragment" data-fragment-index="2">[Définir l'état](http://codepen.io/Muvaiah/pen/mWbWJO?editors=0010#0)</span>
 
-* Créer le premier composant <!-- .element: class="fragment" data-fragment-index="1" -->
-* Définir l'état <!-- .element: class="fragment" data-fragment-index="2" -->
-* Ajouter les contrôles <!-- .element: class="fragment" data-fragment-index="3" -->
-* Découpler <!-- .element: class="fragment" data-fragment-index="4" -->
+<span class="fragment" data-fragment-index="3">[Ajouter les contrôles](http://codepen.io/Muvaiah/pen/yMBMaR?editors=0010#0)</span>
+
+<span class="fragment" data-fragment-index="4">[Découpler](http://codepen.io/Muvaiah/pen/wJwJqy?editors=0010#0)</span>
 
 ---
 
