@@ -123,6 +123,15 @@ Courbe d'apprentissage | Faible | Important | ? | Faible |
 Language | JS | JS | TypeScript | JSX |
 Debug | + | - | ? | ++ |
 
+----
+
+## Au final
+
+* jQuery n'est plus assez structuré pour un application scalable. <!-- .element: class="fragment" data-fragment-index="1" -->
+* AngularJs n'est plus d'actualité en raison de ses perfs et son architecture. <!-- .element: class="fragment" data-fragment-index="2" -->
+* Angular2 semble bon, mais ne m'inspire pas confiance. <!-- .element: class="fragment" data-fragment-index="3" -->
+* React est pour moi un bon pari sur l'avenir. <!-- .element: class="fragment" data-fragment-index="4" -->
+
 ---
 
 ## Qui a choisi React ?
