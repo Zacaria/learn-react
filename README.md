@@ -26,33 +26,10 @@ This announce really shook the community. Developers began to seek for other sol
 
 This repo aims to help introducing React for developers.
 
-## Topics
 
-* Virtual DOM
-* JSX
-* Declarative
-* Component Lifecycle
-* Immutability : why ?
-* One way data-flow
-* Performance
-* Tests : Enzyme / Jest
-* Redux ?
-* Dumb and smart components ?
-* Others : Flux, Relay ?
-* Learn once, write anywhere : React-native
-
-### Presentation
+## Presentation
 
 `npm start` : opens a tab in the browser with a reveal. sourced by Presentation.md
-
-# TODOS
-
-- [x] Introduction
-- [x] Topics
-- [x] Reveal [Presentation](docs/Presentation.md)
-- [ ] Code gifs
-- [ ] Examples
-- [x] Sources
 
 # Sources
 
