@@ -314,7 +314,7 @@ Plus pour longtemps... <!-- .element: class="fragment" data-fragment-index="1" -
 <img src="assets/imgs/standards.png">
 
 <span class="fragment" data-fragment-index="1">
-[airbnb](https://github.com/airbnb/javascript) / [standardjs](https://github.com/feross/standard)
+[airbnb](https://github.com/airbnb/javascript)
 </span>
 
 ----
