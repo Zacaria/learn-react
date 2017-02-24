@@ -29,7 +29,11 @@ This repo aims to help introducing React for developers.
 
 ## Presentation
 
-`npm start` : opens a tab in the browser with a reveal. sourced by Presentation.md
+In markdown mode go [here](docs/TechNight.md)
+
+In reveal mode you need Node Js, `npm install` and then :
+
+`npm start` : opens a tab in the browser with a reveal. sourced by TechNight.md.md
 
 # Sources
 
