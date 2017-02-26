@@ -1,7 +1,7 @@
 {
   "name": "learn-react",
   "version": "0.3.0",
-  "description": "",
+  "description": "React learning base",
   "scripts": {
     "start": "(cd docs && reveal-md TechNight.md -w --theme custom)"
   },
