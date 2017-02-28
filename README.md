@@ -3,6 +3,7 @@
 ## Prequisites
 
 - knowledge of JavaScript & es6 : take the [Quiz](docs/Quiz.md)
+- In case you get under 10/15, you will find some help [here](https://www.havesomecode.io/update-to-es6/)
 
 ## Purpose
 
