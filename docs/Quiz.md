@@ -4,7 +4,11 @@
 # ES6 Quiz
 
 Je vous propose de vous évaluer en EcmaScript 6 avec ce questionnaire.
-Les questions sont centrées sur les pratiques communément utilisée dans un environnement React
+Les questions sont centrées sur les pratiques communément utilisée dans un environnement React.
+
+Les backticks ` dans les questions et réponses permettent de préciser les termes référencant du code.
+
+Bon courage !
 
 1. Sélectionnez les affirmations correctes :
 
@@ -29,10 +33,10 @@ Les questions sont centrées sur les pratiques communément utilisée dans un en
 
 2. Concernant les déclarations de variables. Sélectionnez les affirmations correctes :
 
-  * Le mot clé var n'existe plus.
-  * Le mot clé const permet de définir une variable immutable.
-  * Le mot clé let permet de définir une variable mutable.
-  * Contrairement à `var`, `const` et `let sont block scoped.
+  * Le mot clé `var` n'existe plus.
+  * Le mot clé `const` permet de définir une variable immutable.
+  * Le mot clé `let` permet de définir une variable mutable.
+  * Contrairement à `var`, `const` et `let` sont block scoped.
   
 
 3. A partir de ce code : `const { name, birth } = user;`. Sélectionnez les affirmations correctes :
@@ -55,7 +59,7 @@ Les questions sont centrées sur les pratiques communément utilisée dans un en
 5. En plus de raccourcir le code, quelle est l'autre utilité des arrow-functions ?
 
   * Elles permettent "l'auto-applying".
-  * Elles permettent au contexte extérieur à une fonction, d'y être appliqué automatiquement.
+  * Elles permettent d'importer `this` à la création d'une fonction.
   * On peut simuler une arrow function avec `myfunction.apply(this)`.
   * On peut simuler une arrow function avec `myfunction.bind(this)`.
   * On peut simuler une arrow function avec `myfunction.call(this)`.
@@ -81,8 +85,8 @@ Les questions sont centrées sur les pratiques communément utilisée dans un en
 
   * Elle permet le multi-threading avec sa fonction `race`.
   * Elle permet d'ordonner les appels aved sa fonction `all`.
-  * Elle permet de différer l'execution d'une fonction avec sa fonction `then`.
-  * Elle permet de simplifier la gestion des erreurs avec sa fonction `catch`.
+  * Elle permet d'attendre la fin de l'execution d'une fonction dans sa fonction `then`.
+  * Elle permet de gérer les erreurs avec sa fonction `catch`.
   * Elle permet de résoudre le problème du callback hell.
 
 
@@ -133,8 +137,8 @@ Les questions sont centrées sur les pratiques communément utilisée dans un en
 
   * Elle permet de muter les propriétés d'un objet à partir d'un autre objet.
   * Elle permet de copier les propriétés d'un objet dans un autre objet.
-  * Elle permet de créer un nouvel objet.
-  * Elle permet de créer des "effets de bords".
+  * `Object.assign(a, b)` permet de simuler l'immutabilité.
+  * `Object.assign({}, a, b)` permet de simuler l'immutabilité.
 
 
 13. Que se passe-t-il lorsque ce code est exécuté ?
@@ -150,7 +154,6 @@ Les questions sont centrées sur les pratiques communément utilisée dans un en
   * Le programme affiche "chuck".
   * Le programme affiche "bob".
   * Une erreur surviens.
-  * Rien ne se passe.
 
 
 14. Que se passe-t-il lorsque ce code est exécuté ?
@@ -166,10 +169,9 @@ Les questions sont centrées sur les pratiques communément utilisée dans un en
   * Le programme affiche "chuck".
   * Le programme affiche "bob".
   * Une erreur surviens.
-  * Rien ne se passe.
 
 
-15. Sachant que toutes les variables sont définies. Quelle est la ligne la plus performante ?
+15. Sachant que toutes les variables sont définies, et que le code est syntaxiquement correct. Quelle est la ligne la plus performante ?
 
   ```javascript
   isEmpty ? [] : () => displayName();

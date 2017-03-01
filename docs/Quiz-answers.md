@@ -41,13 +41,16 @@ La fonction `all` n'est pas ordonnée, elle prend en paramètre un tableau de pr
 
 8. A, D, E
 
-Ici c'est une question de syntaxe. Le spread operator ne peut être utilisé qu'en dernière position.
-Il est similaire au rest operator, mais ce dernier désigne les paramètres de fonction.
+Ici c'est une question de syntaxe. Le rest operator ne peut être utilisé qu'en dernière position.
+Il est similaire au spred operator, mais ce dernier n'a pas la même approche.
+Le spread permet d'étaler un itérable comme un objet ou tableau.
+Le rest permet de récupérer une partie d'un itérable.
 
-9. A, E
+9. A, C, E
 
 La réponse B, tente de déstructurer l'objet passé en paramètre. Seulement l'objet n'a aucune clé du nom de "user".
-Les réponses C et D sont des erreurs de syntaxes.
+La réponse C utilise le rest operator pour récupérer toutes les propriétés passées en paramètre, et les mettre dans une variable `user`.
+La réponsee D est de erreur de syntaxe.
 La réponse E montre que l'on peut utiliser des paramètres par défaut même lors de la déstructuration d'un paramètre.
 
 10. B, D
@@ -62,8 +65,8 @@ La réponse B est une erreur de syntaxe.
 
 12. B, C
 
-La fonction permet de copier les propriétés d'un objet dans un autre. 
-En copiant dans objet vide `Object.assign` résout le problème de la copie d'un objet, et non pas de sa référence.
+La fonction permet de copier les propriétés d'un objet dans un autre.
+En copiant dans objet vide `Object.assign` permet de simuler l'immutabilité en renvoyant un objet tout frais.
 
 13. B
 
@@ -79,6 +82,8 @@ Le programme va produire une erreur et s'arrêter.
 
 `[]` équivaut à `new Array()` et `() => {}`équivaut à créer une nouvelle fonction auto-bindée.
 C'est pourquoi la deuxième ligne est plus performante.
-Avec des problématiques de performances, il vaut mieux éviter les raccourcis instanciant de nouveux objets
+Avec des problématiques de performances, il vaut mieux éviter les raccourcis instanciant de nouveux objets.
 Dans la ligne 2 `emptyArray` contiendrait `new Array()`.
-Et displayName serait bindé en dehors de la fonction aux besoins de perfs. De cette manière : `displayName.bind(this)`
+Et displayName serait bindé en dehors de la fonction aux besoins de perfs. De cette manière : `displayName.bind(this)`.
+
+Enfin, il est important de comprendre que l'es6 est une spécification. il
