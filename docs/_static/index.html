@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>reveal-md</title>
+        <link rel="stylesheet" href="./css/reveal.css">
+        <link rel="stylesheet" href="./theme/custom.css" id="theme">
+        <link rel="stylesheet" href="./css/highlight/zenburn.css">
+        <link rel="stylesheet" href="./css/print/paper.css" type="text/css" media="print">
+
+    </head>
+    <body>
+
+        <div class="reveal">
+            <div class="slides"><section  data-markdown><script type="text/template"># TechNight
+
+<img src="assets/imgs/react-logo.png" height="300px">
+
+Excilys - Zacaria Chtatar - Février 2017
+</script></section><section  data-markdown><script type="text/template">
+## Avant propos
+
+* J'ai 4 mois de React
+* Et 3 ans de JS
+* Et j'en suis convaincu
+* Intervenez !
+</script></section><section  data-markdown><script type="text/template">
+## Sommaire
+
+* Contexte
+* JavaScript
+* React pains
+* Du code
+* Dans la vraie vie
+</script></section><section  data-markdown><script type="text/template">
+## Introduction
+
+1ère release : March 2013
+
+> React is a library for providing a view for data rendered as HTML.
+
+[![npm](https://img.shields.io/npm/dm/react.svg)](https://www.npmjs.org/package/react)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/facebook/react.svg)](https://github.com/facebook/react/pulls)
+[![GitHub release](https://img.shields.io/github/release/facebook/react.svg)](https://github.com/facebook/react)
+[![GitHub stars](https://img.shields.io/github/stars/facebook/react.svg?style=social&label=Star)](https://github.com/facebook/react)
+
+Poussé par Facebook et l'annonce d'Angular2 <!-- .element: class="fragment" data-fragment-index="1" -->
+</script></section><section ><section data-markdown><script type="text/template">
+## Comparaison
+
+ | jQuery | AngularJs | Angular2 | React |
+ ---|---|---|---|---|
+</script></section><section data-markdown><script type="text/template">
+## Comparaison
+
+ | jQuery | AngularJs | Angular2 | React |
+ ---|---|---|---|---|
+1ère version | 2006 | 2009 | 2016 | 2013 |
+</script></section><section data-markdown><script type="text/template">
+## Comparaison
+
+ | jQuery | AngularJs | Angular2 | React |
+ ---|---|---|---|---|
+1ère version | 2006 | 2009 | 2016 | 2013 |
+Github stars | ![](https://img.shields.io/github/stars/jquery/jquery.svg?style=social&label=Star) | ![](https://img.shields.io/github/stars/angular/angular.js.svg?style=social&label=Star) | ![](https://img.shields.io/github/stars/angular/angular.svg?style=social&label=Star) | ![](https://img.shields.io/github/stars/facebook/react.svg?style=social&label=Star) |
+</script></section><section data-markdown><script type="text/template">
+## Comparaison
+
+ | jQuery | AngularJs | Angular2 | React |
+ ---|---|---|---|---|
+1ère version | 2006 | 2009 | 2016 | 2013 |
+Github stars | ![](https://img.shields.io/github/stars/jquery/jquery.svg?style=social&label=Star) | ![](https://img.shields.io/github/stars/angular/angular.js.svg?style=social&label=Star) | ![](https://img.shields.io/github/stars/angular/angular.svg?style=social&label=Star) | ![](https://img.shields.io/github/stars/facebook/react.svg?style=social&label=Star) |
+Architecture | YOLO | MV* | Any | Redux |
+</script></section><section data-markdown><script type="text/template">
+## Comparaison
+
+ | jQuery | AngularJs | Angular2 | React |
+ ---|---|---|---|---|
+1ère version | 2006 | 2009 | 2016 | 2013 |
+Github stars | ![](https://img.shields.io/github/stars/jquery/jquery.svg?style=social&label=Star) | ![](https://img.shields.io/github/stars/angular/angular.js.svg?style=social&label=Star) | ![](https://img.shields.io/github/stars/angular/angular.svg?style=social&label=Star) | ![](https://img.shields.io/github/stars/facebook/react.svg?style=social&label=Star) |
+Architecture | YOLO | MV* | Any | Redux |
+Démarrage | Rapide | Rapide | Rapide | Lent |
+
+</script></section><section data-markdown><script type="text/template">
+## Comparaison
+
+ | jQuery | AngularJs | Angular2 | React |
+ ---|---|---|---|---|
+1ère version | 2006 | 2009 | 2016 | 2013 |
+Github stars | ![](https://img.shields.io/github/stars/jquery/jquery.svg?style=social&label=Star) | ![](https://img.shields.io/github/stars/angular/angular.js.svg?style=social&label=Star) | ![](https://img.shields.io/github/stars/angular/angular.svg?style=social&label=Star) | ![](https://img.shields.io/github/stars/facebook/react.svg?style=social&label=Star) |
+Architecture | YOLO | MV* | Any | Redux |
+Démarrage | Rapide | Rapide | Rapide | Lent | 
+Courbe d'apprentissage | Faible | Important | ? | Faible |
+</script></section><section data-markdown><script type="text/template">
+## Comparaison
+
+ | jQuery | AngularJs | Angular2 | React |
+ ---|---|---|---|---|
+1ère version | 2006 | 2009 | 2016 | 2013 |
+Github stars | ![](https://img.shields.io/github/stars/jquery/jquery.svg?style=social&label=Star) | ![](https://img.shields.io/github/stars/angular/angular.js.svg?style=social&label=Star) | ![](https://img.shields.io/github/stars/angular/angular.svg?style=social&label=Star) | ![](https://img.shields.io/github/stars/facebook/react.svg?style=social&label=Star) |
+Architecture | YOLO | MV* | Any | Redux |
+Démarrage | Rapide | Rapide | Rapide | Lent | 
+Courbe d'apprentissage | Faible | Important | ? | Faible |
+Language | JS | JS | TypeScript | JSX |
+</script></section><section data-markdown><script type="text/template">
+## Comparaison
+
+ | jQuery | AngularJs | Angular2 | React |
+ ---|---|---|---|---|
+1ère version | 2006 | 2009 | 2016 | 2013 |
+Github stars | ![](https://img.shields.io/github/stars/jquery/jquery.svg?style=social&label=Star) | ![](https://img.shields.io/github/stars/angular/angular.js.svg?style=social&label=Star) | ![](https://img.shields.io/github/stars/angular/angular.svg?style=social&label=Star) | ![](https://img.shields.io/github/stars/facebook/react.svg?style=social&label=Star) |
+Architecture | YOLO | MV* | Any | Redux |
+Démarrage | Rapide | Rapide | Rapide | Lent | 
+Courbe d'apprentissage | Faible | Important | ? | Faible |
+Language | JS | JS | TypeScript | JSX |
+Debug | + | - | ? | ++ |
+</script></section><section data-markdown><script type="text/template">
+## Au final
+
+* jQuery n'est plus assez structuré pour un application scalable. <!-- .element: class="fragment" data-fragment-index="1" -->
+* AngularJs n'est plus d'actualité en raison de ses perfs et son architecture. <!-- .element: class="fragment" data-fragment-index="2" -->
+* Angular2 semble bon, mais ne m'inspire pas confiance. <!-- .element: class="fragment" data-fragment-index="3" -->
+* React est pour moi un bon pari sur l'avenir. <!-- .element: class="fragment" data-fragment-index="4" -->
+</script></section></section><section  data-markdown><script type="text/template">
+## Qui a choisi React ?
+
+<div class="space-around">
+  <img src="assets/imgs/imgur.png" height="100px">
+  <img src="assets/imgs/airbnb.png" height="100px">
+  <img src="assets/imgs/paypal.png" height="100px">
+</div>
+<div class="space-around">
+  <img src="assets/imgs/mirakl.png" height="100px">
+  <img src="assets/imgs/netflix-logo.png" height="100px">
+</div>
+</script></section><section  data-markdown><script type="text/template">
+## Pourquoi ?
+
+* Simplicité
+* Predictabilité
+* Composants
+* Testabilité
+* Nouveautés
+</script></section><section ><section data-markdown><script type="text/template">
+## Nouveautés
+
+React a amené de grandes innovations
+</script></section><section data-markdown><script type="text/template">
+## Hot Module Reload
+
+<img src="assets/imgs/hmr.gif" height="400px">
+</script></section><section data-markdown><script type="text/template">
+## DOM virtuel
+
+Le rendu est pour le navigateur l'opération la plus couteuse
+
+<img src="assets/imgs/virtual_dom_diff.png" width="650px">
+</script></section><section data-markdown><script type="text/template">
+## React-native
+
+Du vrai natif multi-platforme
+
+[![npm](https://img.shields.io/npm/dm/react-native.svg)](https://www.npmjs.org/package/react-native)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/facebook/react-native.svg)](https://github.com/facebook/react-native/pulls)
+[![GitHub release](https://img.shields.io/github/release/facebook/react-native.svg)](https://github.com/facebook/react-native)
+[![GitHub stars](https://img.shields.io/github/stars/facebook/react-native.svg?style=social&label=Star)](https://github.com/facebook/react-native)
+</script></section><section data-markdown><script type="text/template">
+## Time travel debugging
+
+<img src="assets/imgs/reduxflow.gif" height="400px">
+</script></section></section><section ><section data-markdown><script type="text/template">
+## Pause 
+
+<img src="assets/imgs/pause.png" height="150px">
+</script></section><section data-markdown><script type="text/template">
+## Quiz es6
+
+Comment ça s'est passé ?
+</script></section><section data-markdown><script type="text/template">
+## Destructuring
+
+Déstructurer permet de créer des variables en utilisant la structure de tableaux ou d'objets.
+
+```JavaScript
+// list matching
+var [a, , b] = [1,2,3];
+
+// object matching
+var { op: a, lhs: { op: b }, rhs: c }
+       = getASTNode()
+
+// object matching shorthand
+// binds `op`, `lhs` and `rhs` in scope
+var {op, lhs, rhs} = getASTNode()
+
+// Can be used in parameter position
+function g({name: x}) {
+  console.log(x);
+}
+g({name: 5})
+
+// Fail-soft destructuring
+var [a] = [];
+a === undefined;
+
+// Fail-soft destructuring with defaults
+var [a = 1] = [];
+a === 1;
+```
+</script></section><section data-markdown><script type="text/template">
+## Modules
+
+Support des modules au niveau du langage.
+
+⚠️️ Non supporté par Node 7
+
+```JavaScript
+// lib/math.js
+export function sum(x, y) {
+  return x + y;
+}
+export var pi = 3.141593;
+```
+```JavaScript
+// app.js
+import * as math from "lib/math";
+alert("2π = " + math.sum(math.pi, math.pi));
+```
+```JavaScript
+// otherApp.js
+import {sum, pi} from "lib/math";
+alert("2π = " + sum(pi, pi));
+```
+</script></section><section data-markdown><script type="text/template">
+## Default - Rest - Spread Operator
+
+```JavaScript
+function f(x, y=12) {
+  // y is 12 if not passed (or passed as undefined)
+  return x + y;
+}
+f(3) == 15
+```
+```JavaScript
+function f(x, ...y) {
+  // y is an Array
+  return x * y.length;
+}
+f(3, "hello", true) == 6
+```
+```JavaScript
+function f(x, y, z) {
+  return x + y + z;
+}
+// Pass each elem of array as argument
+f(...[1,2,3]) == 6
+```
+</script></section></section><section ><section data-markdown><script type="text/template">
+## JavaScript
+
+<img src="assets/imgs/entropy.png" height="">
+
+Plus pour longtemps... <!-- .element: class="fragment" data-fragment-index="1" -->
+</script></section><section data-markdown><script type="text/template">
+## Bonnes pratiques
+
+* Automatisation
+* Linters
+* Tests
+* Conventions
+</script></section><section data-markdown><script type="text/template">
+## Conventions
+
+<img src="assets/imgs/standards.png">
+
+<span class="fragment" data-fragment-index="1">
+[airbnb](https://github.com/airbnb/javascript)
+</span>
+</script></section><section data-markdown><script type="text/template">
+## Outils
+
+<div class="space-around">
+  [<img src="assets/imgs/npm-logo.png" height="100px">](https://www.npmjs.com) <!-- .element: class="fragment" data-fragment-index="1" -->
+  [<img src="assets/imgs/babel-logo.png" height="100px">](https://babeljs.io) <!-- .element: class="fragment" data-fragment-index="2" -->
+  [<img src="assets/imgs/webpack-logo.png" height="100px">](https://webpack.js.org) <!-- .element: class="fragment" data-fragment-index="3" -->
+  [<img src="assets/imgs/eslint.png" height="100px">](http://eslint.org) <!-- .element: class="fragment" data-fragment-index="4" -->
+  [<img src="assets/imgs/mocha.svg" height="100px">](https://mochajs.org) <!-- .element: class="fragment" data-fragment-index="5" -->
+  [<img src="assets/imgs/karma.png" height="100px">](https://karma-runner.github.io/1.0/index.html) <!-- .element: class="fragment" data-fragment-index="6" -->
+  [<img src="assets/imgs/enzyme.png" height="100px">](http://airbnb.io/enzyme) <!-- .element: class="fragment" data-fragment-index="7" -->
+</div>
+
+<span class="fragment" data-fragment-index="7">
+[create-react-app](https://github.com/facebookincubator/create-react-app)
+</span>
+
+Désolé, mais le temps nous est compté 😅 <!-- .element: class="fragment" data-fragment-index="8" -->
+</script></section></section><section ><section data-markdown><script type="text/template">
+## Pain points
+
+<img src="assets/imgs/struggle.gif">
+</script></section><section data-markdown><script type="text/template">
+## Pain points #1 : Le système de build
+
+
+<span class="fragment" data-fragment-index="1">
+    Babel
+</span>
+<span class="fragment" data-fragment-index="2">
+    \+ Webpack
+</span>
+<span class="fragment" data-fragment-index="3">
+    \+ Eslint
+</span>
+<span class="fragment" data-fragment-index="4">
+    \+ Mocha
+</span>
+<span class="fragment" data-fragment-index="5">
+    \+ Karma
+</span>
+<span class="fragment" data-fragment-index="6">
+    \+ Enzyme
+</span>
+
+<img src="assets/imgs/pain.jpg"> <!-- .element: class="fragment" data-fragment-index="7" -->
+
+Mais une fois en place c'est 😍 <!-- .element: class="fragment" data-fragment-index="8" -->
+</script></section><section data-markdown><script type="text/template">
+## Pain points #2 : La JS fatigue
+
+<img src="assets/imgs/fatigue.png" height="450px">
+</script></section><section data-markdown><script type="text/template">
+## Pain points #3 : Penser en composants
+
+<img src="assets/imgs/react-think.png" width="650px">
+</script></section></section><section  data-markdown><script type="text/template">
+## Voyons la bête
+
+<img src="assets/imgs/finally.jpg">
+
+* JSX <!-- .element: class="fragment" data-fragment-index="1" -->
+* Composants <!-- .element: class="fragment" data-fragment-index="2" -->
+* Cycle de vie <!-- .element: class="fragment" data-fragment-index="3" -->
+</script></section><section ><section data-markdown><script type="text/template">
+## JSX
+
+Language alliant JS et XML !
+
+```
+// Duh 😕
+React.createElement('div', { className: 'red' }, 'Hello');
+
+// Clean 😊
+<div className="red">
+    Hello
+</div>;
+```
+
+Pourquoi ? <!-- .element: class="fragment" data-fragment-index="1" -->
+</script></section><section data-markdown><script type="text/template">
+```
+// Duh Duh 🤢
+React.createElement(
+  DashboardUnit,
+  { 'data-index': '2' },
+  React.createElement('h1', null, 'Scores'),
+  React.createElement(Scoreboard, {
+    className: 'results', scores: gameScores
+  })
+);
+```
+
+```
+// Clean 😁
+<DashboardUnit data-index="2">
+  <h1>Scores</h1>
+  <Scoreboard className="results" scores={gameScores} />
+</DashboardUnit>;
+```
+
+<span class="fragment" data-fragment-index="1">
+NB : Le JSX doit toujours avoir un noeud racine.
+</span>
+
+<span class="fragment" data-fragment-index="2">
+NB2 : certains attributs tels que `class` sont changés en `className`
+</span>
+</script></section></section><section ><section data-markdown><script type="text/template">
+## Composants
+
+Brique UI dont la structure est définie par le JSX : déclaratif. <!-- .element: class="fragment" data-fragment-index="1" -->
+
+<span class="fragment" data-fragment-index="2">
+    Les données du composant sont paramétrées par son **état** et ses **propriétés**.
+</span>
+</script></section><section data-markdown><script type="text/template">
+Avec des classes es6
+
+```
+class MyComponent extends React.Component {
+    // Minimum mandatory function
+    render() {
+        return <div>Hello World</div>
+    }
+}
+```
+
+⚠️️  Les noms de composants doivent commencer par une majuscule !
+</script></section><section data-markdown><script type="text/template">
+Avec un état initial
+
+```
+class MyComponent extends React.Component {
+    constructor(props) {
+        // You must call super first
+        super(props);
+        this.state = {value: 0};
+    }
+
+    render() {
+        const {value} = this.state;
+        // Template interpreted with curly braces
+        return <div>Is value zero ? {value === 0 ? 'yes' : 'no'}</div>
+    }
+}
+```
+</script></section><section data-markdown><script type="text/template">
+Utilisation d'événements
+
+```
+class MyComponent extends React.Component {
+    constructor(props) {
+        super(props);
+        // Manual binding, better perfs
+        this.clickHandler = this.clickHandler.bind(this);
+    }
+    clickHandler(e) {
+        alert('Hi ' + e.target.value);
+    }
+    render() {
+        return (<div>
+            <p onClick={this.clickHandler}>Manual bind</p>
+            <p onClick={(e) => this.clickHandler(e, 'Zac')}>Auto-bind</p>
+        </div>)
+    }
+}
+```
+</script></section><section data-markdown><script type="text/template">
+Composition et non héritage
+
+```
+// Stateless
+const Presentational = (props) => {
+    const {value} = props;
+    return <div className="title">My value is {value}</div>
+}
+
+// Statefull
+class Container extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {value: 0};
+    }
+    render() {
+        // Container's state is passed to Presentationnal via props
+        return <Presentational value={this.state.value}/>
+    }
+}
+```
+</script></section><section data-markdown><script type="text/template">
+State vs Props ?
+
+> Les propriétés sont aux composants ce que les arguments sont aux fonctions.
+
+> Tout comme les propriétés, l'état altère le rendu du composant. 
+Mais l'état est privé et immutable, entièrement controlé par le composant 🤢.
+
+</script></section><section data-markdown><script type="text/template">
+State immutable
+
+```
+// GET STATE
+const foo = this.state.foo;
+
+// SET STATE
+
+// Impossibru !
+this.state = {foo:'bar'};
+
+// Ok
+this.setState({foo:'bar'});
+```
+</script></section></section><section ><section data-markdown><script type="text/template">
+## Cycle de vie
+
+Les composants utilisent les hooks de l'API :
+
+* render : obligatoire <!-- .element: class="fragment" data-fragment-index="1" -->
+* setState : déclenche le cycle de rendering <!-- .element: class="fragment" data-fragment-index="2" -->
+* componentDidMount : idéal pour les appels async <!-- .element: class="fragment" data-fragment-index="3" -->
+* shouldComponentUpdate : performance <!-- .element: class="fragment" data-fragment-index="4" -->
+* ... <!-- .element: class="fragment" data-fragment-index="5" -->
+</script></section><section data-markdown><script type="text/template">
+Au cas où
+
+<img src="https://cdn-images-1.medium.com/max/1600/0*VoYsN6eq7I_wjVV5.png" width="650px">
+</script></section></section><section  data-markdown><script type="text/template">
+## Les mains dans le cambouis
+
+<a href="http://codepen.io/Muvaiah/pens/public/?grid_type=list#">
+    <img src="assets/imgs/cambouis.jpg" width="250px">
+</a>
+
+<span class="fragment" data-fragment-index="1">[Créer le premier composant](http://codepen.io/Muvaiah/pen/GWKrPZ?editors=0010#0)</span>
+
+<span class="fragment" data-fragment-index="2">[Définir l'état](http://codepen.io/Muvaiah/pen/mWbWJO?editors=0010#0)</span>
+
+<span class="fragment" data-fragment-index="3">[Ajouter les contrôles](http://codepen.io/Muvaiah/pen/yMBMaR?editors=0010#0)</span>
+
+<span class="fragment" data-fragment-index="4">[Découpler](http://codepen.io/Muvaiah/pen/wJwJqy?editors=0010#0)</span>
+</script></section><section ><section data-markdown><script type="text/template">
+## Dans la vraie vie
+
+React n'est pas viable tout seul. 😅 <!-- .element: class="fragment" data-fragment-index="1" -->
+
+Il faut un gestionnaire d'état. <!-- .element: class="fragment" data-fragment-index="2" -->
+
+Redux est le consensus en place. <!-- .element: class="fragment" data-fragment-index="3" -->
+
+<img src="assets/imgs/redux-logo.png" height="200px"> <!-- .element: class="fragment" data-fragment-index="3" -->
+</script></section><section data-markdown><script type="text/template">
+## Redux
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QEjf1W-rRIo" frameborder="0" allowfullscreen></iframe>
+
+[cartoon](redux.md)
+</script></section></section><section  data-markdown><script type="text/template">
+## Merci
+</script></section></div>
+        </div>
+
+        <script src="./lib/js/head.min.js"></script>
+        <script src="./js/reveal.js"></script>
+
+        <script>
+            function extend() {
+              var target = {};
+              for (var i = 0; i < arguments.length; i++) {
+                var source = arguments[i];
+                for (var key in source) {
+                  if (source.hasOwnProperty(key)) {
+                    target[key] = source[key];
+                  }
+                }
+              }
+              return target;
+            }
+
+            // Optional libraries used to extend on reveal.js
+            var deps = [
+              { src: './lib/js/classList.js', condition: function() { return !document.body.classList; } },
+              { src: './plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+              { src: './plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+              { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+              { src: './plugin/zoom-js/zoom.js', async: true },
+              { src: './plugin/notes/notes.js', async: true },
+              { src: './plugin/math/math.js', async: true }
+            ];
+
+            // default options to init reveal.js
+            var defaultOptions = {
+              controls: true,
+              progress: true,
+              history: true,
+              center: true,
+              transition: 'default', // none/fade/slide/convex/concave/zoom
+              dependencies: deps
+            };
+
+            // options from URL query string
+            var queryOptions = Reveal.getQueryHash() || {};
+
+            var options = {};
+            options = extend(defaultOptions, options, queryOptions);
+            Reveal.initialize(options);
+        </script>
+        
+    </body>
+</html>
