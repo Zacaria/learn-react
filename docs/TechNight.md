@@ -38,7 +38,7 @@ Excilys - Zacaria Chtatar - Février 2017
 
 Poussé par Facebook et l'annonce d'Angular2 <!-- .element: class="fragment" data-fragment-index="1" -->
 
----
+----
 
 ## Comparaison
 
@@ -178,20 +178,26 @@ Le rendu est pour le navigateur l'opération la plus couteuse
 
 ----
 
+## Isomorphisme
+
+Grace au DOM virtuel
+* Premier rendu côté serveur
+* Très rapide
+* Meilleur SEO
+
+
+----
+
 ## React-native
 
-Du vrai natif multi-platforme
+Du vrai natif multi-platforme.
 
 [![npm](https://img.shields.io/npm/dm/react-native.svg)](https://www.npmjs.org/package/react-native)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/facebook/react-native.svg)](https://github.com/facebook/react-native/pulls)
 [![GitHub release](https://img.shields.io/github/release/facebook/react-native.svg)](https://github.com/facebook/react-native)
 [![GitHub stars](https://img.shields.io/github/stars/facebook/react-native.svg?style=social&label=Star)](https://github.com/facebook/react-native)
 
-----
-
-## Time travel debugging
-
-<img src="assets/imgs/reduxflow.gif" height="400px">
+Remplace les balises html par des composants natifs.
 
 ---
 
@@ -373,17 +379,20 @@ Mais une fois en place c'est 😍 <!-- .element: class="fragment" data-fragment-
 
 ----
 
-## Pain points #2 : La JS fatigue
-
-<img src="assets/imgs/fatigue.png" height="450px">
-
-----
-
-## Pain points #3 : Penser en composants
+## Pain points #2 : Penser en composants
 
 <img src="assets/imgs/react-think.png" width="650px">
 
 Une couleur est un même composant.
+
+----
+
+## Pain points #3 : Modules
+
+* Npm donne l'accès à tout type de ressources.
+* React est très dynamique <!-- .element: class="fragment" data-fragment-index="1" -->
+* ⚠️️  Versions supportées <!-- .element: class="fragment" data-fragment-index="2" -->
+* ⚠️️  Qualité du code <!-- .element: class="fragment" data-fragment-index="3" -->
 
 ---
 
@@ -410,6 +419,8 @@ React.createElement('div', { className: 'red' }, 'Hello');
     Hello
 </div>;
 ```
+
+Les attributs sont appelés "propriétés".
 
 Pourquoi ? <!-- .element: class="fragment" data-fragment-index="1" -->
 
@@ -440,7 +451,7 @@ NB : Le JSX doit toujours avoir un noeud racine.
 </span>
 
 <span class="fragment" data-fragment-index="2">
-NB2 : certains attributs tels que `class` sont changés en `className`
+NB2 : certains attributs tels que `class` sont changés en `className`.
 </span>
 
 ---
@@ -487,6 +498,8 @@ class MyComponent extends React.Component {
     }
 }
 ```
+
+A votre avis qu'affiche le composant ? <!-- .element: class="fragment" data-fragment-index="1" -->
 
 ----
 
@@ -541,10 +554,11 @@ class Container extends React.Component {
 
 State vs Props ?
 
-> Les propriétés sont aux composants ce que les arguments sont aux fonctions.
+> Les propriétés sont aux composants ce que les arguments sont aux fonctions. <!-- .element: class="fragment" data-fragment-index="1" -->
 
-> Tout comme les propriétés, l'état altère le rendu du composant. 
-Mais l'état est privé et immutable, entièrement controlé par le composant 🤢.
+> Tout comme les propriétés, l'état altère le rendu du composant. <!-- .element: class="fragment" data-fragment-index="2" -->
+
+> Mais l'état est privé et entièrement controlé par le composant 🤢. <!-- .element: class="fragment" data-fragment-index="3" -->
 
 
 ----
@@ -564,6 +578,9 @@ this.state = {foo:'bar'};
 this.setState({foo:'bar'});
 ```
 
+Maitrise des données. <!-- .element: class="fragment" data-fragment-index="1" -->
+
+Maitrise de l'UI. <!-- .element: class="fragment" data-fragment-index="2" -->
 
 ---
 
@@ -579,7 +596,7 @@ Les composants utilisent les hooks de l'API :
 
 ----
 
-Au cas où
+En détails
 
 <img src="https://cdn-images-1.medium.com/max/1600/0*VoYsN6eq7I_wjVV5.png" width="650px">
 
@@ -588,7 +605,7 @@ Au cas où
 ## Les mains dans le cambouis
 
 <a href="http://codepen.io/Muvaiah/pens/public/?grid_type=list#">
-    <img src="assets/imgs/cambouis.jpg" width="250px">
+    <img src="assets/imgs/cambouis.jpg" width="200px">
 </a>
 
 <span class="fragment" data-fragment-index="1">[Créer le premier composant](http://codepen.io/Muvaiah/pen/GWKrPZ?editors=0010#0)</span>
@@ -598,6 +615,8 @@ Au cas où
 <span class="fragment" data-fragment-index="3">[Ajouter les contrôles](http://codepen.io/Muvaiah/pen/yMBMaR?editors=0010#0)</span>
 
 <span class="fragment" data-fragment-index="4">[Découpler](http://codepen.io/Muvaiah/pen/wJwJqy?editors=0010#0)</span>
+
+<span class="fragment" data-fragment-index="5">Wrapper</span>
 
 ---
 
