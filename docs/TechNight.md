@@ -266,17 +266,10 @@ alert("2π = " + sum(pi, pi));
 
 ----
 
-## Default - Rest - Spread Operator
+## Rest - Spread - Default Operator
 
 ```JavaScript
-function f(x, y=12) {
-  // y is 12 if not passed (or passed as undefined)
-  return x + y;
-}
-f(3) == 15
-```
-```JavaScript
-function f(x, ...y) {
+function f(x, ...y) { // Rest to gather
   // y is an Array
   return x * y.length;
 }
@@ -287,7 +280,14 @@ function f(x, y, z) {
   return x + y + z;
 }
 // Pass each elem of array as argument
-f(...[1,2,3]) == 6
+f(...[1,2,3]) == 6 // Spread to iterate
+```
+```JavaScript
+function f(x, y=12) { // Default to ... default
+  // y is 12 if not passed (or passed as undefined)
+  return x + y;
+}
+f(3) == 15
 ```
 
 ---
@@ -382,6 +382,8 @@ Mais une fois en place c'est 😍 <!-- .element: class="fragment" data-fragment-
 ## Pain points #3 : Penser en composants
 
 <img src="assets/imgs/react-think.png" width="650px">
+
+Une couleur est un même composant.
 
 ---
 
@@ -495,15 +497,17 @@ class MyComponent extends React.Component {
     constructor(props) {
         super(props);
         // Manual binding, better perfs
-        this.clickHandler = this.clickHandler.bind(this);
+        this.handleClick = this.handleClick.bind(this);
     }
-    clickHandler(e) {
-        alert('Hi ' + e.target.value);
+    handleClick(e) {
+      console.log(e.target.dataset.custom);
     }
     render() {
         return (<div>
-            <p onClick={this.clickHandler}>Manual bind</p>
-            <p onClick={(e) => this.clickHandler(e, 'Zac')}>Auto-bind</p>
+            <button data-custom="manual"
+                onClick={this.handleClick}>Manual bind</button>
+            <button data-custom="auto"
+                onClick={(e) => this.handleClick(e)}>Auto bind</button>
         </div>)
     }
 }
@@ -511,7 +515,7 @@ class MyComponent extends React.Component {
 
 ----
 
-Composition et non héritage
+Composition via les props et non héritage
 
 ```
 // Stateless
@@ -545,7 +549,7 @@ Mais l'état est privé et immutable, entièrement controlé par le composant �
 
 ----
 
-State immutable
+State et props immutable
 
 ```
 // GET STATE
@@ -560,6 +564,7 @@ this.state = {foo:'bar'};
 this.setState({foo:'bar'});
 ```
 
+
 ---
 
 ## Cycle de vie
@@ -567,7 +572,7 @@ this.setState({foo:'bar'});
 Les composants utilisent les hooks de l'API :
 
 * render : obligatoire <!-- .element: class="fragment" data-fragment-index="1" -->
-* setState : déclenche le cycle de rendering <!-- .element: class="fragment" data-fragment-index="2" -->
+* setState : déclenche le cycle de vie du composant <!-- .element: class="fragment" data-fragment-index="2" -->
 * componentDidMount : idéal pour les appels async <!-- .element: class="fragment" data-fragment-index="3" -->
 * shouldComponentUpdate : performance <!-- .element: class="fragment" data-fragment-index="4" -->
 * ... <!-- .element: class="fragment" data-fragment-index="5" -->
