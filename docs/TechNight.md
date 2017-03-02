@@ -10,7 +10,6 @@ Excilys - Zacaria Chtatar - Février 2017
 
 * J'ai 4 mois de React
 * Et 3 ans de JS
-* Et j'en suis convaincu
 * Intervenez !
 
 ---
@@ -605,18 +604,16 @@ En détails
 ## Les mains dans le cambouis
 
 <a href="http://codepen.io/Muvaiah/pens/public/?grid_type=list#">
-    <img src="assets/imgs/cambouis.jpg" width="200px">
+    <img src="assets/imgs/cambouis.jpg" width="300px">
 </a>
 
-<span class="fragment" data-fragment-index="1">[Créer le premier composant](http://codepen.io/Muvaiah/pen/GWKrPZ?editors=0010#0)</span>
-
-<span class="fragment" data-fragment-index="2">[Définir l'état](http://codepen.io/Muvaiah/pen/mWbWJO?editors=0010#0)</span>
-
-<span class="fragment" data-fragment-index="3">[Ajouter les contrôles](http://codepen.io/Muvaiah/pen/yMBMaR?editors=0010#0)</span>
-
-<span class="fragment" data-fragment-index="4">[Découpler](http://codepen.io/Muvaiah/pen/wJwJqy?editors=0010#0)</span>
-
-<span class="fragment" data-fragment-index="5">Wrapper</span>
+<span class="fragment" data-fragment-index="1">[Créer le premier composant](http://codepen.io/Muvaiah/pen/GWKrPZ?editors=0010#0) -> </span>
+<span class="fragment" data-fragment-index="2">[Définir l'état](http://codepen.io/Muvaiah/pen/mWbWJO?editors=0010#0) -> </span>
+<span class="fragment" data-fragment-index="3">[Ajouter les contrôles](http://codepen.io/Muvaiah/pen/yMBMaR?editors=0010#0) -> </span>
+<span class="fragment" data-fragment-index="4">[Découpler](http://codepen.io/Muvaiah/pen/wJwJqy?editors=0010#0) -> </span>
+<span class="fragment" data-fragment-index="5">[Wrapper](https://codepen.io/Muvaiah/pen/dvMpQq?editors=0010#0) -> </span>
+<span class="fragment" data-fragment-index="6">[Bouton Supprimer](https://codepen.io/Muvaiah/pen/oZxYWV?editors=0010#0) -> </span>
+<span class="fragment" data-fragment-index="7">[Découpler 2](https://codepen.io/Muvaiah/pen/NpNbvd?editors=0010#0)</span>
 
 ---
 

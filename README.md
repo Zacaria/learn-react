@@ -83,3 +83,17 @@ Useful articles :
 - 11 min : [https://code-cartoons.com/a-cartoon-intro-to-redux-3afb775501a6](https://code-cartoons.com/a-cartoon-intro-to-redux-3afb775501a6)
 
 Awesome list : [https://github.com/brillout/awesome-redux](https://github.com/brillout/awesome-redux)
+
+# Exercices
+
+I wrote some exercices on Codepen.io
+
+Here they are :
+
+[First Component](http://codepen.io/Muvaiah/pen/GWKrPZ?editors=0010#0)
+[Define state](http://codepen.io/Muvaiah/pen/mWbWJO?editors=0010#0)
+[Add controls](http://codepen.io/Muvaiah/pen/yMBMaR?editors=0010#0)
+[Decoupling](http://codepen.io/Muvaiah/pen/wJwJqy?editors=0010#0)
+[Wrap](https://codepen.io/Muvaiah/pen/dvMpQq?editors=0010#0)
+[Button Delete](https://codepen.io/Muvaiah/pen/oZxYWV?editors=0010#0)
+[Decoupling 2](https://codepen.io/Muvaiah/pen/NpNbvd?editors=0010#0)
