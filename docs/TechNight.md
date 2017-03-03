@@ -2,7 +2,7 @@
 
 <img src="assets/imgs/react-logo.png" height="300px">
 
-Excilys - Zacaria Chtatar - Février 2017
+Excilys - Zacaria Chtatar - Mars 2017
 
 ---
 
