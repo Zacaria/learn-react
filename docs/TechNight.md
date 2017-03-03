@@ -436,7 +436,7 @@ React.createElement(
   })
 );
 ```
-
+<code class="fragment" data-fragment-index="1">
 ```
 // Clean 😁
 <DashboardUnit data-index="2">
@@ -444,12 +444,13 @@ React.createElement(
   <Scoreboard className="results" scores={gameScores} />
 </DashboardUnit>;
 ```
+</code>
 
-<span class="fragment" data-fragment-index="1">
+<span class="fragment" data-fragment-index="2">
 NB : Le JSX doit toujours avoir un noeud racine.
 </span>
 
-<span class="fragment" data-fragment-index="2">
+<span class="fragment" data-fragment-index="3">
 NB2 : certains attributs tels que `class` sont changés en `className`.
 </span>
 
@@ -638,3 +639,5 @@ Redux est le consensus en place. <!-- .element: class="fragment" data-fragment-i
 ---
 
 ## Merci
+
+Des questions ?
