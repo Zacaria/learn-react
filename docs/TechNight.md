@@ -608,6 +608,8 @@ En détails
     <img src="assets/imgs/cambouis.jpg" width="300px">
 </a>
 
+[Zacaria/learn-react](www.github.com/Zacaria/learn-react)
+
 <span class="fragment" data-fragment-index="1">[Créer le premier composant](http://codepen.io/Muvaiah/pen/GWKrPZ?editors=0010#0) -> </span>
 <span class="fragment" data-fragment-index="2">[Définir l'état](http://codepen.io/Muvaiah/pen/mWbWJO?editors=0010#0) -> </span>
 <span class="fragment" data-fragment-index="3">[Ajouter les contrôles](http://codepen.io/Muvaiah/pen/yMBMaR?editors=0010#0) -> </span>
