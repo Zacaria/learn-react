@@ -16,23 +16,22 @@
 
 <img src="assets/imgs/react-logo.png" height="300px">
 
-Excilys - Zacaria Chtatar - Février 2017
+Excilys - Zacaria Chtatar - Juin 2017
 </script></section><section  data-markdown><script type="text/template">
-## Avant propos
+Si vous ne comprenez pas quelque chose
 
-* J'ai 4 mois de React
-* Et 3 ans de JS
-* Et j'en suis convaincu
-* Intervenez !
+Ne me laissez pas avancer tout seul
+
+Intervenez 😁
 </script></section><section  data-markdown><script type="text/template">
 ## Sommaire
 
-* Contexte
-* JavaScript
-* React pains
-* Du code
-* Dans la vraie vie
-</script></section><section  data-markdown><script type="text/template">
+* Contexte <!-- .element: class="fragment" data-fragment-index="1" -->
+* JavaScript <!-- .element: class="fragment" data-fragment-index="2" -->
+* React pains <!-- .element: class="fragment" data-fragment-index="3" -->
+* Du code <!-- .element: class="fragment" data-fragment-index="4" -->
+* Dans la vraie vie <!-- .element: class="fragment" data-fragment-index="5" -->
+</script></section><section ><section data-markdown><script type="text/template">
 ## Introduction
 
 1ère release : March 2013
@@ -45,7 +44,7 @@ Excilys - Zacaria Chtatar - Février 2017
 [![GitHub stars](https://img.shields.io/github/stars/facebook/react.svg?style=social&label=Star)](https://github.com/facebook/react)
 
 Poussé par Facebook et l'annonce d'Angular2 <!-- .element: class="fragment" data-fragment-index="1" -->
-</script></section><section ><section data-markdown><script type="text/template">
+</script></section><section data-markdown><script type="text/template">
 ## Comparaison
 
  | jQuery | AngularJs | Angular2 | React |
@@ -156,18 +155,24 @@ Le rendu est pour le navigateur l'opération la plus couteuse
 
 <img src="assets/imgs/virtual_dom_diff.png" width="650px">
 </script></section><section data-markdown><script type="text/template">
+## Isomorphisme
+
+Grace au DOM virtuel
+* Premier rendu côté serveur
+* Très rapide
+* Meilleur SEO
+
+</script></section><section data-markdown><script type="text/template">
 ## React-native
 
-Du vrai natif multi-platforme
+Du vrai natif multi-platforme.
 
 [![npm](https://img.shields.io/npm/dm/react-native.svg)](https://www.npmjs.org/package/react-native)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/facebook/react-native.svg)](https://github.com/facebook/react-native/pulls)
 [![GitHub release](https://img.shields.io/github/release/facebook/react-native.svg)](https://github.com/facebook/react-native)
 [![GitHub stars](https://img.shields.io/github/stars/facebook/react-native.svg?style=social&label=Star)](https://github.com/facebook/react-native)
-</script></section><section data-markdown><script type="text/template">
-## Time travel debugging
 
-<img src="assets/imgs/reduxflow.gif" height="400px">
+Remplace les balises html par des composants natifs.
 </script></section></section><section ><section data-markdown><script type="text/template">
 ## Pause 
 
@@ -232,17 +237,10 @@ import {sum, pi} from "lib/math";
 alert("2π = " + sum(pi, pi));
 ```
 </script></section><section data-markdown><script type="text/template">
-## Default - Rest - Spread Operator
+## Rest - Spread - Default Operator
 
 ```JavaScript
-function f(x, y=12) {
-  // y is 12 if not passed (or passed as undefined)
-  return x + y;
-}
-f(3) == 15
-```
-```JavaScript
-function f(x, ...y) {
+function f(x, ...y) { // Rest to gather
   // y is an Array
   return x * y.length;
 }
@@ -253,7 +251,14 @@ function f(x, y, z) {
   return x + y + z;
 }
 // Pass each elem of array as argument
-f(...[1,2,3]) == 6
+f(...[1,2,3]) == 6 // Spread to iterate
+```
+```JavaScript
+function f(x, y=12) { // Default to ... default
+  // y is 12 if not passed (or passed as undefined)
+  return x + y;
+}
+f(3) == 15
 ```
 </script></section></section><section ><section data-markdown><script type="text/template">
 ## JavaScript
@@ -274,7 +279,8 @@ Plus pour longtemps... <!-- .element: class="fragment" data-fragment-index="1" -
 <img src="assets/imgs/standards.png">
 
 <span class="fragment" data-fragment-index="1">
-[airbnb](https://github.com/airbnb/javascript)
+[airbnb](https://github.com/airbnb/javascript) -
+[prettier](https://github.com/prettier/prettier)
 </span>
 </script></section><section data-markdown><script type="text/template">
 ## Outils
@@ -285,7 +291,8 @@ Plus pour longtemps... <!-- .element: class="fragment" data-fragment-index="1" -
   [<img src="assets/imgs/webpack-logo.png" height="100px">](https://webpack.js.org) <!-- .element: class="fragment" data-fragment-index="3" -->
   [<img src="assets/imgs/eslint.png" height="100px">](http://eslint.org) <!-- .element: class="fragment" data-fragment-index="4" -->
   [<img src="assets/imgs/mocha.svg" height="100px">](https://mochajs.org) <!-- .element: class="fragment" data-fragment-index="5" -->
-  [<img src="assets/imgs/karma.png" height="100px">](https://karma-runner.github.io/1.0/index.html) <!-- .element: class="fragment" data-fragment-index="6" -->
+  [<img src="assets/imgs/karma.png" height="100px">](https://karma-runner.github.io/1.0/index.html) <!-- .element: class="fragment" data-fragment-index="5" -->
+  [<img src="assets/imgs/jest.png" height="100px">](https://facebook.github.io/jest/) <!-- .element: class="fragment" data-fragment-index="6" -->
   [<img src="assets/imgs/enzyme.png" height="100px">](http://airbnb.io/enzyme) <!-- .element: class="fragment" data-fragment-index="7" -->
 </div>
 
@@ -293,7 +300,7 @@ Plus pour longtemps... <!-- .element: class="fragment" data-fragment-index="1" -
 [create-react-app](https://github.com/facebookincubator/create-react-app)
 </span>
 
-Désolé, mais le temps nous est compté 😅 <!-- .element: class="fragment" data-fragment-index="8" -->
+Heureusement, il y a react-scripts ! <!-- .element: class="fragment" data-fragment-index="8" -->
 </script></section></section><section ><section data-markdown><script type="text/template">
 ## Pain points
 
@@ -325,13 +332,18 @@ Désolé, mais le temps nous est compté 😅 <!-- .element: class="fragment" da
 
 Mais une fois en place c'est 😍 <!-- .element: class="fragment" data-fragment-index="8" -->
 </script></section><section data-markdown><script type="text/template">
-## Pain points #2 : La JS fatigue
-
-<img src="assets/imgs/fatigue.png" height="450px">
-</script></section><section data-markdown><script type="text/template">
-## Pain points #3 : Penser en composants
+## Pain points #2 : Penser en composants
 
 <img src="assets/imgs/react-think.png" width="650px">
+
+Une couleur est un même composant.
+</script></section><section data-markdown><script type="text/template">
+## Pain points #3 : Modules
+
+* Npm donne l'accès à tout type de ressources.
+* React est très dynamique <!-- .element: class="fragment" data-fragment-index="1" -->
+* ⚠️️  Versions supportées <!-- .element: class="fragment" data-fragment-index="2" -->
+* ⚠️️  Qualité du code <!-- .element: class="fragment" data-fragment-index="3" -->
 </script></section></section><section  data-markdown><script type="text/template">
 ## Voyons la bête
 
@@ -355,6 +367,8 @@ React.createElement('div', { className: 'red' }, 'Hello');
 </div>;
 ```
 
+Les attributs sont appelés "propriétés".
+
 Pourquoi ? <!-- .element: class="fragment" data-fragment-index="1" -->
 </script></section><section data-markdown><script type="text/template">
 ```
@@ -368,7 +382,7 @@ React.createElement(
   })
 );
 ```
-
+<code class="fragment" data-fragment-index="1">
 ```
 // Clean 😁
 <DashboardUnit data-index="2">
@@ -376,13 +390,14 @@ React.createElement(
   <Scoreboard className="results" scores={gameScores} />
 </DashboardUnit>;
 ```
+</code>
 
-<span class="fragment" data-fragment-index="1">
+<span class="fragment" data-fragment-index="2">
 NB : Le JSX doit toujours avoir un noeud racine.
 </span>
 
-<span class="fragment" data-fragment-index="2">
-NB2 : certains attributs tels que `class` sont changés en `className`
+<span class="fragment" data-fragment-index="3">
+NB2 : certains attributs tels que `class` sont changés en `className`.
 </span>
 </script></section></section><section ><section data-markdown><script type="text/template">
 ## Composants
@@ -423,6 +438,8 @@ class MyComponent extends React.Component {
     }
 }
 ```
+
+A votre avis qu'affiche le composant ? <!-- .element: class="fragment" data-fragment-index="1" -->
 </script></section><section data-markdown><script type="text/template">
 Utilisation d'événements
 
@@ -431,21 +448,23 @@ class MyComponent extends React.Component {
     constructor(props) {
         super(props);
         // Manual binding, better perfs
-        this.clickHandler = this.clickHandler.bind(this);
+        this.handleClick = this.handleClick.bind(this);
     }
-    clickHandler(e) {
-        alert('Hi ' + e.target.value);
+    handleClick(e) {
+      console.log(e.target.dataset.custom);
     }
     render() {
         return (<div>
-            <p onClick={this.clickHandler}>Manual bind</p>
-            <p onClick={(e) => this.clickHandler(e, 'Zac')}>Auto-bind</p>
+            <button data-custom="manual"
+                onClick={this.handleClick}>Manual bind</button>
+            <button data-custom="auto"
+                onClick={(e) => this.handleClick(e)}>Auto bind</button>
         </div>)
     }
 }
 ```
 </script></section><section data-markdown><script type="text/template">
-Composition et non héritage
+Composition via les props et non héritage
 
 ```
 // Stateless
@@ -469,13 +488,14 @@ class Container extends React.Component {
 </script></section><section data-markdown><script type="text/template">
 State vs Props ?
 
-> Les propriétés sont aux composants ce que les arguments sont aux fonctions.
+> Les propriétés sont aux composants ce que les arguments sont aux fonctions. <!-- .element: class="fragment" data-fragment-index="1" -->
 
-> Tout comme les propriétés, l'état altère le rendu du composant. 
-Mais l'état est privé et immutable, entièrement controlé par le composant 🤢.
+> Tout comme les propriétés, l'état altère le rendu du composant. <!-- .element: class="fragment" data-fragment-index="2" -->
+
+> Mais l'état est privé et entièrement controlé par le composant 🤢. <!-- .element: class="fragment" data-fragment-index="3" -->
 
 </script></section><section data-markdown><script type="text/template">
-State immutable
+State et props immutable
 
 ```
 // GET STATE
@@ -488,35 +508,38 @@ this.state = {foo:'bar'};
 
 // Ok
 this.setState({foo:'bar'});
+
+// Best
+this.setState(prevState => ({foo:'bar'}));
 ```
+
+Maitrise des données. <!-- .element: class="fragment" data-fragment-index="1" -->
+
+Maitrise de l'UI. <!-- .element: class="fragment" data-fragment-index="2" -->
 </script></section></section><section ><section data-markdown><script type="text/template">
 ## Cycle de vie
 
 Les composants utilisent les hooks de l'API :
 
 * render : obligatoire <!-- .element: class="fragment" data-fragment-index="1" -->
-* setState : déclenche le cycle de rendering <!-- .element: class="fragment" data-fragment-index="2" -->
+* setState : déclenche le cycle de vie du composant <!-- .element: class="fragment" data-fragment-index="2" -->
 * componentDidMount : idéal pour les appels async <!-- .element: class="fragment" data-fragment-index="3" -->
 * shouldComponentUpdate : performance <!-- .element: class="fragment" data-fragment-index="4" -->
 * ... <!-- .element: class="fragment" data-fragment-index="5" -->
 </script></section><section data-markdown><script type="text/template">
-Au cas où
+En détails
 
 <img src="https://cdn-images-1.medium.com/max/1600/0*VoYsN6eq7I_wjVV5.png" width="650px">
 </script></section></section><section  data-markdown><script type="text/template">
 ## Les mains dans le cambouis
 
-<a href="http://codepen.io/Muvaiah/pens/public/?grid_type=list#">
-    <img src="assets/imgs/cambouis.jpg" width="250px">
+<a href="https://codesandbox.io/s/2vZWmQAnP">
+    <img src="assets/imgs/cambouis.jpg" width="350px" href="http://google.com">
 </a>
 
-<span class="fragment" data-fragment-index="1">[Créer le premier composant](http://codepen.io/Muvaiah/pen/GWKrPZ?editors=0010#0)</span>
+[Code sandbox](https://codesandbox.io/s/2vZWmQAnP)
 
-<span class="fragment" data-fragment-index="2">[Définir l'état](http://codepen.io/Muvaiah/pen/mWbWJO?editors=0010#0)</span>
-
-<span class="fragment" data-fragment-index="3">[Ajouter les contrôles](http://codepen.io/Muvaiah/pen/yMBMaR?editors=0010#0)</span>
-
-<span class="fragment" data-fragment-index="4">[Découpler](http://codepen.io/Muvaiah/pen/wJwJqy?editors=0010#0)</span>
+[Zacaria/learn-react](www.github.com/Zacaria/learn-react)
 </script></section><section ><section data-markdown><script type="text/template">
 ## Dans la vraie vie
 
@@ -534,7 +557,16 @@ Redux est le consensus en place. <!-- .element: class="fragment" data-fragment-i
 
 [cartoon](redux.md)
 </script></section></section><section  data-markdown><script type="text/template">
-## Merci
+## Deux derniers mots clés
+
+* prop-types <!-- .element: class="fragment" data-fragment-index="1" -->
+* React DevTools <!-- .element: class="fragment" data-fragment-index="2" -->
+</script></section><section  data-markdown><script type="text/template">
+## Merci 👊
+
+Des questions ?
+
+Et des feedbacks ? <!-- .element: class="fragment" data-fragment-index="1" -->
 </script></section></div>
         </div>
 

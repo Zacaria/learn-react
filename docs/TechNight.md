@@ -2,25 +2,25 @@
 
 <img src="assets/imgs/react-logo.png" height="300px">
 
-Excilys - Zacaria Chtatar - Mars 2017
+Excilys - Zacaria Chtatar - Juin 2017
 
 ---
 
-## Avant propos
+Si vous ne comprenez pas quelque chose
 
-* J'ai 4 mois de React
-* Et 3 ans de JS
-* Intervenez !
+Ne me laissez pas avancer tout seul
+
+Intervenez 😁
 
 ---
 
 ## Sommaire
 
-* Contexte
-* JavaScript
-* React pains
-* Du code
-* Dans la vraie vie
+* Contexte <!-- .element: class="fragment" data-fragment-index="1" -->
+* JavaScript <!-- .element: class="fragment" data-fragment-index="2" -->
+* React pains <!-- .element: class="fragment" data-fragment-index="3" -->
+* Du code <!-- .element: class="fragment" data-fragment-index="4" -->
+* Dans la vraie vie <!-- .element: class="fragment" data-fragment-index="5" -->
 
 ---
 
@@ -319,7 +319,8 @@ Plus pour longtemps... <!-- .element: class="fragment" data-fragment-index="1" -
 <img src="assets/imgs/standards.png">
 
 <span class="fragment" data-fragment-index="1">
-[airbnb](https://github.com/airbnb/javascript)
+[airbnb](https://github.com/airbnb/javascript) -
+[prettier](https://github.com/prettier/prettier)
 </span>
 
 ----
@@ -332,7 +333,8 @@ Plus pour longtemps... <!-- .element: class="fragment" data-fragment-index="1" -
   [<img src="assets/imgs/webpack-logo.png" height="100px">](https://webpack.js.org) <!-- .element: class="fragment" data-fragment-index="3" -->
   [<img src="assets/imgs/eslint.png" height="100px">](http://eslint.org) <!-- .element: class="fragment" data-fragment-index="4" -->
   [<img src="assets/imgs/mocha.svg" height="100px">](https://mochajs.org) <!-- .element: class="fragment" data-fragment-index="5" -->
-  [<img src="assets/imgs/karma.png" height="100px">](https://karma-runner.github.io/1.0/index.html) <!-- .element: class="fragment" data-fragment-index="6" -->
+  [<img src="assets/imgs/karma.png" height="100px">](https://karma-runner.github.io/1.0/index.html) <!-- .element: class="fragment" data-fragment-index="5" -->
+  [<img src="assets/imgs/jest.png" height="100px">](https://facebook.github.io/jest/) <!-- .element: class="fragment" data-fragment-index="6" -->
   [<img src="assets/imgs/enzyme.png" height="100px">](http://airbnb.io/enzyme) <!-- .element: class="fragment" data-fragment-index="7" -->
 </div>
 
@@ -340,7 +342,7 @@ Plus pour longtemps... <!-- .element: class="fragment" data-fragment-index="1" -
 [create-react-app](https://github.com/facebookincubator/create-react-app)
 </span>
 
-Désolé, mais le temps nous est compté 😅 <!-- .element: class="fragment" data-fragment-index="8" -->
+Heureusement, il y a react-scripts ! <!-- .element: class="fragment" data-fragment-index="8" -->
 
 ---
 
@@ -576,6 +578,9 @@ this.state = {foo:'bar'};
 
 // Ok
 this.setState({foo:'bar'});
+
+// Best
+this.setState(prevState => ({foo:'bar'}));
 ```
 
 Maitrise des données. <!-- .element: class="fragment" data-fragment-index="1" -->
@@ -604,19 +609,13 @@ En détails
 
 ## Les mains dans le cambouis
 
-<a href="http://codepen.io/Muvaiah/pens/public/?grid_type=list#">
-    <img src="assets/imgs/cambouis.jpg" width="300px">
+<a href="https://codesandbox.io/s/2vZWmQAnP">
+    <img src="assets/imgs/cambouis.jpg" width="350px" href="http://google.com">
 </a>
 
-[Zacaria/learn-react](www.github.com/Zacaria/learn-react)
+[Code sandbox](https://codesandbox.io/s/2vZWmQAnP)
 
-<span class="fragment" data-fragment-index="1">[Créer le premier composant](http://codepen.io/Muvaiah/pen/GWKrPZ?editors=0010#0) -> </span>
-<span class="fragment" data-fragment-index="2">[Définir l'état](http://codepen.io/Muvaiah/pen/mWbWJO?editors=0010#0) -> </span>
-<span class="fragment" data-fragment-index="3">[Ajouter les contrôles](http://codepen.io/Muvaiah/pen/yMBMaR?editors=0010#0) -> </span>
-<span class="fragment" data-fragment-index="4">[Découpler](http://codepen.io/Muvaiah/pen/wJwJqy?editors=0010#0) -> </span>
-<span class="fragment" data-fragment-index="5">[Wrapper](https://codepen.io/Muvaiah/pen/dvMpQq?editors=0010#0) -> </span>
-<span class="fragment" data-fragment-index="6">[Bouton Supprimer](https://codepen.io/Muvaiah/pen/oZxYWV?editors=0010#0) -> </span>
-<span class="fragment" data-fragment-index="7">[Découpler 2](https://codepen.io/Muvaiah/pen/NpNbvd?editors=0010#0)</span>
+[Zacaria/learn-react](www.github.com/Zacaria/learn-react)
 
 ---
 
@@ -640,6 +639,15 @@ Redux est le consensus en place. <!-- .element: class="fragment" data-fragment-i
 
 ---
 
-## Merci
+## Deux derniers mots clés
+
+* prop-types <!-- .element: class="fragment" data-fragment-index="1" -->
+* React DevTools <!-- .element: class="fragment" data-fragment-index="2" -->
+
+---
+
+## Merci 👊
 
 Des questions ?
+
+Et des feedbacks ? <!-- .element: class="fragment" data-fragment-index="1" -->
