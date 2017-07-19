@@ -58,10 +58,13 @@ La réponse E montre que l'on peut utiliser des paramètres par défaut même lo
 Les réponses A et C sont des erreurs de syntaxe avec le point virgule et le signe égal.
 La réponse D présente l'utilisation du "shorthand property definition". Lorsque le nom de la clé et de la variable sont égales, alors on peut omettre la variable
 
-11. C, D
+11. A, D
 
-La réponse A crée un objet littéral qui n'est pas instantiable.
-La réponse B est une erreur de syntaxe.
+Les backticks permettent de créer des "template strings". Interpolation de code, ajout de tag et sauts de lignes conservés sont pris en charge.
+
+Les single quotes et double quotes ont exactement les mêmes fonctionnalités. Mais la convention veut que l'on utilise au maxiumum les single quotes.
+
+Les tags sont des fonctions que l'on peut appliquer à la volée à une chaine de caractères.
 
 12. B, C
 

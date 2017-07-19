@@ -126,11 +126,12 @@ Bon courage !
 
 
 11. Parmi les propositions suivantes, lesquelles permettent d'executer ensuite : `const car = new Car();`:
+11. Parmi les propositions suivantes, lesquelles sont correctes ?
 
-  * `const Car = {};`.
-  * `class Car = {};`.
-  * `class Car {};`.
-  * `const Car = () => {};`.
+  * Les backticks permettent d'interpoler du code dans une chaine de caractères.
+  * Les doubles quotes permettent de conserver les sauts de ligne, alors que les backticks ne le permettent pas.
+  * Les backticks, les single quotes et les doubles quotes ont strictement les mêmes fonctionnalités.
+  * Les backticks permettent l'utilisation de "tags" sur les chaines de caractères.
 
 
 12. Quelle est l'utilité de la fonction `Object.assign` :
