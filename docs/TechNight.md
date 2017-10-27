@@ -4,6 +4,8 @@
 
 Excilys - Zacaria Chtatar - Mars 2017
 
+https://github.com/Zacaria/learn-react
+
 ---
 
 ## Avant propos
