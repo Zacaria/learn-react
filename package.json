@@ -9,7 +9,6 @@
     "deploy": "npm run clean && cd docs && npm run build && ls && npm run copyAssets && npm run surge",
     "copyAssets": "cp -R docs/assets docs/_static/ && cp -R docs/theme docs/_static",
     "surge": "surge -d $npm_package_config_deploy_domain -p docs/_static"
-
   },
   "repository": {
     "type": "git",
@@ -30,5 +29,8 @@
   },
   "config": {
     "deploy_domain": "havesome-react.surge.sh"
+  },
+  "resolutions": {
+    "tar": "2.2.1"
   }
 }
