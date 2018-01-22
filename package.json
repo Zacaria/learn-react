@@ -28,7 +28,7 @@
     "surge": "latest"
   },
   "config": {
-    "deploy_domain": "havesome-react.surge.sh"
+    "deploy_domain": "learn-some-react.surge.sh"
   },
   "resolutions": {
     "tar": "2.2.1"
