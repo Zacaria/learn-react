@@ -1,18 +1,14 @@
-# TechNight
+---
+title: Learn React
+---
+
+## Premiers pas en React
 
 <img src="assets/imgs/react-logo.png" height="300px">
 
 Excilys - Zacaria Chtatar - Mars 2017
 
 https://github.com/Zacaria/learn-react
-
----
-
-## Avant propos
-
-* J'ai 4 mois de React
-* Et 3 ans de JS
-* Intervenez !
 
 ---
 
