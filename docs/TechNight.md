@@ -6,7 +6,7 @@ title: Learn React
 
 <img src="assets/imgs/react-logo.png" height="300px">
 
-Excilys - Zacaria Chtatar - Mars 2017
+Excilys - Zacaria Chtatar - Janvier 2018
 
 https://github.com/Zacaria/learn-react
 
@@ -24,7 +24,7 @@ https://github.com/Zacaria/learn-react
 
 ## Introduction
 
-1ère release : March 2013
+1ère release : Mars 2013
 
 > React is a library for providing a view for data rendered as HTML.
 
@@ -444,12 +444,8 @@ React.createElement(
 ```
 </code>
 
-<span class="fragment" data-fragment-index="2">
-NB : Le JSX doit toujours avoir un noeud racine.
-</span>
-
 <span class="fragment" data-fragment-index="3">
-NB2 : certains attributs tels que `class` sont changés en `className`.
+NB : certains attributs tels que `class` sont changés en `className`.
 </span>
 
 ---
